@@ -182,6 +182,60 @@
             font-size: 15px; color: var(--text-light); line-height: 1.7;
         }
 
+        /* Works / Portfolio Grid */
+        .works-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+        .work-card {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 20px; overflow: hidden;
+            transition: all 0.3s;
+        }
+        .work-card:hover {
+            border-color: var(--accent); box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        .work-link {
+            display: block; text-decoration: none; color: inherit;
+        }
+        .work-preview {
+            height: 200px; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .work-swatch {
+            width: 64px; height: 64px; border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            position: relative; z-index: 2;
+        }
+        .work-overlay {
+            position: absolute; bottom: 16px; left: 16px;
+            z-index: 2;
+        }
+        .work-tag {
+            background: rgba(255,255,255,0.95); color: var(--text);
+            padding: 6px 14px; border-radius: 20px;
+            font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+        }
+        .work-info {
+            padding: 28px 24px;
+        }
+        .work-info h3 {
+            font-size: 20px; font-weight: 700; margin-bottom: 10px;
+            color: var(--text);
+        }
+        .work-info p {
+            font-size: 15px; color: var(--text-light); line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .work-cta {
+            font-size: 14px; font-weight: 600; color: var(--primary);
+            transition: color 0.2s;
+        }
+        .work-card:hover .work-cta { color: var(--primary-dark); }
+
         /* Pricing */
         .pricing-grid {
             max-width: 960px; margin: 0 auto;
@@ -329,7 +383,7 @@
             <a href="#" class="logo">Easy<span>App</span>Website</a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#services" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                    <li><a href="#works" data-zh="作品參考" data-en="Portfolio">作品參考</a></li>
                     <li><a href="#pricing" data-zh="收費方案" data-en="Pricing">收費方案</a></li>
                     <li><a href="#contact" data-zh="立即查詢" data-en="Contact">立即查詢</a></li>
                 </ul>
@@ -351,7 +405,7 @@
             <span class="highlight" data-zh="專業網站" data-en="professional website">專業網站</span><br>
             <span data-zh="無需高昂的費用" data-en="without the high cost">無需高昂的費用</span>
         </h1>
-        <p id="hero-subtitle" data-zh="為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。" data-en="Business, restaurant, personal brand & e-commerce websites — at transparent, affordable prices. Delivered in as fast as one week.">
+        <p id="hero-subtitle" data-zh="為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。" data-en="Business, restaurant, personal brand &amp; e-commerce websites — at transparent, affordable prices. Delivered in as fast as one week.">
             為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。
         </p>
         <div class="hero-ctas">
@@ -367,57 +421,71 @@
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="alt" id="services">
+    <!-- Portfolio / References -->
+    <section class="alt" id="works">
         <div class="section-header">
-            <span class="kicker" data-zh="/ 服務項目" data-en="/ SERVICES">/ 服務項目</span>
-            <h2 data-zh="為您量身打造" data-en="Built for you">為您量身打造</h2>
-            <p data-zh="從靜態展示網站到動態 WordPress 網店，我們提供簡單直接的方案，讓您以最低成本在網上建立專業形象。" data-en="From static showcase sites to dynamic WordPress stores — simple, direct solutions to build your online presence at the lowest cost.">
-                從靜態展示網站到動態 WordPress 網店，我們提供簡單直接的方案，讓您以最低成本在網上建立專業形象。
+            <span class="kicker" data-zh="/ 作品參考" data-en="/ OUR WORK">/ 作品參考</span>
+            <h2 data-zh="我們製作的網站" data-en="Sites we've built">我們製作的網站</h2>
+            <p data-zh="每一個項目都根據客戶品牌量身設計，從音樂創作到霓虹燈藝術，涵蓋多元行業。" data-en="Every project is tailored to the client's brand — from music creation to neon art, across diverse industries.">
+                每一個項目都根據客戶品牌量身設計，從音樂創作到霓虹燈藝術，涵蓋多元行業。
             </p>
         </div>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-icon">🏢</div>
-                <h3 data-zh="公司網站" data-en="Company Website">公司網站</h3>
-                <p data-zh="展示企業形象、服務及聯絡資訊。適合中小企快速上線，建立客戶信任。" data-en="Showcase your business, services & contact info. Perfect for SMEs to launch quickly and build customer trust.">
-                    展示企業形象、服務及聯絡資訊。適合中小企快速上線，建立客戶信任。
-                </p>
+        <div class="works-grid">
+            <!-- mycantopop.hk -->
+            <div class="work-card fade-in">
+                <a href="https://mycantopop.hk" target="_blank" rel="noopener" class="work-link">
+                    <div class="work-preview" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #4a1a4a 100%);">
+                        <div class="work-swatch" style="background: #ff2d95;"></div>
+                        <div class="work-overlay">
+                            <span class="work-tag" data-zh="音樂創作平台" data-en="Music Creation">音樂創作平台</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>mycantopop.hk</h3>
+                        <p data-zh="廣東歌·為你 — 真人填詞 Cantopop 訂製服務。暗黑風格設計，配合霓虹粉紅品牌調性。" data-en="Cantopop for you — bespoke Cantonese songwriting. Dark aesthetic with hot-pink neon branding.">
+                            廣東歌·為你 — 真人填詞 Cantopop 訂製服務。暗黑風格設計，配合霓虹粉紅品牌調性。
+                        </p>
+                        <span class="work-cta" data-zh="瀏覽網站 →" data-en="Visit site →">瀏覽網站 →</span>
+                    </div>
+                </a>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🍜</div>
-                <h3 data-zh="餐飲網站" data-en="Restaurant / F&B">餐飲網站</h3>
-                <p data-zh="菜單展示、品牌故事、訂座連結。幫助餐廳在搜尋引擎脫穎而出。" data-en="Menu display, brand story, reservation links. Help your restaurant stand out in search results.">
-                    菜單展示、品牌故事、訂座連結。幫助餐廳在搜尋引擎脫穎而出。
-                </p>
+
+            <!-- whysolution.hk -->
+            <div class="work-card fade-in">
+                <a href="https://whysolution.hk" target="_blank" rel="noopener" class="work-link">
+                    <div class="work-preview" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #dcfce7 100%);">
+                        <div class="work-swatch" style="background: #10b981;"></div>
+                        <div class="work-overlay">
+                            <span class="work-tag" data-zh="AI 解決方案" data-en="AI Solutions">AI 解決方案</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>whysolution.hk</h3>
+                        <p data-zh="為中小企而設的 AI 解決方案。簡潔企業風格，翡翠綠品牌色，中英雙語設計。" data-en="AI solutions for SMEs. Clean enterprise style, jade-green brand color, bilingual Chinese/English design.">
+                            為中小企而設的 AI 解決方案。簡潔企業風格，翡翠綠品牌色，中英雙語設計。
+                        </p>
+                        <span class="work-cta" data-zh="瀏覽網站 →" data-en="Visit site →">瀏覽網站 →</span>
+                    </div>
+                </a>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">👤</div>
-                <h3 data-zh="個人網站 / 品牌" data-en="Personal / Portfolio">個人網站 / 品牌</h3>
-                <p data-zh="設計師、攝影師、自由工作者作品集。簡潔有力，突出個人風格。" data-en="Designers, photographers, freelancers — clean, impactful portfolios that highlight your personal style.">
-                    設計師、攝影師、自由工作者作品集。簡潔有力，突出個人風格。
-                </p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🛒</div>
-                <h3 data-zh="網店 / Blog" data-en="E-commerce / Blog">網店 / Blog</h3>
-                <p data-zh="WordPress + WooCommerce 完整方案。輕鬆管理產品、訂單及內容，自訂收款方式。" data-en="Full WordPress + WooCommerce setup. Easily manage products, orders & content with custom payment methods.">
-                    WordPress + WooCommerce 完整方案。輕鬆管理產品、訂單及內容，自訂收款方式。
-                </p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">📱</div>
-                <h3 data-zh="響應式設計" data-en="Responsive Design">響應式設計</h3>
-                <p data-zh="自動適配桌面、手機及平板。無論用戶使用什麼裝置，您的網站都能完美呈現。" data-en="Auto-adapts to desktop, mobile & tablet. Your site looks perfect on any device your visitors use.">
-                    自動適配桌面、手機及平板。無論用戶使用什麼裝置，您的網站都能完美呈現。
-                </p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🔍</div>
-                <h3 data-zh="基本 SEO" data-en="Basic SEO">基本 SEO</h3>
-                <p data-zh="結構化標籤、速度優化及搜尋引擎設定。讓 Google 更容易找到您的網站。" data-en="Structured tags, speed optimization & search engine setup. Make it easy for Google to find your site.">
-                    結構化標籤、速度優化及搜尋引擎設定。讓 Google 更容易找到您的網站。
-                </p>
+
+            <!-- neonlight.pro -->
+            <div class="work-card fade-in">
+                <a href="https://neonlight.pro" target="_blank" rel="noopener" class="work-link">
+                    <div class="work-preview" style="background: linear-gradient(135deg, #0a0a0a 0%, #0f172a 50%, #164e63 100%);">
+                        <div class="work-swatch" style="background: #06b6d4;"></div>
+                        <div class="work-overlay">
+                            <span class="work-tag" data-zh="霓虹燈設計" data-en="Neon Design">霓虹燈設計</span>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3>neonlight.pro</h3>
+                        <p data-zh="霓虹燈招牌設計及製作工作室。深黑夜景風格，青藍色點綴，畫廊式作品展示。" data-en="Neon sign design &amp; production studio. Dark nighttime aesthetic, cyan-blue accents, gallery-style portfolio.">
+                            霓虹燈招牌設計及製作工作室。深黑夜景風格，青藍色點綴，畫廊式作品展示。
+                        </p>
+                        <span class="work-cta" data-zh="瀏覽網站 →" data-en="Visit site →">瀏覽網站 →</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -525,7 +593,7 @@
         <div class="footer-inner">
             <div class="footer-brand">Easy<span style="color:#3b82f6;">App</span>Website</div>
             <ul class="footer-links">
-                <li><a href="#services" data-zh="服務" data-en="Services">服務</a></li>
+                <li><a href="#works" data-zh="作品" data-en="Portfolio">作品</a></li>
                 <li><a href="#pricing" data-zh="收費" data-en="Pricing">收費</a></li>
                 <li><a href="#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
             </ul>
