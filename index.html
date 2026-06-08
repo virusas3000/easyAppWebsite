@@ -360,6 +360,35 @@
         .form-actions { display: flex; gap: 12px; margin-top: 8px; }
         .form-actions .btn { flex: 1; }
 
+        /* Article Section */
+        .article-section {
+            padding: 80px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-inner { max-width: 720px; margin: 0 auto; }
+        .article-content h3 {
+            font-size: 22px; font-weight: 700;
+            color: var(--text); margin: 36px 0 14px;
+        }
+        .article-content p {
+            font-size: 16px; color: var(--text-light);
+            line-height: 1.8; margin-bottom: 16px;
+        }
+        .article-cta-box {
+            margin-top: 40px; padding: 32px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: 16px; text-align: center;
+        }
+        .article-cta-box h4 {
+            font-size: 20px; font-weight: 700;
+            margin-bottom: 8px; color: var(--text);
+        }
+        .article-cta-box p {
+            font-size: 15px; color: var(--text-light);
+            margin-bottom: 20px; line-height: 1.7;
+        }
+
         /* Footer */
         footer {
             background: #111827; color: #9ca3af; padding: 60px 24px 32px;
@@ -676,6 +705,40 @@
                     <button type="submit" class="btn btn-white" style="background:var(--red);color:#fff;flex:1;" data-zh="發送查詢 →" data-en="Send Enquiry →">發送查詢 →</button>
                 </div>
             </form>
+        </div>
+    </section>
+
+    <!-- Article: 整Website -->
+    <section id="整website" class="article-section">
+        <div class="article-inner">
+            <header class="section-header" style="margin-bottom:48px;">
+                <span class="kicker" data-zh="網頁設計指南" data-en="Web Design Guide">網頁設計指南</span>
+                <h2 data-zh="甚麼是「整Website」？一次過了解完整網站建立流程" data-en="What is a Complete Website Build?">甚麼是「整Website」？一次過了解完整網站建立流程</h2>
+                <p data-zh="由網站規劃到上線，香港中小企如何選擇最適合的網站開發方案。" data-en="From planning to launch — how HK SMEs choose the right web development plan.">由網站規劃到上線，香港中小企如何選擇最適合的網站開發方案。</p>
+            </header>
+
+            <div class="article-content">
+                <h3 data-zh="1. 網站規劃（Planning Phase）" data-en="1. Website Planning">1. 網站規劃（Planning Phase）</h3>
+                <p data-zh="整Website的第一步並非寫程式，而是釐清目標。你需要回答幾個問題：網站目的是品牌展示、網上銷售，還是收集潛在客戶名單？目標用戶是誰？他們用甚麼裝置瀏覽？這些決定會直接影響網站架構、功能需求，以及最終的開發成本。" data-en="The first step in building a complete website isn't coding — it's clarifying your goals. What is the purpose? Who is your audience? What devices do they use? These answers shape your site architecture, features, and budget.">整Website的第一步並非寫程式，而是釐清目標。你需要回答幾個問題：網站目的是品牌展示、網上網上銷售，還是收集潛在客戶名單？目標用戶是誰？他們用甚麼裝置瀏覽？這些決定會直接影響網站架構、功能需求，以及最終的開發成本。</p>
+
+                <h3 data-zh="2. 設計與用戶體驗（UI/UX Design）" data-en="2. Design &amp; User Experience">2. 設計與用戶體驗（UI/UX Design）</h3>
+                <p data-zh="好的網站設計不是「靚」咁簡單，而是要引導訪客完成你想他們做的事——無論是填表查詢、加入購物車，抑或直接致電。Wireframe（線框圖）和 Prototype（原型）能讓你在寫程式前先確認流程，避免後期大幅修改。響應式設計（Responsive）更是必須，確保手機、平板、桌面電腦都有良好體驗。" data-en="Good web design isn't just about looks — it's about guiding visitors to take action. Wireframes and prototypes let you validate flows before coding. Responsive design is essential for mobile, tablet, and desktop.">好的網站設計不是「靚」咁簡單，而是要引導訪客完成你想他們做的事——無論是填表查詢、加入購物車，抑或直接致電。Wireframe（線框圖）和 Prototype（原型）能讓你在寫程式前先確認流程，避免後期大幅修改。響應式設計（Responsive）更是必須，確保手機、平板、桌面電腦都有良好體驗。</p>
+
+                <h3 data-zh="3. 前端與後端開發（Development）" data-en="3. Front-end &amp; Back-end Development">3. 前端與後端開發（Development）</h3>
+                <p data-zh="「靜態網站」適合不需要頻繁更新內容的公司或個人網站，頁面載入快、成本低。「動態網站」則需要數據庫和後台管理系統，適合網店、Blog 或需要會員功能的平台。如果你打算做網上商店，Woocommerce 或 Shopify 是常見選擇；若需要高度訂製，則會選擇自建系統。" data-en="Static sites are fast and cost-effective for fixed content. Dynamic sites need databases and CMS, ideal for stores, blogs, or membership platforms. For e-commerce, WooCommerce or Shopify are common; fully custom builds offer maximum flexibility.">「靜態網站」適合不需要頻繁更新內容的公司或個人網站，頁面載入快、成本低。「動態網站」則需要數據庫和後台管理系統，適合網店、Blog 或需要會員功能的平台。如果你打算做網上商店，Woocommerce 或 Shopify 是常見選擇；若需要高度訂製，則會選擇自建系統。</p>
+
+                <h3 data-zh="4. 測試與優化（Testing &amp; Optimization）" data-en="4. Testing &amp; Optimization">4. 測試與優化（Testing &amp; Optimization）</h3>
+                <p data-zh="網站上線前要經過多重測試：不同瀏覽器兼容性、手機顯示、表單功能、金流串接（如適用）。網站速度亦直接影響 SEO 排名和用戶留存——圖片壓縮、CDN 加速、快取設定都是關鍵。Google PageSpeed Insights 是免費的檢測工具，值得在上線前跑一次。" data-en="Before launch, test across browsers, devices, forms, and payment flows. Site speed directly impacts SEO and retention — image compression, CDN, and caching are critical. Run Google PageSpeed Insights before going live.">網站上線前要經過多重測試：不同瀏覽器兼容性、手機顯示、表單功能、金流串接（如適用）。網站速度亦直接影響 SEO 排名和用戶留存——圖片壓縮、CDN 加速、快取設定都是關鍵。Google PageSpeed Insights 是免費的檢測工具，值得在上線前跑一次。</p>
+
+                <h3 data-zh="5. 上線與後續維護（Launch &amp; Maintenance）" data-en="5. Launch &amp; Maintenance">5. 上線與後續維護（Launch &amp; Maintenance）</h3>
+                <p data-zh=" domain 註冊、SSL 憑證安裝、伺服器設定——這些技術細節往往被忽略，但卻是網站能否穩定運作的基礎。上線後亦需要定期更新系統、備份數據、監控安全漏洞。選擇一個提供持續支援的開發團隊，比單純比價更重要。" data-en="Domain registration, SSL certificates, and server configuration are the foundation of a stable site. Post-launch, you need regular updates, backups, and security monitoring. A development team offering ongoing support matters more than the lowest price."> domain 註冊、SSL 憑證安裝、伺服器設定——這些技術細節往往被忽略，但卻是網站能否穩定運作的基礎。上線後亦需要定期更新系統、備份數據、監控安全漏洞。選擇一個提供持續支援的開發團隊，比單純比價更重要。</p>
+
+                <div class="article-cta-box">
+                    <h4 data-zh="準備好整Website？" data-en="Ready to build your website?">準備好整Website？</h4>
+                    <p data-zh="無論你想做公司網站、餐飲網站、個人網站，還是網店／Blog，我們都可以幫你規劃最適合的方案。靜態網站 $3,000 起，動態網站 $4,000 起。" data-en="Whether you need a company site, restaurant site, personal site, or online store / blog — we'll plan the right solution. Static from $3,000, dynamic from $4,000.">無論你想做公司網站、餐飲網站、個人網站，還是網店／Blog，我們都可以幫你規劃最適合的方案。靜態網站 $3,000 起，動態網站 $4,000 起。</p>
+                    <a href="#contact" class="btn btn-white" style="background:var(--red);color:#fff;display:inline-flex;" data-zh="免費查詢 →" data-en="Free Enquiry →">免費查詢 →</a>
+                </div>
+            </div>
         </div>
     </section>
 
