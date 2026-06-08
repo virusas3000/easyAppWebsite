@@ -278,8 +278,9 @@
         .price-btn.red:hover { background: var(--red-dark); }
         .price-btn.orange { background: #ea580c; color: #fff; }
         .price-btn.orange:hover { background: #c2410c; }
-        .price-btn.blue { background: #2563eb; color: #fff; }
-        .price-btn.blue:hover { background: #1d4ed8; }
+    .price-header.app { background: linear-gradient(135deg, #059669, #10b981); }
+    .price-btn.app { background: #059669; color: #fff; }
+    .price-btn.app:hover { background: #047857; }
 
         /* Portfolio */
         .portfolio { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
@@ -682,13 +683,14 @@
 
                 <!-- App Development -->
                 <div class="price-card fade-in">
-                    <div class="price-header" style="background: linear-gradient(135deg, #059669, #10b981);">
+                    <div class="price-header app">
                         <h3 data-zh="App 開發" data-en="App Development">App 開發</h3>
                     </div>
                     <div class="price-body">
                         <div class="price-tag">
-                            <div class="big"><span>$</span>15,000+</div>
-                            <div class="strike" data-zh="按功能報價" data-en="Custom quote">按功能報價</div>
+                            <div class="big"><span>$</span>6,000</div>
+                            <div class="strike" data-zh="原價 $10,000" data-en="Was $10,000">原價 $10,000</div>
+                            <div class="save" data-zh="現省 $4,000" data-en="Save $4,000">現省 $4,000</div>
                         </div>
                         <ul>
                             <li data-zh="iOS / Android 原生或跨平台" data-en="iOS / Android native or cross-platform">iOS / Android 原生或跨平台</li>
@@ -698,31 +700,11 @@
                             <li data-zh="用戶認證及後台系統" data-en="Auth &amp; admin panel">用戶認證及後台系統</li>
                             <li data-zh="API 整合及數據同步" data-en="API &amp; data sync">API 整合及數據同步</li>
                         </ul>
-                        <a href="#contact" class="price-btn" style="background: #059669; color: #fff;" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
+                        <a href="#contact" class="price-btn app" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
                     </div>
                 </div>
 
-                <!-- Custom -->
-                <div class="price-card fade-in">
-                    <div class="price-header blue">
-                        <h3 data-zh="度身訂造方案" data-en="Custom Solution">度身訂造方案</h3>
-                    </div>
-                    <div class="price-body">
-                        <div class="price-tag">
-                            <div class="big"><span>$</span>8,000+</div>
-                            <div class="strike" data-zh="按需求報價" data-en="Custom quote">按需求報價</div>
-                        </div>
-                        <ul>
-                            <li data-zh="無限頁面數量" data-en="Unlimited pages">無限頁面數量</li>
-                            <li data-zh="自定功能開發" data-en="Custom feature development">自定功能開發</li>
-                            <li data-zh="API 整合" data-en="API integrations">API 整合</li>
-                            <li data-zh="多語言支援" data-en="Multi-language support">多語言支援</li>
-                            <li data-zh="進階 SEO 方案" data-en="Advanced SEO package">進階 SEO 方案</li>
-                            <li data-zh="專屬客戶經理" data-en="Dedicated account manager">專屬客戶經理</li>
-                        </ul>
-                        <a href="#contact" class="price-btn blue" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
-                    </div>
-                </div>
+                <!-- Custom removed -->
             </div>
         </div>
     </section>
@@ -760,8 +742,7 @@
                             <option value="static" data-zh="靜態網站 ($3,000)" data-en="Static ($3,000)">靜態網站 ($3,000)</option>
                             <option value="dynamic" data-zh="動態網站 ($4,000)" data-en="Dynamic ($4,000)">動態網站 ($4,000)</option>
                             <option value="ecommerce" data-zh="網店進階版 ($6,000+)" data-en="Advanced Store ($6,000+)">網店進階版 ($6,000+)</option>
-                            <option value="custom" data-zh="度身訂造 ($8,000+)" data-en="Custom ($8,000+)">度身訂造 ($8,000+)</option>
-                            <option value="app" data-zh="App 開發 ($15,000+)" data-en="App Dev ($15,000+)">App 開發 ($15,000+)</option>
+                            <option value="app" data-zh="App 開發 ($6,000)" data-en="App Dev ($6,000)">App 開發 ($6,000)</option>
                             <option value="unsure" data-zh="不確定，需要建議" data-en="Unsure, need advice">不確定，需要建議</option>
                         </select>
                     </div>
