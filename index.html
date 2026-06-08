@@ -1,565 +1,614 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-    <meta charset="utf-8">
-    <title>OAK - HTML Theme</title>
-    <meta name="description" content="">
-    <meta name="msapplication-tap-highlight" content="yes" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAppWebsite — 輕鬆建站 | Web & App Development</title>
+    <meta name="description" content="香港專業網站開發 — 靜態網站 $3,000，動態網站 $4,000。為公司、餐飲、個人及網店、Blog 提供高性價比網站方案。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --border: #e5e7eb;
+            --success: #059669;
+            --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
 
-    <!-- Google Web Font -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!--  Bootstrap 3-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+        html { scroll-behavior: smooth; }
 
-    <!-- OWL Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
+        body {
+            font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
 
-    <!--  Slider -->
-    <link rel="stylesheet" href="css/jquery.kenburnsy.css">
+        /* Nav */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        nav.scrolled { box-shadow: var(--shadow); }
 
-    <!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            padding: 0 24px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
 
-    <!-- Web Icons Font -->
-    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="css/iconmoon.css">
-    <link rel="stylesheet" href="css/et-line.css">
-    <link rel="stylesheet" href="css/ionicons.css">
+        .logo {
+            font-size: 22px; font-weight: 700;
+            color: var(--primary); text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--accent); }
 
-    <!-- Magnific PopUp -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+        .nav-right { display: flex; align-items: center; gap: 24px; }
 
-    <!-- Tabs -->
-    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a {
+            color: var(--text-light); text-decoration: none;
+            font-size: 14px; font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
 
-    <!-- Loader Style -->
-    <link rel="stylesheet" href="css/loader-1.css">
+        .lang-toggle {
+            display: flex; gap: 2px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: 8px; padding: 3px;
+        }
+        .lang-toggle button {
+            border: none; background: none; cursor: pointer;
+            padding: 5px 12px; border-radius: 6px;
+            font-size: 13px; font-weight: 500; color: var(--text-light);
+            transition: all 0.2s;
+        }
+        .lang-toggle button.active {
+            background: var(--bg); color: var(--text);
+            box-shadow: var(--shadow-sm);
+        }
 
-    <!-- Costum Styles -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 12px 28px; border-radius: 8px;
+            font-size: 15px; font-weight: 600; text-decoration: none;
+            transition: all 0.2s; cursor: pointer; border: none;
+        }
+        .btn-primary {
+            background: var(--primary); color: #fff;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow); }
+        .btn-outline {
+            background: transparent; color: var(--text);
+            border: 1.5px solid var(--border);
+        }
+        .btn-outline:hover { border-color: var(--text-light); }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="favicon.ico">
+        /* Hero */
+        .hero {
+            padding: 140px 24px 80px;
+            max-width: 1200px; margin: 0 auto;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #dbeafe; color: var(--primary);
+            padding: 6px 14px; border-radius: 20px;
+            font-size: 13px; font-weight: 500; margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 52px; font-weight: 700; line-height: 1.15;
+            color: var(--text); margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero h1 .highlight { color: var(--primary); }
+        .hero p {
+            font-size: 20px; color: var(--text-light);
+            max-width: 640px; margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-    <!-- Modernizer & Respond js -->
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        .trust-bar {
+            margin-top: 60px; padding-top: 40px;
+            border-top: 1px solid var(--border);
+            display: flex; justify-content: center; gap: 48px;
+            flex-wrap: wrap; opacity: 0.6;
+        }
+        .trust-bar span {
+            font-size: 13px; font-weight: 500; color: var(--text-light);
+            letter-spacing: 0.5px; text-transform: uppercase;
+        }
+
+        /* Sections */
+        section { padding: 96px 24px; }
+        section.alt { background: var(--bg-alt); }
+
+        .section-header {
+            text-align: center; max-width: 640px; margin: 0 auto 64px;
+        }
+        .section-header h2 {
+            font-size: 36px; font-weight: 700; margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .section-header p {
+            font-size: 18px; color: var(--text-light); line-height: 1.7;
+        }
+        .kicker {
+            display: block; font-size: 13px; font-weight: 600;
+            color: var(--accent); text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 12px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 16px; padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            border-color: var(--accent); box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: #dbeafe; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px; font-size: 22px;
+        }
+        .service-card h3 {
+            font-size: 20px; font-weight: 700; margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 15px; color: var(--text-light); line-height: 1.7;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            max-width: 960px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 24px;
+        }
+        .pricing-card {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 20px; padding: 48px 36px;
+            position: relative; transition: all 0.3s;
+        }
+        .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(180deg, #fff 0%, #eff6ff 100%);
+        }
+        .pricing-badge {
+            position: absolute; top: -1px; right: 36px;
+            background: var(--primary); color: #fff;
+            padding: 6px 16px; border-radius: 0 0 8px 8px;
+            font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+        }
+        .pricing-card h3 {
+            font-size: 22px; font-weight: 700; margin-bottom: 8px;
+        }
+        .pricing-card .desc {
+            font-size: 15px; color: var(--text-light); margin-bottom: 24px;
+        }
+        .price-box { margin-bottom: 32px; }
+        .price-current {
+            font-size: 48px; font-weight: 700; color: var(--text);
+            line-height: 1;
+        }
+        .price-current span { font-size: 24px; vertical-align: super; }
+        .price-original {
+            font-size: 16px; color: #9ca3af; text-decoration: line-through;
+            margin-top: 8px;
+        }
+        .price-save {
+            display: inline-block; margin-top: 10px;
+            background: #d1fae5; color: var(--success);
+            padding: 4px 12px; border-radius: 6px;
+            font-size: 13px; font-weight: 600;
+        }
+        .pricing-features { list-style: none; margin-bottom: 32px; }
+        .pricing-features li {
+            display: flex; align-items: flex-start; gap: 12px;
+            padding: 10px 0; font-size: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-features li::before {
+            content: "✓"; flex-shrink: 0;
+            width: 22px; height: 22px; border-radius: 50%;
+            background: #d1fae5; color: var(--success);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; margin-top: 1px;
+        }
+        .pricing-card .btn { width: 100%; }
+
+        /* Contact */
+        .contact-wrap {
+            max-width: 640px; margin: 0 auto;
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 20px; padding: 48px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 14px; font-weight: 500;
+            margin-bottom: 6px; color: var(--text);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 12px 16px;
+            border: 1.5px solid var(--border); border-radius: 10px;
+            font-size: 15px; font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+        }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-actions { display: flex; gap: 12px; margin-top: 8px; }
+        .form-actions .btn { flex: 1; }
+
+        /* Footer */
+        footer {
+            background: #111827; color: #9ca3af;
+            padding: 48px 24px 32px;
+        }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 24px;
+        }
+        .footer-brand {
+            font-size: 20px; font-weight: 700; color: #fff;
+        }
+        .footer-links { display: flex; gap: 24px; list-style: none; }
+        .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .footer-links a:hover { color: #fff; }
+        .footer-copy { font-size: 13px; margin-top: 32px; text-align: center; width: 100%; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 17px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .trust-bar { gap: 24px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Sticky CTA for mobile */
+        .sticky-cta {
+            display: none;
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid var(--border);
+            padding: 12px 24px; gap: 12px; z-index: 999;
+        }
+        .sticky-cta .btn { flex: 1; padding: 12px; font-size: 14px; }
+        @media (max-width: 768px) { .sticky-cta { display: flex; } }
+    </style>
 </head>
-
 <body>
 
-    <!-- Preloader -->
-    <div class="cover"></div>
-
-    <div class="header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo">
-                </a>
-            </div>
-            
-            <!-- Menu Hamburger (Default) -->
-            <button class="main-menu-indicator" id="open-button">
-                <span class="line"></span>
-            </button>
-            
-            <div class="menu-wrap" style="background-image: url(img/nav_bg.jpg)">
-                <div class="menu-content">
-                    <div class="navigation">
-                        <span class="pe-7s-close close-menu" id="close-button"></span>
-                        <div class="search-wrap js-ui-search">
-                            <input class="js-ui-text" type="text" placeholder="Search Here...">
-                            <span class="eks js-ui-close"></span>
-                        </div>
-                    </div>
-                    <nav class="menu">
-                        <div class="menu-list">
-                            <ul>
-                                <li class="menu-item-has-children"><a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">- Default</a></li>
-                                        <li><a href="index-architecture.html">- Architecture</a></li>
-                                        <li><a href="index-full-slider.html">- Slider Full Width</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="menu-item-has-children"><a href="#">Portfolio</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="portfolio-2column.html">-Portfolio 2 Column</a></li>
-                                        <li><a href="portfolio-3column.html">-Portfolio 3 Column</a></li>
-                                        <li><a href="portfolio-masonry.html">-Portfolio Masonry</a></li>
-                                        <li><a href="portfolio-dribbble.html">-Portfolio Dribbble</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-timeline.html">Blog Timeline</a></li>
-                                        <li><a href="single-blog.html">Blog Single</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                    <div class="hidden-xs">
-                        <div class="menu-social-media">
-                            <ul>
-                               <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
-                               <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
-                               <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
-                               <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
-                               <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-information">
-                            <ul>
-                                <li><span>T:</span> 003 124 115</li>
-                                <li><span>E:</span> info@mail.com</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">Easy<span>App</span>Website</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#services" data-zh="服務項目" data-en="Services">服務項目</a></li>
+                    <li><a href="#pricing" data-zh="收費方案" data-en="Pricing">收費方案</a></li>
+                    <li><a href="#contact" data-zh="立即查詢" data-en="Contact">立即查詢</a></li>
+                </ul>
+                <div class="lang-toggle">
+                    <button class="active" onclick="setLang('zh')" id="btn-zh">中文</button>
+                    <button onclick="setLang('en')" id="btn-en">EN</button>
                 </div>
             </div>
-            <!-- End of Menu Hamburger (Default) -->
-
         </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-badge" id="hero-badge">
+            <span>🚀</span> <span data-zh="香港專業網站開發團隊" data-en="Hong Kong Web Development Team">香港專業網站開發團隊</span>
+        </div>
+        <h1 id="hero-title">
+            <span data-zh="輕鬆擁有" data-en="Get a">輕鬆擁有</span>
+            <span class="highlight" data-zh="專業網站" data-en="professional website">專業網站</span><br>
+            <span data-zh="無需高昂的費用" data-en="without the high cost">無需高昂的費用</span>
+        </h1>
+        <p id="hero-subtitle" data-zh="為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。" data-en="Business, restaurant, personal brand & e-commerce websites — at transparent, affordable prices. Delivered in as fast as one week.">
+            為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。
+        </p>
+        <div class="hero-ctas">
+            <a href="#pricing" class="btn btn-primary" data-zh="查看收費方案 ↓" data-en="See Pricing ↓">查看收費方案 ↓</a>
+            <a href="#contact" class="btn btn-outline" data-zh="免費查詢" data-en="Free Enquiry">免費查詢</a>
+        </div>
+
+        <div class="trust-bar">
+            <span data-zh="響應式設計" data-en="Responsive Design">響應式設計</span>
+            <span data-zh="SEO 優化" data-en="SEO Optimized">SEO 優化</span>
+            <span data-zh="快速交付" data-en="Fast Delivery">快速交付</span>
+            <span data-zh="透明定價" data-en="Transparent Pricing">透明定價</span>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="alt" id="services">
+        <div class="section-header">
+            <span class="kicker" data-zh="/ 服務項目" data-en="/ SERVICES">/ 服務項目</span>
+            <h2 data-zh="為您量身打造" data-en="Built for you">為您量身打造</h2>
+            <p data-zh="從靜態展示網站到動態 WordPress 網店，我們提供簡單直接的方案，讓您以最低成本在網上建立專業形象。" data-en="From static showcase sites to dynamic WordPress stores — simple, direct solutions to build your online presence at the lowest cost.">
+                從靜態展示網站到動態 WordPress 網店，我們提供簡單直接的方案，讓您以最低成本在網上建立專業形象。
+            </p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">🏢</div>
+                <h3 data-zh="公司網站" data-en="Company Website">公司網站</h3>
+                <p data-zh="展示企業形象、服務及聯絡資訊。適合中小企快速上線，建立客戶信任。" data-en="Showcase your business, services & contact info. Perfect for SMEs to launch quickly and build customer trust.">
+                    展示企業形象、服務及聯絡資訊。適合中小企快速上線，建立客戶信任。
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🍜</div>
+                <h3 data-zh="餐飲網站" data-en="Restaurant / F&B">餐飲網站</h3>
+                <p data-zh="菜單展示、品牌故事、訂座連結。幫助餐廳在搜尋引擎脫穎而出。" data-en="Menu display, brand story, reservation links. Help your restaurant stand out in search results.">
+                    菜單展示、品牌故事、訂座連結。幫助餐廳在搜尋引擎脫穎而出。
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">👤</div>
+                <h3 data-zh="個人網站 / 品牌" data-en="Personal / Portfolio">個人網站 / 品牌</h3>
+                <p data-zh="設計師、攝影師、自由工作者作品集。簡潔有力，突出個人風格。" data-en="Designers, photographers, freelancers — clean, impactful portfolios that highlight your personal style.">
+                    設計師、攝影師、自由工作者作品集。簡潔有力，突出個人風格。
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🛒</div>
+                <h3 data-zh="網店 / Blog" data-en="E-commerce / Blog">網店 / Blog</h3>
+                <p data-zh="WordPress + WooCommerce 完整方案。輕鬆管理產品、訂單及內容，自訂收款方式。" data-en="Full WordPress + WooCommerce setup. Easily manage products, orders & content with custom payment methods.">
+                    WordPress + WooCommerce 完整方案。輕鬆管理產品、訂單及內容，自訂收款方式。
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">📱</div>
+                <h3 data-zh="響應式設計" data-en="Responsive Design">響應式設計</h3>
+                <p data-zh="自動適配桌面、手機及平板。無論用戶使用什麼裝置，您的網站都能完美呈現。" data-en="Auto-adapts to desktop, mobile & tablet. Your site looks perfect on any device your visitors use.">
+                    自動適配桌面、手機及平板。無論用戶使用什麼裝置，您的網站都能完美呈現。
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🔍</div>
+                <h3 data-zh="基本 SEO" data-en="Basic SEO">基本 SEO</h3>
+                <p data-zh="結構化標籤、速度優化及搜尋引擎設定。讓 Google 更容易找到您的網站。" data-en="Structured tags, speed optimization & search engine setup. Make it easy for Google to find your site.">
+                    結構化標籤、速度優化及搜尋引擎設定。讓 Google 更容易找到您的網站。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="section-header">
+            <span class="kicker" data-zh="/ 收費方案" data-en="/ PRICING">/ 收費方案</span>
+            <h2 data-zh="明碼實價，無隱藏費用" data-en="Transparent Pricing, No Hidden Fees">明碼實價，無隱藏費用</h2>
+            <p data-zh="香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。" data-en="Most HK agencies hide their prices. We choose transparency so you can decide with confidence.">
+                香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。
+            </p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card fade-in">
+                <h3 data-zh="靜態網站" data-en="Static Website">靜態網站</h3>
+                <p class="desc" data-zh="適合公司、餐飲、個人品牌展示" data-en="Perfect for company, restaurant & personal brand showcases">適合公司、餐飲、個人品牌展示</p>
+                <div class="price-box">
+                    <div class="price-current"><span>$</span>3,000</div>
+                    <div class="price-original" data-zh="原價 $5,000" data-en="Was $5,000">原價 $5,000</div>
+                    <div class="price-save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
+                </div>
+                <ul class="pricing-features">
+                    <li data-zh="6 版 HTML 頁面" data-en="6 HTML pages">6 版 HTML 頁面</li>
+                    <li data-zh="響應式設計（桌面 + 手機）" data-en="Responsive design (desktop + mobile)">響應式設計（桌面 + 手機）</li>
+                    <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
+                    <li data-zh="聯絡表單整合" data-en="Contact form integration">聯絡表單整合</li>
+                    <li data-zh="域名及部署協助" data-en="Domain & deployment assistance">域名及部署協助</li>
+                    <li data-zh="1 週內交付" data-en="Delivered within 1 week">1 週內交付</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+            </div>
+
+            <div class="pricing-card featured fade-in">
+                <div class="pricing-badge" data-zh="熱門選擇" data-en="Most Popular">熱門選擇</div>
+                <h3 data-zh="動態網站" data-en="Dynamic Website">動態網站</h3>
+                <p class="desc" data-zh="WordPress 網店、Blog 及內容管理系統" data-en="WordPress store, blog & content management">WordPress 網店、Blog 及內容管理系統</p>
+                <div class="price-box">
+                    <div class="price-current"><span>$</span>4,000</div>
+                    <div class="price-original" data-zh="原價 $6,000" data-en="Was $6,000">原價 $6,000</div>
+                    <div class="price-save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
+                </div>
+                <ul class="pricing-features">
+                    <li data-zh="Database 驅動（WordPress）" data-en="Database-driven (WordPress)">Database 驅動（WordPress）</li>
+                    <li data-zh="內容管理系統（自行更新）" data-en="Content management system (self-update)">內容管理系統（自行更新）</li>
+                    <li data-zh="網店 / Blog 功能" data-en="Store / blog functionality">網店 / Blog 功能</li>
+                    <li data-zh="響應式設計（桌面 + 手機）" data-en="Responsive design (desktop + mobile)">響應式設計（桌面 + 手機）</li>
+                    <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
+                    <li data-zh="域名及部署協助" data-en="Domain & deployment assistance">域名及部署協助</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Enquiry -->
+    <section class="alt" id="contact">
+        <div class="section-header">
+            <span class="kicker" data-zh="/ 立即查詢" data-en="/ ENQUIRY">/ 立即查詢</span>
+            <h2 data-zh="準備好開始了嗎？" data-en="Ready to start?">準備好開始了嗎？</h2>
+            <p data-zh="填寫下方表格，我們會在 24 小時內回覆您的查詢。" data-en="Fill in the form below and we'll reply within 24 hours.">
+                填寫下方表格，我們會在 24 小時內回覆您的查詢。
+            </p>
+        </div>
+        <div class="contact-wrap fade-in">
+            <form action="mailto:info@easyappwebsite.com" method="GET" enctype="text/plain">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-zh="姓名 / 公司名" data-en="Name / Company">姓名 / 公司名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-zh="電郵" data-en="Email">電郵</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" data-zh="電話（選填）" data-en="Phone (optional)">電話（選填）</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="plan" data-zh="感興趣的方案" data-en="Interested plan">感興趣的方案</label>
+                        <select id="plan" name="plan">
+                            <option value="" data-zh="請選擇" data-en="Please select">請選擇</option>
+                            <option value="static" data-zh="靜態網站 ($3,000)" data-en="Static Website ($3,000)">靜態網站 ($3,000)</option>
+                            <option value="dynamic" data-zh="動態網站 ($4,000)" data-en="Dynamic Website ($4,000)">動態網站 ($4,000)</option>
+                            <option value="unsure" data-zh="不確定，需要建議" data-en="Unsure, need advice">不確定，需要建議</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-zh="項目簡介" data-en="Project details">項目簡介</label>
+                    <textarea id="message" name="message" placeholder="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-en="Briefly describe your website needs, e.g. site type, number of pages or features..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" data-zh="發送查詢 →" data-en="Send Enquiry →">發送查詢 →</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">Easy<span style="color:#3b82f6;">App</span>Website</div>
+            <ul class="footer-links">
+                <li><a href="#services" data-zh="服務" data-en="Services">服務</a></li>
+                <li><a href="#pricing" data-zh="收費" data-en="Pricing">收費</a></li>
+                <li><a href="#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
+            </ul>
+        </div>
+        <div class="footer-copy">
+            <span data-zh="© 2025 EasyAppWebsite. 保留一切權利。" data-en="© 2025 EasyAppWebsite. All rights reserved.">© 2025 EasyAppWebsite. 保留一切權利。</span>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <a href="#pricing" class="btn btn-outline" data-zh="收費方案" data-en="Pricing">收費方案</a>
+        <a href="#contact" class="btn btn-primary" data-zh="免費查詢" data-en="Enquiry">免費查詢</a>
     </div>
 
-    <div class="container">
-        <div class="slider-wrapper">
-            <div class="slider-description">
-                <div class="slider-description-inner">
-                <h1><span>網頁設計</span></h1>
-                </div>
-                <div class="cd-intro">
-                    <div class="cd-headline clip">
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">AWESOME THEME</b>
-                            <b>MODERN COMBINATION</b>
-                            <b>CREATIVE SOLUTIONS</b>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div id="slider-ef" class="slider-images-wrapper">
-                <img class="img-responsive" src="img/slider/image_1.jpg" alt="">
-                <img class="img-responsive" src="img/slider/image_2.jpg" alt="">
-                <img class="img-responsive" src="img/slider/image_3.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="container margin-top">
-        <div class="history-wrapper">
-            <div class="col-md-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
-                <div class="row">
-                    <article>
-                        <h1>HISTORY OF AGENCY</h1>
-                        <hr>
-                        <h4>WHO LOVES OR PURSUES OR DESIRES TO OBTAIN PAIN OF ITSELF, BUT BECAUSE OCCASIONALLY CIRCUMSTANCES OCCUR AND PAIN CAN PROCURE HIM SOME GREAT PLEASURE</h4>
-                        <p>
-                        <br/>Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi modi tempora incidunt ut labore.</p>
-                    </article>
-                </div>
-            </div>
-            <div class="col-md-5 col-md-offset-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                <div class="row">
-                    <div id="history-images" class="owl-carousel">
-                        <div><img class="img-responsive center-block" src="img/about_img.jpg" alt="About"></div>
-                        <div><img class="img-responsive center-block" src="img/about_img2.jpg" alt="About"></div>
-                        <div><img class="img-responsive center-block" src="img/about_img3.jpg" alt="About"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container margin-top">
-        <div class="main-title">
-            <h1>WHY CHOOSE US?</h1>
-            <hr>
-            <h6>Except to obtain some advantage from it</h6>
-        </div>
-        <div class="services-home-page">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="services-icon">
-                        <span class="icon-tools"></span>
-                        <hr>
-                    </div>
-                    <h4>BRANDING</h4>
-                    <p>Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because procure him.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-icon">
-                        <span class="icon-globe"></span>
-                        <hr>
-                    </div>
-                    <h4>PLAN OF WORK</h4>
-                    <p>Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because procure him.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-icon">
-                        <span class="icon-paintbrush"></span>
-                        <hr>
-                    </div>
-                    <h4>ILUSTRATION</h4>
-                    <p>Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because procure him.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Section -->
-    <div class="container margin-top">
-        <div class="main-title">
-            <h1>收費方案</h1>
-            <hr>
-            <h6>透明定價，無隱藏費用</h6>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="pricing-box text-center" style="border:1px solid #eee;padding:40px 20px;margin-bottom:30px;">
-                    <div class="pricing-header">
-                        <h3 style="font-size:22px;letter-spacing:2px;margin-bottom:20px;">靜態網站</h3>
-                        <div class="pricing-price" style="margin-bottom:20px;">
-                            <span style="font-size:48px;font-weight:700;color:#333;">$3,000</span>
-                            <span style="display:block;font-size:14px;color:#999;text-decoration:line-through;margin-top:5px;">原價 $5,000</span>
-                        </div>
-                    </div>
-                    <hr style="width:60px;margin:20px auto;">
-                    <div class="pricing-features" style="font-size:14px;color:#666;line-height:2.2;">
-                        <p>6 版 HTML 頁面</p>
-                        <p>公司 / 餐飲 / 個人網站</p>
-                        <p>響應式設計</p>
-                        <p>基本 SEO 設定</p>
-                        <p>聯絡表單</p>
-                    </div>
-                    <div style="margin-top:30px;">
-                        <a href="contact.html" class="btn btn-default" style="padding:12px 30px;font-size:12px;letter-spacing:2px;">立即查詢</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pricing-box text-center" style="border:1px solid #eee;padding:40px 20px;margin-bottom:30px;">
-                    <div class="pricing-header">
-                        <h3 style="font-size:22px;letter-spacing:2px;margin-bottom:20px;">動態網站</h3>
-                        <div class="pricing-price" style="margin-bottom:20px;">
-                            <span style="font-size:48px;font-weight:700;color:#333;">$4,000</span>
-                            <span style="display:block;font-size:14px;color:#999;text-decoration:line-through;margin-top:5px;">原價 $6,000</span>
-                        </div>
-                    </div>
-                    <hr style="width:60px;margin:20px auto;">
-                    <div class="pricing-features" style="font-size:14px;color:#666;line-height:2.2;">
-                        <p>Database 驅動</p>
-                        <p>WordPress 網店 / Blog</p>
-                        <p>內容管理系統</p>
-                        <p>響應式設計</p>
-                        <p>基本 SEO 設定</p>
-                    </div>
-                    <div style="margin-top:30px;">
-                        <a href="contact.html" class="btn btn-default" style="padding:12px 30px;font-size:12px;letter-spacing:2px;">立即查詢</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Pricing Section -->
-    <div class="container margin-top">
-        <div class="main-title">
-            <h1>OUR WORK</h1>
-            <hr>
-            <h6>Laborious to obtain some advantage from it</h6>
-        </div>
-        <div class="portfolio-wrapper">
-            <button class="nav">
-                <span class="icon-container">
-                    <span class="line line01"></span>
-                    <span class="line line02"></span>
-                    <span class="line line03"></span>
-                    <span class="line line04"></span>
-                </span>
-            </button>
-            <div class="works-filter">
-                <a href="javascript:void(0)" class="filter active" data-filter="mix">All</a>
-                <a href="javascript:void(0)" class="filter" data-filter="branding">Branding</a>
-                <a href="javascript:void(0)" class="filter" data-filter="web">Web Design</a>
-                <a href="javascript:void(0)" class="filter" data-filter="graphic">Graphic Design</a>
-            </div>
-            <div class="js-masonry">
-                <div class="row" id="work-grid">
-                    <!-- Begin of Thumbs Portfolio -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_1.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">250</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix web">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_2.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">60</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">WATCH-J</span>
-                                    <span class="info">NEW TREND FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix graphic">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_3.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">1060</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_4.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">900</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_5.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">979</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_6.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">1024</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_7.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">2048</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_8.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">256</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 mix branding">
-                        <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_9.jpg" alt="Portfolio Item">
-                            <div class="overlay-thumb">
-                                <a href="javascript:void(0)" class="like-product">
-                                    <i class="ion-ios-heart-outline"></i>
-                                    <span class="like-product">Liked</span>
-                                    <span class="output">256</span>
-                                </a>
-                                <div class="details">
-                                    <span class="title">STYLE FASHION</span>
-                                    <span class="info">NEW BAG & STYLE FASHION</span>
-                                </div>
-                                <span class="btnBefore"></span>
-                                <span class="btnAfter"></span>
-                                <a class="main-portfolio-link" href="single-project.html"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="load-more">
-                <a href="javascript:void(0)" id="load-more"><i class="icon-refresh"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="container margin-top">
-        <div class="newsletter">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="newsletter-left">
-                        <div class="newsletter-left-inner">
-                            <h1>STAY INFORMED <br> WITH OUR <b>NEWSLETTER</b></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="newsletter-right" style="background: url(img/newsletter-bg.jpg)">
-                        <div class="newsletter-right-inner">
-                            <form>
-                                <input type="text" name="newsletter" placeholder="ENTER YOUR EMAIL">
-                                <input type="submit" value="SUBSCRIBE">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer margin-top">
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-2 col-sm-4 col-xs-12">
-                        <div class="footer-inner">
-                            <div class="footer-content">
-                                <h4>O.A.K THEME</h4>
-                                    <address>City 35 AM <br>Street 1395 p.n <br>your Country</address>
-                            </div>
-                        </div>
-                    </div>
+    <script>
+        // Language Switcher
+        let currentLang = 'zh';
 
-                    <div class="col-md-2 col-md-push-8 col-sm-4 col-xs-12">
-                        <div class="footer-inner">
-                            <div class="footer-content">
-                               <h4>CONTACT INFO</h4>
-                                <p>
-                                    T:003 124 115 <br>
-                                    E:info@mail.com <br>
-                                    W:www.website.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        function setLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
 
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-inner">
-                            <div class="footer-content">
-                            <ul class="social-media">
-                                <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-flickr2"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
-                            </ul>
-                            <span class="copyright-mark">&copy; 2015 OAK, ALL RIGHTS RESERVED</span>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-    <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
+            // Update buttons
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script data-pace-options='{ "ajax": false }' src="js/vendor/pace.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/classie.js"></script>
-    <script src="js/vendor/isotope.pkgd.min.js"></script>
-    <script src="js/vendor/jquery.velocity.min.js"></script>
-    <script src="js/vendor/jquery.kenburnsy.min.js"></script>
-    <script src="js/vendor/textslide.js"></script>
-    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="js/vendor/tabs.js"></script>
-    <script src="js/ef-slider.js"></script>    
-    <script src="js/vendor/owl.carousel.min.js"></script>
-    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="js/vendor/jquery.social-buttons.min.js"></script>
-    <script src="js/vendor/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/ajax.js"></script>
+            // Update text content
+            document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    // skip, handled by placeholder
+                } else {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+                el.placeholder = lang === 'zh'
+                    ? el.getAttribute('placeholder')
+                    : el.getAttribute('data-placeholder-en');
+            });
+
+            // Update select options
+            document.querySelectorAll('select option[data-zh]').forEach(opt => {
+                opt.textContent = opt.getAttribute('data-' + lang);
+            });
+
+            // Update title
+            document.title = lang === 'zh'
+                ? 'EasyAppWebsite — 輕鬆建站 | Web & App Development'
+                : 'EasyAppWebsite — Affordable Web & App Development';
+        }
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Smooth anchor scroll offset for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
