@@ -203,12 +203,14 @@
         .work-preview {
             height: 200px; position: relative; overflow: hidden;
             display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: top center;
         }
-        .work-swatch {
-            width: 64px; height: 64px; border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-            position: relative; z-index: 2;
+        .work-preview::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.25) 100%);
+            z-index: 1;
         }
+        .work-swatch { display: none; }
         .work-overlay {
             position: absolute; bottom: 16px; left: 16px;
             z-index: 2;
@@ -434,8 +436,7 @@
             <!-- mycantopop.hk -->
             <div class="work-card fade-in">
                 <a href="https://mycantopop.hk" target="_blank" rel="noopener" class="work-link">
-                    <div class="work-preview" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #4a1a4a 100%);">
-                        <div class="work-swatch" style="background: #ff2d95;"></div>
+                    <div class="work-preview" style="background-image: url('img/portfolio/mycantopop.png');">
                         <div class="work-overlay">
                             <span class="work-tag" data-zh="音樂創作平台" data-en="Music Creation">音樂創作平台</span>
                         </div>
@@ -453,8 +454,7 @@
             <!-- whysolution.hk -->
             <div class="work-card fade-in">
                 <a href="https://whysolution.hk" target="_blank" rel="noopener" class="work-link">
-                    <div class="work-preview" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #dcfce7 100%);">
-                        <div class="work-swatch" style="background: #10b981;"></div>
+                    <div class="work-preview" style="background-image: url('img/portfolio/whysolution.png');">
                         <div class="work-overlay">
                             <span class="work-tag" data-zh="AI 解決方案" data-en="AI Solutions">AI 解決方案</span>
                         </div>
@@ -472,8 +472,7 @@
             <!-- neonlight.pro -->
             <div class="work-card fade-in">
                 <a href="https://neonlight.pro" target="_blank" rel="noopener" class="work-link">
-                    <div class="work-preview" style="background: linear-gradient(135deg, #0a0a0a 0%, #0f172a 50%, #164e63 100%);">
-                        <div class="work-swatch" style="background: #06b6d4;"></div>
+                    <div class="work-preview" style="background-image: url('img/portfolio/neonlight.png');">
                         <div class="work-overlay">
                             <span class="work-tag" data-zh="霓虹燈設計" data-en="Neon Design">霓虹燈設計</span>
                         </div>
