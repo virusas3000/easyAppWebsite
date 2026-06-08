@@ -224,7 +224,7 @@
         .pricing { padding: 80px 24px; background: var(--bg-alt); }
         .pricing-inner { max-width: 1200px; margin: 0 auto; }
         .pricing-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;
         }
         .price-card {
             background: #fff; border-radius: 16px; overflow: hidden;
@@ -680,6 +680,28 @@
                     </div>
                 </div>
 
+                <!-- App Development -->
+                <div class="price-card fade-in">
+                    <div class="price-header" style="background: linear-gradient(135deg, #059669, #10b981);">
+                        <h3 data-zh="App 開發" data-en="App Development">App 開發</h3>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-tag">
+                            <div class="big"><span>$</span>15,000+</div>
+                            <div class="strike" data-zh="按功能報價" data-en="Custom quote">按功能報價</div>
+                        </div>
+                        <ul>
+                            <li data-zh="iOS / Android 原生或跨平台" data-en="iOS / Android native or cross-platform">iOS / Android 原生或跨平台</li>
+                            <li data-zh="Flutter 或 React Native 開發" data-en="Flutter or React Native">Flutter 或 React Native 開發</li>
+                            <li data-zh="App Store / Play Store 上架" data-en="App Store / Play Store publishing">App Store / Play Store 上架</li>
+                            <li data-zh="推送通知功能" data-en="Push notifications">推送通知功能</li>
+                            <li data-zh="用戶認證及後台系統" data-en="Auth &amp; admin panel">用戶認證及後台系統</li>
+                            <li data-zh="API 整合及數據同步" data-en="API &amp; data sync">API 整合及數據同步</li>
+                        </ul>
+                        <a href="#contact" class="price-btn" style="background: #059669; color: #fff;" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
+                    </div>
+                </div>
+
                 <!-- Custom -->
                 <div class="price-card fade-in">
                     <div class="price-header blue">
@@ -739,6 +761,7 @@
                             <option value="dynamic" data-zh="動態網站 ($4,000)" data-en="Dynamic ($4,000)">動態網站 ($4,000)</option>
                             <option value="ecommerce" data-zh="網店進階版 ($6,000+)" data-en="Advanced Store ($6,000+)">網店進階版 ($6,000+)</option>
                             <option value="custom" data-zh="度身訂造 ($8,000+)" data-en="Custom ($8,000+)">度身訂造 ($8,000+)</option>
+                            <option value="app" data-zh="App 開發 ($15,000+)" data-en="App Dev ($15,000+)">App 開發 ($15,000+)</option>
                             <option value="unsure" data-zh="不確定，需要建議" data-en="Unsure, need advice">不確定，需要建議</option>
                         </select>
                     </div>
