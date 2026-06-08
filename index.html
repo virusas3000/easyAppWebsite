@@ -667,7 +667,7 @@
                 </div>
                 <div class="form-group">
                     <label for="message" data-zh="項目簡介" data-en="Project details">項目簡介</label>
-                    <textarea id="message" name="message" placeholder="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-en="Briefly describe your website needs, e.g. site type, pages or features..."></textarea>
+                    <textarea id="message" name="message" placeholder="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-zh="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-en="Briefly describe your website needs, e.g. site type, pages or features..."></textarea>
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-white" style="background:var(--red);color:#fff;flex:1;" data-zh="發送查詢 →" data-en="Send Enquiry →">發送查詢 →</button>
@@ -741,9 +741,9 @@
                 }
             });
             document.querySelectorAll('[data-placeholder-en]').forEach(el => {
-                el.placeholder = lang === 'zh'
-                    ? el.getAttribute('placeholder')
-                    : el.getAttribute('data-placeholder-en');
+                const zh = el.getAttribute('data-placeholder-zh') || el.getAttribute('placeholder');
+                const en = el.getAttribute('data-placeholder-en');
+                el.placeholder = lang === 'zh' ? zh : en;
             });
             document.querySelectorAll('select option[data-zh]').forEach(opt => {
                 opt.textContent = opt.getAttribute('data-' + lang);
