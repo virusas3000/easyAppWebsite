@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyAppWebsite — 輕鬆建站 | Web & App Development</title>
+    <title>EasyAppWebsite — 輕鬆建站 | Web &amp; App Development</title>
     <meta name="description" content="香港專業網站開發 — 靜態網站 $3,000，動態網站 $4,000。為公司、餐飲、個人及網店、Blog 提供高性價比網站方案。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e40af;
-            --primary-dark: #1e3a8a;
-            --accent: #3b82f6;
+            --red: #dc2626;
+            --red-dark: #b91c1c;
+            --red-light: #fecaca;
+            --maroon: #7f1d1d;
+            --pink: #fce7f3;
             --text: #1f2937;
             --text-light: #6b7280;
             --bg: #ffffff;
@@ -22,51 +24,58 @@
             --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
             --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background: var(--bg);
+            color: var(--text); line-height: 1.6; background: var(--bg);
             -webkit-font-smoothing: antialiased;
         }
+        a { text-decoration: none; color: inherit; }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--red); color: #fff; font-size: 13px; padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1200px; margin: 0 auto;
+            padding: 0 24px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        .top-bar a { color: #fff; opacity: 0.9; transition: opacity 0.2s; }
+        .top-bar a:hover { opacity: 1; }
 
         /* Nav */
         nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-            background: rgba(255,255,255,0.92);
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             transition: box-shadow 0.3s;
         }
         nav.scrolled { box-shadow: var(--shadow); }
-
         .nav-inner {
             max-width: 1200px; margin: 0 auto;
-            padding: 0 24px; height: 64px;
+            padding: 0 24px; height: 68px;
             display: flex; align-items: center; justify-content: space-between;
         }
-
         .logo {
-            font-size: 22px; font-weight: 700;
-            color: var(--primary); text-decoration: none;
-            letter-spacing: -0.5px;
+            font-size: 22px; font-weight: 900; color: var(--red);
+            display: flex; align-items: center; gap: 8px;
         }
-        .logo span { color: var(--accent); }
-
+        .logo-icon {
+            width: 36px; height: 36px; background: var(--red);
+            border-radius: 8px; display: flex;
+            align-items: center; justify-content: center;
+            color: #fff; font-size: 18px; font-weight: 700;
+        }
         .nav-right { display: flex; align-items: center; gap: 24px; }
-
         .nav-links { display: flex; gap: 28px; list-style: none; }
         .nav-links a {
-            color: var(--text-light); text-decoration: none;
-            font-size: 14px; font-weight: 500; transition: color 0.2s;
+            color: var(--text); text-decoration: none;
+            font-size: 15px; font-weight: 500; transition: color 0.2s;
         }
-        .nav-links a:hover { color: var(--primary); }
-
+        .nav-links a:hover { color: var(--red); }
         .lang-toggle {
             display: flex; gap: 2px;
             background: var(--bg-alt); border: 1px solid var(--border);
@@ -82,111 +91,206 @@
             background: var(--bg); color: var(--text);
             box-shadow: var(--shadow-sm);
         }
-
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: 12px 28px; border-radius: 8px;
-            font-size: 15px; font-weight: 600; text-decoration: none;
-            transition: all 0.2s; cursor: pointer; border: none;
+        .nav-cta {
+            background: var(--red); color: #fff;
+            padding: 10px 22px; border-radius: 8px;
+            font-size: 14px; font-weight: 600;
+            transition: background 0.2s;
         }
-        .btn-primary {
-            background: var(--primary); color: #fff;
-        }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow); }
-        .btn-outline {
-            background: transparent; color: var(--text);
-            border: 1.5px solid var(--border);
-        }
-        .btn-outline:hover { border-color: var(--text-light); }
+        .nav-cta:hover { background: var(--red-dark); }
 
         /* Hero */
         .hero {
-            padding: 140px 24px 80px;
-            max-width: 1200px; margin: 0 auto;
-            text-align: center;
+            background: linear-gradient(135deg, #fce7f3 0%, #fda4af 30%, #f43f5e 60%, #dc2626 100%);
+            padding: 100px 24px 90px; position: relative; overflow: hidden;
         }
+        .hero-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; gap: 60px;
+        }
+        .hero-text { flex: 1; }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 6px;
-            background: #dbeafe; color: var(--primary);
-            padding: 6px 14px; border-radius: 20px;
-            font-size: 13px; font-weight: 500; margin-bottom: 24px;
+            background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);
+            color: #7f1d1d; padding: 6px 16px; border-radius: 20px;
+            font-size: 13px; font-weight: 600; margin-bottom: 20px;
         }
         .hero h1 {
-            font-size: 52px; font-weight: 700; line-height: 1.15;
-            color: var(--text); margin-bottom: 20px;
-            letter-spacing: -1px;
+            font-size: 48px; font-weight: 900; color: #fff;
+            line-height: 1.15; margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .hero h1 .highlight { color: var(--primary); }
+        .hero h1 span { color: #fef08a; }
         .hero p {
-            font-size: 20px; color: var(--text-light);
-            max-width: 640px; margin: 0 auto 36px;
-            line-height: 1.7;
+            font-size: 18px; color: rgba(255,255,255,0.95);
+            max-width: 520px; margin-bottom: 32px; line-height: 1.7;
         }
-        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-        .trust-bar {
-            margin-top: 60px; padding-top: 40px;
-            border-top: 1px solid var(--border);
-            display: flex; justify-content: center; gap: 48px;
-            flex-wrap: wrap; opacity: 0.6;
+        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 8px; padding: 14px 32px; border-radius: 8px;
+            font-size: 16px; font-weight: 700; transition: all 0.2s;
+            cursor: pointer; border: none;
         }
-        .trust-bar span {
-            font-size: 13px; font-weight: 500; color: var(--text-light);
-            letter-spacing: 0.5px; text-transform: uppercase;
+        .btn-white {
+            background: #fff; color: var(--red);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.5); color: #fff;
+            background: transparent;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+        /* Floating decorations */
+        .float-card {
+            position: absolute; background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 16px; padding: 16px 20px;
+            color: #fff; font-size: 14px; font-weight: 500;
+            animation: float 6s ease-in-out infinite;
+        }
+        .float-1 { top: 15%; right: 8%; transform: rotate(6deg); animation-delay: 0s; }
+        .float-2 { bottom: 22%; right: 18%; transform: rotate(-4deg); animation-delay: 2s; }
+        .float-3 { top: 28%; right: 22%; width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; animation-delay: 4s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+            50% { transform: translateY(-12px) rotate(var(--r, 0deg)); }
         }
 
-        /* Sections */
-        section { padding: 96px 24px; }
-        section.alt { background: var(--bg-alt); }
-
+        /* Features */
+        .features { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
         .section-header {
             text-align: center; max-width: 640px; margin: 0 auto 64px;
         }
         .section-header h2 {
-            font-size: 36px; font-weight: 700; margin-bottom: 16px;
-            letter-spacing: -0.5px;
+            font-size: 36px; font-weight: 900; margin-bottom: 16px;
         }
         .section-header p {
             font-size: 18px; color: var(--text-light); line-height: 1.7;
         }
         .kicker {
             display: block; font-size: 13px; font-weight: 600;
-            color: var(--accent); text-transform: uppercase;
+            color: var(--red); text-transform: uppercase;
             letter-spacing: 1.5px; margin-bottom: 12px;
         }
-
-        /* Services Grid */
-        .services-grid {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+        .features-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
         }
-        .service-card {
-            background: var(--bg); border: 1px solid var(--border);
-            border-radius: 16px; padding: 40px 32px;
-            transition: all 0.3s;
+        .feature-card {
+            border: 1px solid var(--border); border-radius: 16px;
+            padding: 40px 28px; text-align: center;
+            transition: all 0.3s; background: var(--bg);
         }
-        .service-card:hover {
-            border-color: var(--accent); box-shadow: var(--shadow-lg);
+        .feature-card:hover {
+            border-color: var(--red); box-shadow: 0 10px 40px rgba(220,38,38,0.1);
             transform: translateY(-4px);
         }
-        .service-icon {
-            width: 48px; height: 48px; border-radius: 12px;
-            background: #dbeafe; display: flex; align-items: center; justify-content: center;
-            margin-bottom: 20px; font-size: 22px;
+        .feature-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 28px;
         }
-        .service-card h3 {
-            font-size: 20px; font-weight: 700; margin-bottom: 12px;
-        }
-        .service-card p {
-            font-size: 15px; color: var(--text-light); line-height: 1.7;
-        }
+        .feature-card:nth-child(1) .feature-icon { background: #fee2e2; }
+        .feature-card:nth-child(2) .feature-icon { background: #dbeafe; }
+        .feature-card:nth-child(3) .feature-icon { background: #dcfce7; }
+        .feature-card:nth-child(4) .feature-icon { background: #fef9c3; }
+        .feature-card:nth-child(5) .feature-icon { background: #f3e8ff; }
+        .feature-card:nth-child(6) .feature-icon { background: #ffedd5; }
+        .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+        .feature-card p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
 
-        /* Works / Portfolio Grid */
-        .works-grid {
+        /* Stats Bar */
+        .stats {
+            background: var(--maroon); color: #fff; padding: 60px 24px;
+        }
+        .stats-inner {
             max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 56px; font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #fecaca 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .stat-label { font-size: 16px; opacity: 0.85; margin-top: 8px; }
+
+        /* Pricing */
+        .pricing { padding: 80px 24px; background: var(--bg-alt); }
+        .pricing-inner { max-width: 1200px; margin: 0 auto; }
+        .pricing-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+        }
+        .price-card {
+            background: #fff; border-radius: 16px; overflow: hidden;
+            border: 1px solid var(--border); transition: all 0.3s;
+        }
+        .price-card:hover {
+            box-shadow: var(--shadow-lg); transform: translateY(-4px);
+        }
+        .price-header {
+            padding: 24px 20px 16px; text-align: center;
+        }
+        .price-header.purple { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+        .price-header.red { background: linear-gradient(135deg, #dc2626, #ef4444); }
+        .price-header.orange { background: linear-gradient(135deg, #ea580c, #f97316); }
+        .price-header.blue { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .price-header h3 { color: #fff; font-size: 18px; font-weight: 700; }
+        .price-body { padding: 24px 20px; }
+        .price-tag { text-align: center; margin-bottom: 20px; }
+        .price-tag .big { font-size: 36px; font-weight: 900; color: var(--text); }
+        .price-tag .big span { font-size: 20px; vertical-align: super; }
+        .price-tag .strike {
+            font-size: 16px; color: #9ca3af; text-decoration: line-through;
+        }
+        .price-tag .save {
+            display: inline-block; margin-top: 8px;
+            background: #d1fae5; color: var(--success);
+            padding: 4px 12px; border-radius: 6px;
+            font-size: 13px; font-weight: 600;
+        }
+        .price-body ul { list-style: none; font-size: 14px; }
+        .price-body li {
+            padding: 8px 0; border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .price-body li:last-child { border-bottom: none; }
+        .price-body li::before {
+            content: "✓"; color: var(--success); font-weight: 700; flex-shrink: 0;
+            width: 20px; height: 20px; border-radius: 50%;
+            background: #d1fae5; display: flex; align-items: center; justify-content: center;
+            font-size: 11px; margin-top: 1px;
+        }
+        .price-btn {
+            display: block; text-align: center;
+            padding: 12px; border-radius: 8px;
+            font-size: 15px; font-weight: 700;
+            margin-top: 20px; transition: all 0.2s;
+        }
+        .price-btn.purple { background: #8b5cf6; color: #fff; }
+        .price-btn.purple:hover { background: #7c3aed; }
+        .price-btn.red { background: var(--red); color: #fff; }
+        .price-btn.red:hover { background: var(--red-dark); }
+        .price-btn.orange { background: #ea580c; color: #fff; }
+        .price-btn.orange:hover { background: #c2410c; }
+        .price-btn.blue { background: #2563eb; color: #fff; }
+        .price-btn.blue:hover { background: #1d4ed8; }
+
+        /* Portfolio */
+        .portfolio { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+        .portfolio-sub {
+            text-align: center; color: var(--red);
+            font-size: 15px; font-weight: 700; margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .works-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
+            gap: 28px; margin-top: 40px;
         }
         .work-card {
             background: var(--bg); border: 1px solid var(--border);
@@ -194,109 +298,36 @@
             transition: all 0.3s;
         }
         .work-card:hover {
-            border-color: var(--accent); box-shadow: var(--shadow-lg);
+            border-color: var(--red); box-shadow: var(--shadow-lg);
             transform: translateY(-4px);
         }
-        .work-link {
-            display: block; text-decoration: none; color: inherit;
-        }
+        .work-link { display: block; }
         .work-preview {
-            height: 200px; position: relative; overflow: hidden;
-            display: flex; align-items: center; justify-content: center;
-            background-size: cover; background-position: top center;
+            height: 220px; background-size: cover; background-position: top center;
+            position: relative;
         }
-        .work-preview::after {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.25) 100%);
-            z-index: 1;
-        }
-        .work-swatch { display: none; }
         .work-overlay {
-            position: absolute; bottom: 16px; left: 16px;
-            z-index: 2;
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
         }
         .work-tag {
+            display: inline-block;
             background: rgba(255,255,255,0.95); color: var(--text);
             padding: 6px 14px; border-radius: 20px;
-            font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
-            backdrop-filter: blur(4px);
+            font-size: 12px; font-weight: 600;
         }
-        .work-info {
-            padding: 28px 24px;
-        }
-        .work-info h3 {
-            font-size: 20px; font-weight: 700; margin-bottom: 10px;
-            color: var(--text);
-        }
+        .work-info { padding: 24px; }
+        .work-info h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
         .work-info p {
             font-size: 15px; color: var(--text-light); line-height: 1.7;
             margin-bottom: 16px;
         }
         .work-cta {
-            font-size: 14px; font-weight: 600; color: var(--primary);
+            font-size: 14px; font-weight: 600; color: var(--red);
             transition: color 0.2s;
         }
-        .work-card:hover .work-cta { color: var(--primary-dark); }
-
-        /* Pricing */
-        .pricing-grid {
-            max-width: 960px; margin: 0 auto;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 24px;
-        }
-        .pricing-card {
-            background: var(--bg); border: 1px solid var(--border);
-            border-radius: 20px; padding: 48px 36px;
-            position: relative; transition: all 0.3s;
-        }
-        .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-        .pricing-card.featured {
-            border-color: var(--primary);
-            background: linear-gradient(180deg, #fff 0%, #eff6ff 100%);
-        }
-        .pricing-badge {
-            position: absolute; top: -1px; right: 36px;
-            background: var(--primary); color: #fff;
-            padding: 6px 16px; border-radius: 0 0 8px 8px;
-            font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
-        }
-        .pricing-card h3 {
-            font-size: 22px; font-weight: 700; margin-bottom: 8px;
-        }
-        .pricing-card .desc {
-            font-size: 15px; color: var(--text-light); margin-bottom: 24px;
-        }
-        .price-box { margin-bottom: 32px; }
-        .price-current {
-            font-size: 48px; font-weight: 700; color: var(--text);
-            line-height: 1;
-        }
-        .price-current span { font-size: 24px; vertical-align: super; }
-        .price-original {
-            font-size: 16px; color: #9ca3af; text-decoration: line-through;
-            margin-top: 8px;
-        }
-        .price-save {
-            display: inline-block; margin-top: 10px;
-            background: #d1fae5; color: var(--success);
-            padding: 4px 12px; border-radius: 6px;
-            font-size: 13px; font-weight: 600;
-        }
-        .pricing-features { list-style: none; margin-bottom: 32px; }
-        .pricing-features li {
-            display: flex; align-items: flex-start; gap: 12px;
-            padding: 10px 0; font-size: 15px;
-            border-bottom: 1px solid var(--border);
-        }
-        .pricing-features li:last-child { border-bottom: none; }
-        .pricing-features li::before {
-            content: "✓"; flex-shrink: 0;
-            width: 22px; height: 22px; border-radius: 50%;
-            background: #d1fae5; color: var(--success);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 12px; font-weight: 700; margin-top: 1px;
-        }
-        .pricing-card .btn { width: 100%; }
+        .work-card:hover .work-cta { color: var(--red-dark); }
 
         /* Contact */
         .contact-wrap {
@@ -320,8 +351,8 @@
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            outline: none; border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+            outline: none; border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(220,38,38,0.1);
         }
         .form-group textarea { min-height: 120px; resize: vertical; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -330,41 +361,27 @@
 
         /* Footer */
         footer {
-            background: #111827; color: #9ca3af;
-            padding: 48px 24px 32px;
+            background: #111827; color: #9ca3af; padding: 60px 24px 32px;
         }
         .footer-inner {
             max-width: 1200px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
-            flex-wrap: wrap; gap: 24px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
         }
-        .footer-brand {
-            font-size: 20px; font-weight: 700; color: #fff;
+        .footer-col h4 {
+            color: #fff; font-size: 16px; font-weight: 700; margin-bottom: 16px;
         }
-        .footer-links { display: flex; gap: 24px; list-style: none; }
-        .footer-links a { color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s; }
-        .footer-links a:hover { color: #fff; }
-        .footer-copy { font-size: 13px; margin-top: 32px; text-align: center; width: 100%; }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 17px; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .trust-bar { gap: 24px; }
-            .footer-inner { flex-direction: column; text-align: center; }
+        .footer-col ul { list-style: none; font-size: 14px; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #9ca3af; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom {
+            max-width: 1200px; margin: 40px auto 0;
+            padding-top: 24px; border-top: 1px solid #374151;
+            display: flex; justify-content: space-between;
+            font-size: 13px; flex-wrap: wrap; gap: 12px;
         }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0; transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* Sticky CTA for mobile */
+        /* Sticky Mobile CTA */
         .sticky-cta {
             display: none;
             position: fixed; bottom: 0; left: 0; right: 0;
@@ -375,17 +392,52 @@
         }
         .sticky-cta .btn { flex: 1; padding: 12px; font-size: 14px; }
         @media (max-width: 768px) { .sticky-cta { display: flex; } }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 34px; }
+            .hero-inner { flex-direction: column; gap: 40px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .works-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: repeat(2, 1fr); }
+            .form-row { grid-template-columns: 1fr; }
+            .float-card { display: none; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span data-zh="香港專業網站開發 — 靜態網站 $3,000 起 | 動態網站 $4,000 起" data-en="HK Web Dev — Static from $3,000 | Dynamic from $4,000">香港專業網站開發 — 靜態網站 $3,000 起 | 動態網站 $4,000 起</span>
+            <div>
+                <a href="tel:+85212345678">📞 <span data-zh="查詢熱線" data-en="Hotline">查詢熱線</span></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="#" class="logo">Easy<span>App</span>Website</a>
+            <a href="#" class="logo">
+                <div class="logo-icon">E</div>
+                <span>EasyAppWebsite</span>
+            </a>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#works" data-zh="作品參考" data-en="Portfolio">作品參考</a></li>
+                    <li><a href="#features" data-zh="服務項目" data-en="Services">服務項目</a></li>
                     <li><a href="#pricing" data-zh="收費方案" data-en="Pricing">收費方案</a></li>
                     <li><a href="#contact" data-zh="立即查詢" data-en="Contact">立即查詢</a></li>
                 </ul>
@@ -393,52 +445,116 @@
                     <button class="active" onclick="setLang('zh')" id="btn-zh">中文</button>
                     <button onclick="setLang('en')" id="btn-en">EN</button>
                 </div>
+                <a href="#contact" class="nav-cta" data-zh="立即報價" data-en="Get Quote">立即報價</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero-badge" id="hero-badge">
-            <span>🚀</span> <span data-zh="香港專業網站開發團隊" data-en="Hong Kong Web Development Team">香港專業網站開發團隊</span>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span>🚀</span> <span data-zh="香港專業網站開發團隊" data-en="HK Web Development Team">香港專業網站開發團隊</span>
+                </div>
+                <h1 id="hero-title">
+                    <span data-zh="專業網站設計" data-en="Professional Web Design">專業網站設計</span><br>
+                    <span data-zh="滿足您所有需求" data-en="for All Your Needs">滿足您所有需求</span>
+                </h1>
+                <p data-zh="為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。" data-en="Business, restaurant, personal brand &amp; e-commerce sites at transparent prices. Delivered in as fast as one week.">
+                    為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。
+                </p>
+                <div class="hero-ctas">
+                    <a href="#pricing" class="btn btn-white" data-zh="📋 查看收費方案" data-en="📋 See Pricing">📋 查看收費方案</a>
+                    <a href="https://wa.me/85212345678" class="btn btn-outline" data-zh="💬 Whatsapp 查詢" data-en="💬 WhatsApp Us">💬 Whatsapp 查詢</a>
+                </div>
+            </div>
         </div>
-        <h1 id="hero-title">
-            <span data-zh="輕鬆擁有" data-en="Get a">輕鬆擁有</span>
-            <span class="highlight" data-zh="專業網站" data-en="professional website">專業網站</span><br>
-            <span data-zh="無需高昂的費用" data-en="without the high cost">無需高昂的費用</span>
-        </h1>
-        <p id="hero-subtitle" data-zh="為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。" data-en="Business, restaurant, personal brand &amp; e-commerce websites — at transparent, affordable prices. Delivered in as fast as one week.">
-            為公司、餐飲、個人品牌及網店打造高性價比網站。明碼實價，無隱藏收費，最快一週交付。
-        </p>
-        <div class="hero-ctas">
-            <a href="#pricing" class="btn btn-primary" data-zh="查看收費方案 ↓" data-en="See Pricing ↓">查看收費方案 ↓</a>
-            <a href="#contact" class="btn btn-outline" data-zh="免費查詢" data-en="Free Enquiry">免費查詢</a>
-        </div>
+        <div class="float-card float-1" style="--r:6deg">🎨 <span data-zh="響應式設計" data-en="Responsive">響應式設計</span></div>
+        <div class="float-card float-2" style="--r:-4deg">⚡ <span data-zh="快速交付" data-en="Fast Delivery">快速交付</span></div>
+        <div class="float-card float-3" style="--r:0deg">🚀</div>
+    </section>
 
-        <div class="trust-bar">
-            <span data-zh="響應式設計" data-en="Responsive Design">響應式設計</span>
-            <span data-zh="SEO 優化" data-en="SEO Optimized">SEO 優化</span>
-            <span data-zh="快速交付" data-en="Fast Delivery">快速交付</span>
-            <span data-zh="透明定價" data-en="Transparent Pricing">透明定價</span>
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="kicker" data-zh="/ 服務項目" data-en="/ SERVICES">/ 服務項目</span>
+            <h2 data-zh="一站式網站設計服務" data-en="One-Stop Web Design Services">一站式網站設計服務</h2>
+            <p data-zh="從設計到上線，我們提供完整的一站式網站解決方案。" data-en="From design to launch, we provide complete website solutions.">
+                從設計到上線，我們提供完整的一站式網站解決方案。
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">💻</div>
+                <h3 data-zh="度身訂造網頁設計" data-en="Custom Web Design">度身訂造網頁設計</h3>
+                <p data-zh="根據您的品牌形象及需求，量身打造獨一無二的專業網站。" data-en="Tailored professional websites built around your brand identity and needs.">根據您的品牌形象及需求，量身打造獨一無二的專業網站。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🛒</div>
+                <h3 data-zh="網上商店開發" data-en="E-Commerce Development">網上商店開發</h3>
+                <p data-zh="WordPress + WooCommerce 完整電商方案，輕鬆管理產品及訂單。" data-en="Full WooCommerce e-commerce solution to manage products and orders with ease.">WordPress + WooCommerce 完整電商方案，輕鬆管理產品及訂單。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📱</div>
+                <h3 data-zh="響應式設計" data-en="Responsive Design">響應式設計</h3>
+                <p data-zh="自動適配桌面、手機及平板，確保任何裝置都有最佳體驗。" data-en="Seamlessly adapts to desktop, mobile and tablet for the best experience on any device.">自動適配桌面、手機及平板，確保任何裝置都有最佳體驗。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔍</div>
+                <h3 data-zh="SEO 搜尋器優化" data-en="SEO Optimization">SEO 搜尋器優化</h3>
+                <p data-zh="結構化標籤、速度優化及搜尋引擎設定，提升自然排名。" data-en="Structured tags, speed optimization and search engine setup to boost organic rankings.">結構化標籤、速度優化及搜尋引擎設定，提升自然排名。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">☁️</div>
+                <h3 data-zh="網頁寄存及域名" data-en="Hosting &amp; Domain">網頁寄存及域名</h3>
+                <p data-zh="提供穩定快速的伺服器托管，並協助域名註冊及設定。" data-en="Stable, fast server hosting plus domain registration and setup assistance.">提供穩定快速的伺服器托管，並協助域名註冊及設定。</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔧</div>
+                <h3 data-zh="持續技術支援" data-en="Ongoing Support">持續技術支援</h3>
+                <p data-zh="網站完成後仍提供技術支援，確保您的網站長期穩定運作。" data-en="Post-launch technical support to keep your website running smoothly long-term.">網站完成後仍提供技術支援，確保您的網站長期穩定運作。</p>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio / References -->
-    <section class="alt" id="works">
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div>
+                <div class="stat-num">100%</div>
+                <div class="stat-label" data-zh="客戶滿意度" data-en="Client Satisfaction">客戶滿意度</div>
+            </div>
+            <div>
+                <div class="stat-num">50+</div>
+                <div class="stat-label" data-zh="完成項目" data-en="Projects Completed">完成項目</div>
+            </div>
+            <div>
+                <div class="stat-num">7<span style="font-size:24px">天</span></div>
+                <div class="stat-label" data-zh="最快交付" data-en="Fastest Delivery">最快交付</div>
+            </div>
+            <div>
+                <div class="stat-num">24/7</div>
+                <div class="stat-label" data-zh="技術支援" data-en="Support">技術支援</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="works">
+        <div class="portfolio-sub" data-zh="我們的作品集" data-en="OUR PORTFOLIO">我們的作品集</div>
         <div class="section-header">
-            <span class="kicker" data-zh="/ 作品參考" data-en="/ OUR WORK">/ 作品參考</span>
-            <h2 data-zh="我們製作的網站" data-en="Sites we've built">我們製作的網站</h2>
-            <p data-zh="每一個項目都根據客戶品牌量身設計，從音樂創作到霓虹燈藝術，涵蓋多元行業。" data-en="Every project is tailored to the client's brand — from music creation to neon art, across diverse industries.">
+            <h2 data-zh="超高辨別度及設計質感的網站" data-en="High-Impact, Beautifully Designed Websites">超高辨別度及設計質感的網站</h2>
+            <p data-zh="每一個項目都根據客戶品牌量身設計，從音樂創作到霓虹燈藝術，涵蓋多元行業。" data-en="Every project is tailored to the client's brand — from music to neon art, across diverse industries.">
                 每一個項目都根據客戶品牌量身設計，從音樂創作到霓虹燈藝術，涵蓋多元行業。
             </p>
         </div>
         <div class="works-grid">
-            <!-- mycantopop.hk -->
             <div class="work-card fade-in">
                 <a href="https://mycantopop.hk" target="_blank" rel="noopener" class="work-link">
                     <div class="work-preview" style="background-image: url('img/portfolio/mycantopop.png');">
                         <div class="work-overlay">
-                            <span class="work-tag" data-zh="音樂創作平台" data-en="Music Creation">音樂創作平台</span>
+                            <span class="work-tag" data-zh="音樂創作平台" data-en="Music Platform">音樂創作平台</span>
                         </div>
                     </div>
                     <div class="work-info">
@@ -450,8 +566,6 @@
                     </div>
                 </a>
             </div>
-
-            <!-- whysolution.hk -->
             <div class="work-card fade-in">
                 <a href="https://whysolution.hk" target="_blank" rel="noopener" class="work-link">
                     <div class="work-preview" style="background-image: url('img/portfolio/whysolution.png');">
@@ -461,15 +575,13 @@
                     </div>
                     <div class="work-info">
                         <h3>whysolution.hk</h3>
-                        <p data-zh="為中小企而設的 AI 解決方案。簡潔企業風格，翡翠綠品牌色，中英雙語設計。" data-en="AI solutions for SMEs. Clean enterprise style, jade-green brand color, bilingual Chinese/English design.">
+                        <p data-zh="為中小企而設的 AI 解決方案。簡潔企業風格，翡翠綠品牌色，中英雙語設計。" data-en="AI solutions for SMEs. Clean enterprise style, jade-green brand color, bilingual design.">
                             為中小企而設的 AI 解決方案。簡潔企業風格，翡翠綠品牌色，中英雙語設計。
                         </p>
                         <span class="work-cta" data-zh="瀏覽網站 →" data-en="Visit site →">瀏覽網站 →</span>
                     </div>
                 </a>
             </div>
-
-            <!-- neonlight.pro -->
             <div class="work-card fade-in">
                 <a href="https://neonlight.pro" target="_blank" rel="noopener" class="work-link">
                     <div class="work-preview" style="background-image: url('img/portfolio/neonlight.png');">
@@ -490,58 +602,111 @@
     </section>
 
     <!-- Pricing -->
-    <section id="pricing">
-        <div class="section-header">
-            <span class="kicker" data-zh="/ 收費方案" data-en="/ PRICING">/ 收費方案</span>
-            <h2 data-zh="明碼實價，無隱藏費用" data-en="Transparent Pricing, No Hidden Fees">明碼實價，無隱藏費用</h2>
-            <p data-zh="香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。" data-en="Most HK agencies hide their prices. We choose transparency so you can decide with confidence.">
-                香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。
-            </p>
-        </div>
-        <div class="pricing-grid">
-            <div class="pricing-card fade-in">
-                <h3 data-zh="靜態網站" data-en="Static Website">靜態網站</h3>
-                <p class="desc" data-zh="適合公司、餐飲、個人品牌展示" data-en="Perfect for company, restaurant & personal brand showcases">適合公司、餐飲、個人品牌展示</p>
-                <div class="price-box">
-                    <div class="price-current"><span>$</span>3,000</div>
-                    <div class="price-original" data-zh="原價 $5,000" data-en="Was $5,000">原價 $5,000</div>
-                    <div class="price-save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
-                </div>
-                <ul class="pricing-features">
-                    <li data-zh="6 版 HTML 頁面" data-en="6 HTML pages">6 版 HTML 頁面</li>
-                    <li data-zh="響應式設計（桌面 + 手機）" data-en="Responsive design (desktop + mobile)">響應式設計（桌面 + 手機）</li>
-                    <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
-                    <li data-zh="聯絡表單整合" data-en="Contact form integration">聯絡表單整合</li>
-                    <li data-zh="域名及部署協助" data-en="Domain & deployment assistance">域名及部署協助</li>
-                    <li data-zh="1 週內交付" data-en="Delivered within 1 week">1 週內交付</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+    <section class="pricing" id="pricing">
+        <div class="pricing-inner">
+            <div class="section-header">
+                <span class="kicker" data-zh="/ 收費方案" data-en="/ PRICING">/ 收費方案</span>
+                <h2 data-zh="網頁設計套餐" data-en="Web Design Packages">網頁設計套餐</h2>
+                <p data-zh="香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。" data-en="Most HK agencies hide their prices. We choose transparency so you can decide with confidence.">
+                    香港大部份網站公司報價不透明，我們選擇直接公開價格，讓您安心決策。
+                </p>
             </div>
-
-            <div class="pricing-card featured fade-in">
-                <div class="pricing-badge" data-zh="熱門選擇" data-en="Most Popular">熱門選擇</div>
-                <h3 data-zh="動態網站" data-en="Dynamic Website">動態網站</h3>
-                <p class="desc" data-zh="WordPress 網店、Blog 及內容管理系統" data-en="WordPress store, blog & content management">WordPress 網店、Blog 及內容管理系統</p>
-                <div class="price-box">
-                    <div class="price-current"><span>$</span>4,000</div>
-                    <div class="price-original" data-zh="原價 $6,000" data-en="Was $6,000">原價 $6,000</div>
-                    <div class="price-save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
+            <div class="pricing-grid">
+                <!-- Static -->
+                <div class="price-card fade-in">
+                    <div class="price-header purple">
+                        <h3 data-zh="靜態網站" data-en="Static Website">靜態網站</h3>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-tag">
+                            <div class="big"><span>$</span>3,000</div>
+                            <div class="strike" data-zh="原價 $5,000" data-en="Was $5,000">原價 $5,000</div>
+                            <div class="save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
+                        </div>
+                        <ul>
+                            <li data-zh="6 版 HTML 頁面" data-en="6 HTML pages">6 版 HTML 頁面</li>
+                            <li data-zh="公司 / 餐飲 / 個人網站" data-en="Company / Restaurant / Personal">公司 / 餐飲 / 個人網站</li>
+                            <li data-zh="響應式設計" data-en="Responsive design">響應式設計</li>
+                            <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
+                            <li data-zh="聯絡表單整合" data-en="Contact form">聯絡表單整合</li>
+                            <li data-zh="域名及部署協助" data-en="Domain &amp; deployment help">域名及部署協助</li>
+                        </ul>
+                        <a href="#contact" class="price-btn purple" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+                    </div>
                 </div>
-                <ul class="pricing-features">
-                    <li data-zh="Database 驅動（WordPress）" data-en="Database-driven (WordPress)">Database 驅動（WordPress）</li>
-                    <li data-zh="內容管理系統（自行更新）" data-en="Content management system (self-update)">內容管理系統（自行更新）</li>
-                    <li data-zh="網店 / Blog 功能" data-en="Store / blog functionality">網店 / Blog 功能</li>
-                    <li data-zh="響應式設計（桌面 + 手機）" data-en="Responsive design (desktop + mobile)">響應式設計（桌面 + 手機）</li>
-                    <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
-                    <li data-zh="域名及部署協助" data-en="Domain & deployment assistance">域名及部署協助</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+
+                <!-- Dynamic -->
+                <div class="price-card fade-in">
+                    <div class="price-header red">
+                        <h3 data-zh="動態網站" data-en="Dynamic Website">動態網站</h3>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-tag">
+                            <div class="big"><span>$</span>4,000</div>
+                            <div class="strike" data-zh="原價 $6,000" data-en="Was $6,000">原價 $6,000</div>
+                            <div class="save" data-zh="現省 $2,000" data-en="Save $2,000">現省 $2,000</div>
+                        </div>
+                        <ul>
+                            <li data-zh="Database 驅動" data-en="Database-driven">Database 驅動</li>
+                            <li data-zh="WordPress 網店 / Blog" data-en="WordPress store / blog">WordPress 網店 / Blog</li>
+                            <li data-zh="內容管理系統" data-en="Content management">內容管理系統</li>
+                            <li data-zh="響應式設計" data-en="Responsive design">響應式設計</li>
+                            <li data-zh="基本 SEO 設定" data-en="Basic SEO setup">基本 SEO 設定</li>
+                            <li data-zh="域名及部署協助" data-en="Domain &amp; deployment help">域名及部署協助</li>
+                        </ul>
+                        <a href="#contact" class="price-btn red" data-zh="選擇方案" data-en="Choose Plan">選擇方案</a>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="price-card fade-in">
+                    <div class="price-header orange">
+                        <h3 data-zh="網店進階版" data-en="Advanced Store">網店進階版</h3>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-tag">
+                            <div class="big"><span>$</span>6,000+</div>
+                            <div class="strike" data-zh="按功能報價" data-en="Custom quote">按功能報價</div>
+                        </div>
+                        <ul>
+                            <li data-zh="WooCommerce 完整功能" data-en="Full WooCommerce">WooCommerce 完整功能</li>
+                            <li data-zh="支付閘道整合" data-en="Payment gateway integration">支付閘道整合</li>
+                            <li data-zh="庫存管理系統" data-en="Inventory management">庫存管理系統</li>
+                            <li data-zh="會員系統" data-en="Membership system">會員系統</li>
+                            <li data-zh="優惠券及促銷" data-en="Coupons &amp; promotions">優惠券及促銷</li>
+                            <li data-zh="優先技術支援" data-en="Priority support">優先技術支援</li>
+                        </ul>
+                        <a href="#contact" class="price-btn orange" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
+                    </div>
+                </div>
+
+                <!-- Custom -->
+                <div class="price-card fade-in">
+                    <div class="price-header blue">
+                        <h3 data-zh="度身訂造方案" data-en="Custom Solution">度身訂造方案</h3>
+                    </div>
+                    <div class="price-body">
+                        <div class="price-tag">
+                            <div class="big"><span>$</span>8,000+</div>
+                            <div class="strike" data-zh="按需求報價" data-en="Custom quote">按需求報價</div>
+                        </div>
+                        <ul>
+                            <li data-zh="無限頁面數量" data-en="Unlimited pages">無限頁面數量</li>
+                            <li data-zh="自定功能開發" data-en="Custom feature development">自定功能開發</li>
+                            <li data-zh="API 整合" data-en="API integrations">API 整合</li>
+                            <li data-zh="多語言支援" data-en="Multi-language support">多語言支援</li>
+                            <li data-zh="進階 SEO 方案" data-en="Advanced SEO package">進階 SEO 方案</li>
+                            <li data-zh="專屬客戶經理" data-en="Dedicated account manager">專屬客戶經理</li>
+                        </ul>
+                        <a href="#contact" class="price-btn blue" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Enquiry -->
-    <section class="alt" id="contact">
+    <!-- Contact -->
+    <section class="features" id="contact" style="background:var(--bg-alt)">
         <div class="section-header">
             <span class="kicker" data-zh="/ 立即查詢" data-en="/ ENQUIRY">/ 立即查詢</span>
             <h2 data-zh="準備好開始了嗎？" data-en="Ready to start?">準備好開始了嗎？</h2>
@@ -570,18 +735,20 @@
                         <label for="plan" data-zh="感興趣的方案" data-en="Interested plan">感興趣的方案</label>
                         <select id="plan" name="plan">
                             <option value="" data-zh="請選擇" data-en="Please select">請選擇</option>
-                            <option value="static" data-zh="靜態網站 ($3,000)" data-en="Static Website ($3,000)">靜態網站 ($3,000)</option>
-                            <option value="dynamic" data-zh="動態網站 ($4,000)" data-en="Dynamic Website ($4,000)">動態網站 ($4,000)</option>
+                            <option value="static" data-zh="靜態網站 ($3,000)" data-en="Static ($3,000)">靜態網站 ($3,000)</option>
+                            <option value="dynamic" data-zh="動態網站 ($4,000)" data-en="Dynamic ($4,000)">動態網站 ($4,000)</option>
+                            <option value="ecommerce" data-zh="網店進階版 ($6,000+)" data-en="Advanced Store ($6,000+)">網店進階版 ($6,000+)</option>
+                            <option value="custom" data-zh="度身訂造 ($8,000+)" data-en="Custom ($8,000+)">度身訂造 ($8,000+)</option>
                             <option value="unsure" data-zh="不確定，需要建議" data-en="Unsure, need advice">不確定，需要建議</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message" data-zh="項目簡介" data-en="Project details">項目簡介</label>
-                    <textarea id="message" name="message" placeholder="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-en="Briefly describe your website needs, e.g. site type, number of pages or features..."></textarea>
+                    <textarea id="message" name="message" placeholder="請簡單描述您的網站需求，例如網站類型、頁面數量或功能要求..." data-placeholder-en="Briefly describe your website needs, e.g. site type, pages or features..."></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary" data-zh="發送查詢 →" data-en="Send Enquiry →">發送查詢 →</button>
+                    <button type="submit" class="btn btn-white" style="background:var(--red);color:#fff;flex:1;" data-zh="發送查詢 →" data-en="Send Enquiry →">發送查詢 →</button>
                 </div>
             </form>
         </div>
@@ -590,89 +757,100 @@
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
-            <div class="footer-brand">Easy<span style="color:#3b82f6;">App</span>Website</div>
-            <ul class="footer-links">
-                <li><a href="#works" data-zh="作品" data-en="Portfolio">作品</a></li>
-                <li><a href="#pricing" data-zh="收費" data-en="Pricing">收費</a></li>
-                <li><a href="#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
-            </ul>
+            <div class="footer-col">
+                <h4 data-zh="網頁設計" data-en="Web Design">網頁設計</h4>
+                <ul>
+                    <li><a href="#" data-zh="度身訂造網頁設計" data-en="Custom Web Design">度身訂造網頁設計</a></li>
+                    <li><a href="#" data-zh="模板特快網頁設計" data-en="Template Fast Design">模板特快網頁設計</a></li>
+                    <li><a href="#" data-zh="網上商店" data-en="Online Store">網上商店</a></li>
+                    <li><a href="#works" data-zh="作品展示" data-en="Portfolio">作品展示</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="網上推廣" data-en="Online Marketing">網上推廣</h4>
+                <ul>
+                    <li><a href="#" data-zh="SEO 搜尋器優化" data-en="SEO">SEO 搜尋器優化</a></li>
+                    <li><a href="#" data-zh="Google 廣告" data-en="Google Ads">Google 廣告</a></li>
+                    <li><a href="#" data-zh="社交媒體推廣" data-en="Social Media">社交媒體推廣</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="其他服務" data-en="Other Services">其他服務</h4>
+                <ul>
+                    <li><a href="#" data-zh="網頁寄存" data-en="Web Hosting">網頁寄存</a></li>
+                    <li><a href="#" data-zh="域名登記" data-en="Domain Registration">域名登記</a></li>
+                    <li><a href="#" data-zh="平面設計" data-en="Graphic Design">平面設計</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-zh="聯絡我們" data-en="Contact Us">聯絡我們</h4>
+                <ul>
+                    <li>📞 +852 1234 5678</li>
+                    <li>✉️ info@easyappwebsite.com</li>
+                    <li>📍 <span data-zh="香港" data-en="Hong Kong">香港</span></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-copy">
+        <div class="footer-bottom">
             <span data-zh="© 2025 EasyAppWebsite. 保留一切權利。" data-en="© 2025 EasyAppWebsite. All rights reserved.">© 2025 EasyAppWebsite. 保留一切權利。</span>
+            <span data-zh="專業網站設計及開發服務" data-en="Professional Web Design &amp; Development">專業網站設計及開發服務</span>
         </div>
     </footer>
 
     <!-- Sticky Mobile CTA -->
     <div class="sticky-cta">
-        <a href="#pricing" class="btn btn-outline" data-zh="收費方案" data-en="Pricing">收費方案</a>
-        <a href="#contact" class="btn btn-primary" data-zh="免費查詢" data-en="Enquiry">免費查詢</a>
+        <a href="#pricing" class="btn btn-outline" style="border-color:var(--border);color:var(--text);" data-zh="收費方案" data-en="Pricing">收費方案</a>
+        <a href="#contact" class="btn btn-white" style="background:var(--red);color:#fff;" data-zh="免費查詢" data-en="Enquiry">免費查詢</a>
     </div>
 
     <script>
         // Language Switcher
         let currentLang = 'zh';
-
         function setLang(lang) {
             currentLang = lang;
             document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
-
-            // Update buttons
             document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-
-            // Update text content
             document.querySelectorAll('[data-zh][data-en]').forEach(el => {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    // skip, handled by placeholder
+                    // skip
                 } else {
                     el.textContent = el.getAttribute('data-' + lang);
                 }
             });
-
-            // Update placeholders
             document.querySelectorAll('[data-placeholder-en]').forEach(el => {
                 el.placeholder = lang === 'zh'
                     ? el.getAttribute('placeholder')
                     : el.getAttribute('data-placeholder-en');
             });
-
-            // Update select options
             document.querySelectorAll('select option[data-zh]').forEach(opt => {
                 opt.textContent = opt.getAttribute('data-' + lang);
             });
-
-            // Update title
             document.title = lang === 'zh'
-                ? 'EasyAppWebsite — 輕鬆建站 | Web & App Development'
-                : 'EasyAppWebsite — Affordable Web & App Development';
+                ? 'EasyAppWebsite — 輕鬆建站 | Web \u0026 App Development'
+                : 'EasyAppWebsite — Affordable Web \u0026 App Development';
         }
 
         // Scroll reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Navbar shadow on scroll
+        // Navbar shadow
         window.addEventListener('scroll', () => {
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
         });
 
-        // Smooth anchor scroll offset for fixed nav
+        // Smooth scroll offset for fixed nav
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
                 }
             });
         });
