@@ -63,6 +63,7 @@
             font-size: 22px; font-weight: 900; color: var(--red);
             display: flex; align-items: center; gap: 8px;
         }
+        .logo-img { height: 40px; width: auto; }
         .logo-icon {
             width: 36px; height: 36px; background: var(--red);
             border-radius: 8px; display: flex;
@@ -434,8 +435,7 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .logo { font-size: 17px; gap: 6px; }
-            .logo span { display: none; }
-            .logo-icon { width: 36px; height: 36px; font-size: 16px; }
+            .logo-img { height: 34px; width: auto; }
             .nav-inner { padding: 0 16px; height: 60px; }
             .nav-cta { display: none; }
             .hero { display: none; }
@@ -465,8 +465,7 @@
     <nav id="navbar">
         <div class="nav-inner">
             <a href="#" class="logo">
-                <div class="logo-icon">E</div>
-                <span>EasyAppWebsite</span>
+                <img src="logo.jpg" alt="EasyAppWebsite" class="logo-img">
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
