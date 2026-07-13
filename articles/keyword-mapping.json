@@ -552,7 +552,36 @@
     "香港網站Toast通知設計",
     "香港網站骨架屏設計",
     "香港網站404頁面優化",
-    "香港網站滾動指示器設計"
+    "香港網站滾動指示器設計",
+    "香港網站漸進式增強設計",
+    "香港網站降級優雅處理",
+    "香港網站國際化i18n進階",
+    "香港網站本地化L10n策略",
+    "香港網站RTL佈局支援",
+    "香港網站動態內容渲染",
+    "香港網站靜態預生成策略",
+    "香港網站邊緣渲染Edge SSR",
+    "香港網站流式渲染優化",
+    "香港網站選擇性hydration",
+    "香港網站島嶼架構進階",
+    "香港網站資源優先級管理",
+    "香港網站預連接Preconnect",
+    "香港網站預載入Preload策略",
+    "香港網站預渲染Speculation Rules",
+    "香港網站圖片格式AVIF",
+    "香港網站響應式圖片srcset",
+    "香港網站背景圖片優化",
+    "香港網站影片自動播放優化",
+    "香港網站音頻串流優化",
+    "香港網站字型載入FOIT消除",
+    "香港網站可變字體Variable Font",
+    "香港網站色彩管理Color Profile",
+    "香港網站高對比模式支援",
+    "香港網站動態減弱偏好",
+    "香港網站深色模式自動切換",
+    "香港網站色彩強制配色",
+    "香港網站遊戲手柄API",
+    "香港網站全螢幕API進階"
   ],
   "articles": [
     {
@@ -2318,9 +2347,212 @@
       "title": "香港網站滾動指示器設計：Scroll Indicator引導用戶瀏覽的UX技巧",
       "slug": "611-香港網站滾動指示器設計：Scroll Indicator引導用戶瀏覽的UX技巧.html",
       "path": "articles/611-香港網站滾動指示器設計：Scroll Indicator引導用戶瀏覽的UX技巧.html"
+    },
+    {
+      "id": 612,
+      "keyword": "香港網站漸進式增強設計",
+      "title": "香港網站漸進式增強設計：Progressive Enhancement提升相容性的完整策略",
+      "slug": "612-香港網站漸進式增強設計：Progressive Enhancement提升相容性的完整策略.html",
+      "path": "articles/612-香港網站漸進式增強設計：Progressive Enhancement提升相容性的完整策略.html"
+    },
+    {
+      "id": 613,
+      "keyword": "香港網站降級優雅處理",
+      "title": "香港網站降級優雅處理：Graceful Degradation確保功能可用性的實戰指南",
+      "slug": "613-香港網站降級優雅處理：Graceful Degradation確保功能可用性的實戰指南.html",
+      "path": "articles/613-香港網站降級優雅處理：Graceful Degradation確保功能可用性的實戰指南.html"
+    },
+    {
+      "id": 614,
+      "keyword": "香港網站國際化i18n進階",
+      "title": "香港網站國際化i18n進階：多語言內容管理的最佳實踐與技術選型",
+      "slug": "614-香港網站國際化i18n進階：多語言內容管理的最佳實踐與技術選型.html",
+      "path": "articles/614-香港網站國際化i18n進階：多語言內容管理的最佳實踐與技術選型.html"
+    },
+    {
+      "id": 615,
+      "keyword": "香港網站本地化L10n策略",
+      "title": "香港網站本地化L10n策略：打造符合香港用戶文化習慣的網站體驗",
+      "slug": "615-香港網站本地化L10n策略：打造符合香港用戶文化習慣的網站體驗.html",
+      "path": "articles/615-香港網站本地化L10n策略：打造符合香港用戶文化習慣的網站體驗.html"
+    },
+    {
+      "id": 616,
+      "keyword": "香港網站RTL佈局支援",
+      "title": "香港網站RTL佈局支援：阿拉伯語等右至左語言網站的CSS解決方案",
+      "slug": "616-香港網站RTL佈局支援：阿拉伯語等右至左語言網站的CSS解決方案.html",
+      "path": "articles/616-香港網站RTL佈局支援：阿拉伯語等右至左語言網站的CSS解決方案.html"
+    },
+    {
+      "id": 617,
+      "keyword": "香港網站動態內容渲染",
+      "title": "香港網站動態內容渲染：CSR vs SSR vs SSG效能與SEO的全面比較",
+      "slug": "617-香港網站動態內容渲染：CSR vs SSR vs SSG效能與SEO的全面比較.html",
+      "path": "articles/617-香港網站動態內容渲染：CSR vs SSR vs SSG效能與SEO的全面比較.html"
+    },
+    {
+      "id": 618,
+      "keyword": "香港網站靜態預生成策略",
+      "title": "香港網站靜態預生成策略：ISG與ISR提升大型網站效能的關鍵技術",
+      "slug": "618-香港網站靜態預生成策略：ISG與ISR提升大型網站效能的關鍵技術.html",
+      "path": "articles/618-香港網站靜態預生成策略：ISG與ISR提升大型網站效能的關鍵技術.html"
+    },
+    {
+      "id": 619,
+      "keyword": "香港網站邊緣渲染Edge SSR",
+      "title": "香港網站邊緣渲染Edge SSR：在全球節點上實現毫秒級伺服器端渲染",
+      "slug": "619-香港網站邊緣渲染Edge SSR：在全球節點上實現毫秒級伺服器端渲染.html",
+      "path": "articles/619-香港網站邊緣渲染Edge SSR：在全球節點上實現毫秒級伺服器端渲染.html"
+    },
+    {
+      "id": 620,
+      "keyword": "香港網站流式渲染優化",
+      "title": "香港網站流式渲染優化：Streaming SSR減少TTFB提升首屏速度的實戰方法",
+      "slug": "620-香港網站流式渲染優化：Streaming SSR減少TTFB提升首屏速度的實戰方法.html",
+      "path": "articles/620-香港網站流式渲染優化：Streaming SSR減少TTFB提升首屏速度的實戰方法.html"
+    },
+    {
+      "id": 621,
+      "keyword": "香港網站選擇性hydration",
+      "title": "香港網站選擇性hydration：Selective Hydration提升互動速度的進階技術",
+      "slug": "621-香港網站選擇性hydration：Selective Hydration提升互動速度的進階技術.html",
+      "path": "articles/621-香港網站選擇性hydration：Selective Hydration提升互動速度的進階技術.html"
+    },
+    {
+      "id": 622,
+      "keyword": "香港網站島嶼架構進階",
+      "title": "香港網站島嶼架構進階：Islands Architecture在大型專案的深度應用",
+      "slug": "622-香港網站島嶼架構進階：Islands Architecture在大型專案的深度應用.html",
+      "path": "articles/622-香港網站島嶼架構進階：Islands Architecture在大型專案的深度應用.html"
+    },
+    {
+      "id": 623,
+      "keyword": "香港網站資源優先級管理",
+      "title": "香港網站資源優先級管理：fetchpriority與Resource Hints的完整配置指南",
+      "slug": "623-香港網站資源優先級管理：fetchpriority與Resource Hints的完整配置指南.html",
+      "path": "articles/623-香港網站資源優先級管理：fetchpriority與Resource Hints的完整配置指南.html"
+    },
+    {
+      "id": 624,
+      "keyword": "香港網站預連接Preconnect",
+      "title": "香港網站預連接Preconnect：加速第三方資源載入的DNS與TLS優化技巧",
+      "slug": "624-香港網站預連接Preconnect：加速第三方資源載入的DNS與TLS優化技巧.html",
+      "path": "articles/624-香港網站預連接Preconnect：加速第三方資源載入的DNS與TLS優化技巧.html"
+    },
+    {
+      "id": 625,
+      "keyword": "香港網站預載入Preload策略",
+      "title": "香港網站預載入Preload策略：關鍵資源提前載入提升LCP的實戰方案",
+      "slug": "625-香港網站預載入Preload策略：關鍵資源提前載入提升LCP的實戰方案.html",
+      "path": "articles/625-香港網站預載入Preload策略：關鍵資源提前載入提升LCP的實戰方案.html"
+    },
+    {
+      "id": 626,
+      "keyword": "香港網站預渲染Speculation Rules",
+      "title": "香港網站預渲染Speculation Rules：Chrome推測載入功能讓頁面秒開的秘訣",
+      "slug": "626-香港網站預渲染Speculation Rules：Chrome推測載入功能讓頁面秒開的秘訣.html",
+      "path": "articles/626-香港網站預渲染Speculation Rules：Chrome推測載入功能讓頁面秒開的秘訣.html"
+    },
+    {
+      "id": 627,
+      "keyword": "香港網站圖片格式AVIF",
+      "title": "香港網站圖片格式AVIF：下一代圖片壓縮技術在HK電商的應用與相容性處理",
+      "slug": "627-香港網站圖片格式AVIF：下一代圖片壓縮技術在HK電商的應用與相容性處理.html",
+      "path": "articles/627-香港網站圖片格式AVIF：下一代圖片壓縮技術在HK電商的應用與相容性處理.html"
+    },
+    {
+      "id": 628,
+      "keyword": "香港網站響應式圖片srcset",
+      "title": "香港網站響應式圖片srcset：根據裝置自動選擇最佳尺寸的完整實作",
+      "slug": "628-香港網站響應式圖片srcset：根據裝置自動選擇最佳尺寸的完整實作.html",
+      "path": "articles/628-香港網站響應式圖片srcset：根據裝置自動選擇最佳尺寸的完整實作.html"
+    },
+    {
+      "id": 629,
+      "keyword": "香港網站背景圖片優化",
+      "title": "香港網站背景圖片優化：CSS背景圖片的效能與SEO最佳實踐",
+      "slug": "629-香港網站背景圖片優化：CSS背景圖片的效能與SEO最佳實踐.html",
+      "path": "articles/629-香港網站背景圖片優化：CSS背景圖片的效能與SEO最佳實踐.html"
+    },
+    {
+      "id": 630,
+      "keyword": "香港網站影片自動播放優化",
+      "title": "香港網站影片自動播放優化：Autoplay策略在不犧牲效能下的UX平衡方案",
+      "slug": "630-香港網站影片自動播放優化：Autoplay策略在不犧牲效能下的UX平衡方案.html",
+      "path": "articles/630-香港網站影片自動播放優化：Autoplay策略在不犧牲效能下的UX平衡方案.html"
+    },
+    {
+      "id": 631,
+      "keyword": "香港網站音頻串流優化",
+      "title": "香港網站音頻串流優化：Web Audio API實現高效音頻播放與處理",
+      "slug": "631-香港網站音頻串流優化：Web Audio API實現高效音頻播放與處理.html",
+      "path": "articles/631-香港網站音頻串流優化：Web Audio API實現高效音頻播放與處理.html"
+    },
+    {
+      "id": 632,
+      "keyword": "香港網站字型載入FOIT消除",
+      "title": "香港網站字型載入FOIT消除：font-display策略避免文字閃爍的完整方案",
+      "slug": "632-香港網站字型載入FOIT消除：font-display策略避免文字閃爍的完整方案.html",
+      "path": "articles/632-香港網站字型載入FOIT消除：font-display策略避免文字閃爍的完整方案.html"
+    },
+    {
+      "id": 633,
+      "keyword": "香港網站可變字體Variable Font",
+      "title": "香港網站可變字體Variable Font：一個檔案多種風格的現代字型技術應用",
+      "slug": "633-香港網站可變字體Variable Font：一個檔案多種風格的現代字型技術應用.html",
+      "path": "articles/633-香港網站可變字體Variable Font：一個檔案多種風格的現代字型技術應用.html"
+    },
+    {
+      "id": 634,
+      "keyword": "香港網站色彩管理Color Profile",
+      "title": "香港網站色彩管理Color Profile：sRGB P3 Display-P3色彩空間的網頁應用",
+      "slug": "634-香港網站色彩管理Color Profile：sRGB P3 Display-P3色彩空間的網頁應用.html",
+      "path": "articles/634-香港網站色彩管理Color Profile：sRGB P3 Display-P3色彩空間的網頁應用.html"
+    },
+    {
+      "id": 635,
+      "keyword": "香港網站高對比模式支援",
+      "title": "香港網站高對比模式支援：prefers-contrast媒體查詢的無障礙實作指南",
+      "slug": "635-香港網站高對比模式支援：prefers-contrast媒體查詢的無障礙實作指南.html",
+      "path": "articles/635-香港網站高對比模式支援：prefers-contrast媒體查詢的無障礙實作指南.html"
+    },
+    {
+      "id": 636,
+      "keyword": "香港網站動態減弱偏好",
+      "title": "香港網站動態減弱偏好：prefers-reduced-motion尊重用戶動畫偏好的設計策略",
+      "slug": "636-香港網站動態減弱偏好：prefers-reduced-motion尊重用戶動畫偏好的設計策略.html",
+      "path": "articles/636-香港網站動態減弱偏好：prefers-reduced-motion尊重用戶動畫偏好的設計策略.html"
+    },
+    {
+      "id": 637,
+      "keyword": "香港網站深色模式自動切換",
+      "title": "香港網站深色模式自動切換：prefers-color-scheme跟隨系統主題的完整實作",
+      "slug": "637-香港網站深色模式自動切換：prefers-color-scheme跟隨系統主題的完整實作.html",
+      "path": "articles/637-香港網站深色模式自動切換：prefers-color-scheme跟隨系統主題的完整實作.html"
+    },
+    {
+      "id": 638,
+      "keyword": "香港網站色彩強制配色",
+      "title": "香港網站色彩強制配色：forced-colors媒體查詢的Windows高對比模式支援",
+      "slug": "638-香港網站色彩強制配色：forced-colors媒體查詢的Windows高對比模式支援.html",
+      "path": "articles/638-香港網站色彩強制配色：forced-colors媒體查詢的Windows高對比模式支援.html"
+    },
+    {
+      "id": 639,
+      "keyword": "香港網站遊戲手柄API",
+      "title": "香港網站遊戲手柄API：Gamepad API讓網頁支援實體控制器的開發指南",
+      "slug": "639-香港網站遊戲手柄API：Gamepad API讓網頁支援實體控制器的開發指南.html",
+      "path": "articles/639-香港網站遊戲手柄API：Gamepad API讓網頁支援實體控制器的開發指南.html"
+    },
+    {
+      "id": 640,
+      "keyword": "香港網站全螢幕API進階",
+      "title": "香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用",
+      "slug": "640-香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用.html",
+      "path": "articles/640-香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用.html"
     }
   ],
-  "generated_at": "2026-07-12T12:00:00+08:00",
-  "total_articles": 252,
-  "total_keywords": 553
+  "generated_at": "2026-07-13T12:00:00+08:00",
+  "total_articles": 281,
+  "total_keywords": 582
 }
