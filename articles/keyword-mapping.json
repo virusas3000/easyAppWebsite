@@ -581,7 +581,36 @@
     "香港網站深色模式自動切換",
     "香港網站色彩強制配色",
     "香港網站遊戲手柄API",
-    "香港網站全螢幕API進階"
+    "香港網站全螢幕API進階",
+    "香港網站Web Components自訂元素開發",
+    "香港網站Intersection Observer無限滾載入",
+    "香港網站Service Worker快取策略進階",
+    "香港網站WebGL着色器特效開發",
+    "香港網站WebRTC點對點檔案傳輸",
+    "香港網站Web Audio API音頻視覺化",
+    "香港網站Canvas 2D遊戲開發",
+    "香港網站IndexedDB交易進階操作",
+    "香港網站WebSocket伺服器架設",
+    "香港網站Web Animations API關鍵影格",
+    "香港網站Resize Observer佈局自適應",
+    "香港網站Mutation Observer表單監控",
+    "香港網站Geolocation API地圖標記",
+    "香港網站Notification API權限管理",
+    "香港網站Clipboard API富文本複製",
+    "香港網站HTML5拖放排序功能",
+    "香港網站File API圖片預覽壓縮",
+    "香港網站Web Share API檔案分享",
+    "香港網站Payment Request API商家整合",
+    "香港網站Credentials API密碼less登入",
+    "香港網站Web Storage資料加密",
+    "香港網站Performance Observer長任務監控",
+    "香港網站Background Sync離線表單提交",
+    "香港網站Web Speech API語音指令",
+    "香港網站Beacon API頁面卸載分析",
+    "香港網站Content Indexing API離線內容目錄",
+    "香港網站Screen Wake Lock API影片播放",
+    "香港網站Page Visibility API資源管理",
+    "香港網站Reporting API安全報告收集"
   ],
   "articles": [
     {
@@ -2550,9 +2579,212 @@
       "title": "香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用",
       "slug": "640-香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用.html",
       "path": "articles/640-香港網站全螢幕API進階：Fullscreen API在影片與互動內容的深度應用.html"
+    },
+    {
+      "keyword": "香港網站Web Components自訂元素開發",
+      "file": "641-香港網站Web Components自訂元素開發：Custom Elements與Shadow DOM的完整實戰指南.html",
+      "slug": "641-香港網站Web Components自訂元素開發：Custom Elements與Shadow DOM的完整實戰指南",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/641-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Components%E8%87%AA%E8%A8%82%E5%85%83%E7%B4%A0%E9%96%8B%E7%99%BC%EF%BC%9ACustom%20Elements%E8%88%87Shadow%20DOM%E7%9A%84%E5%AE%8C%E6%95%B4%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97"
+    },
+    {
+      "keyword": "香港網站Intersection Observer無限滾載入",
+      "file": "642-香港網站Intersection Observer無限滾載入：動態內容載入與虛擬列表最佳實踐.html",
+      "slug": "642-香港網站Intersection Observer無限滾載入：動態內容載入與虛擬列表最佳實踐",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/642-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Intersection%20Observer%E7%84%A1%E9%99%90%E6%BB%BE%E8%BC%89%E5%85%A5%EF%BC%9A%E5%8B%95%E6%85%8B%E5%85%A7%E5%AE%B9%E8%BC%89%E5%85%A5%E8%88%87%E8%99%9B%E6%93%AC%E5%88%97%E8%A1%A8%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90"
+    },
+    {
+      "keyword": "香港網站Service Worker快取策略進階",
+      "file": "643-香港網站Service Worker快取策略進階：Cache Storage與離線優先架構深度解析.html",
+      "slug": "643-香港網站Service Worker快取策略進階：Cache Storage與離線優先架構深度解析",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/643-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Service%20Worker%E5%BF%AB%E5%8F%96%E7%AD%96%E7%95%A5%E9%80%B2%E9%9A%8E%EF%BC%9ACache%20Storage%E8%88%87%E9%9B%A2%E7%B7%9A%E5%84%AA%E5%85%88%E6%9E%B6%E6%A7%8B%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90"
+    },
+    {
+      "keyword": "香港網站WebGL着色器特效開發",
+      "file": "644-香港網站WebGL着色器特效開發：GLSL Fragment Shader在網頁視覺效果的實戰應用.html",
+      "slug": "644-香港網站WebGL着色器特效開發：GLSL Fragment Shader在網頁視覺效果的實戰應用",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/644-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99WebGL%E7%9D%80%E8%89%B2%E5%99%A8%E7%89%B9%E6%95%88%E9%96%8B%E7%99%BC%EF%BC%9AGLSL%20Fragment%20Shader%E5%9C%A8%E7%B6%B2%E9%A0%81%E8%A6%96%E8%A6%BA%E6%95%88%E6%9E%9C%E7%9A%84%E5%AF%A6%E6%88%B0%E6%87%89%E7%94%A8"
+    },
+    {
+      "keyword": "香港網站WebRTC點對點檔案傳輸",
+      "file": "645-香港網站WebRTC點對點檔案傳輸：Data Channel在瀏覽器間直接傳送檔案的完整方案.html",
+      "slug": "645-香港網站WebRTC點對點檔案傳輸：Data Channel在瀏覽器間直接傳送檔案的完整方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/645-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99WebRTC%E9%BB%9E%E5%B0%8D%E9%BB%9E%E6%AA%94%E6%A1%88%E5%82%B3%E8%BC%B8%EF%BC%9AData%20Channel%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E9%96%93%E7%9B%B4%E6%8E%A5%E5%82%B3%E9%80%81%E6%AA%94%E6%A1%88%E7%9A%84%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Web Audio API音頻視覺化",
+      "file": "646-香港網站Web Audio API音頻視覺化：AnalyserNode與Canvas頻譜圖實作教學.html",
+      "slug": "646-香港網站Web Audio API音頻視覺化：AnalyserNode與Canvas頻譜圖實作教學",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/646-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Audio%20API%E9%9F%B3%E9%A0%BB%E8%A6%96%E8%A6%BA%E5%8C%96%EF%BC%9AAnalyserNode%E8%88%87Canvas%E9%A0%BB%E8%AD%9C%E5%9C%96%E5%AF%A6%E4%BD%9C%E6%95%99%E5%AD%B8"
+    },
+    {
+      "keyword": "香港網站Canvas 2D遊戲開發",
+      "file": "647-香港網站Canvas 2D遊戲開發：遊戲迴圈與碰撞檢測在瀏覽器的完整實作.html",
+      "slug": "647-香港網站Canvas 2D遊戲開發：遊戲迴圈與碰撞檢測在瀏覽器的完整實作",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/647-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Canvas%202D%E9%81%8A%E6%88%B2%E9%96%8B%E7%99%BC%EF%BC%9A%E9%81%8A%E6%88%B2%E8%BF%B4%E5%9C%88%E8%88%87%E7%A2%B0%E6%92%9E%E6%AA%A2%E6%B8%AC%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E5%AE%8C%E6%95%B4%E5%AF%A6%E4%BD%9C"
+    },
+    {
+      "keyword": "香港網站IndexedDB交易進階操作",
+      "file": "648-香港網站IndexedDB交易進階操作：Cursor遍歷與索引查詢的深度應用.html",
+      "slug": "648-香港網站IndexedDB交易進階操作：Cursor遍歷與索引查詢的深度應用",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/648-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99IndexedDB%E4%BA%A4%E6%98%93%E9%80%B2%E9%9A%8E%E6%93%8D%E4%BD%9C%EF%BC%9ACursor%E9%81%8D%E6%AD%B7%E8%88%87%E7%B4%A2%E5%BC%95%E6%9F%A5%E8%A9%A2%E7%9A%84%E6%B7%B1%E5%BA%A6%E6%87%89%E7%94%A8"
+    },
+    {
+      "keyword": "香港網站WebSocket伺服器架設",
+      "file": "649-香港網站WebSocket伺服器架設：Node.js ws套件與即時廣播系統完整建置.html",
+      "slug": "649-香港網站WebSocket伺服器架設：Node.js ws套件與即時廣播系統完整建置",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/649-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99WebSocket%E4%BC%BA%E6%9C%8D%E5%99%A8%E6%9E%B6%E8%A8%AD%EF%BC%9ANode.js%20ws%E5%A5%97%E4%BB%B6%E8%88%87%E5%8D%B3%E6%99%82%E5%BB%A3%E6%92%AD%E7%B3%BB%E7%B5%B1%E5%AE%8C%E6%95%B4%E5%BB%BA%E7%BD%AE"
+    },
+    {
+      "keyword": "香港網站Web Animations API關鍵影格",
+      "file": "650-香港網站Web Animations API關鍵影格：KeyframeEffect與GroupEffect動畫編排技巧.html",
+      "slug": "650-香港網站Web Animations API關鍵影格：KeyframeEffect與GroupEffect動畫編排技巧",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/650-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Animations%20API%E9%97%9C%E9%8D%B5%E5%BD%B1%E6%A0%BC%EF%BC%9AKeyframeEffect%E8%88%87GroupEffect%E5%8B%95%E7%95%AB%E7%B7%A8%E6%8E%92%E6%8A%80%E5%B7%A7"
+    },
+    {
+      "keyword": "香港網站Resize Observer佈局自適應",
+      "file": "651-香港網站Resize Observer佈局自適應：容器尺寸變動觸發動態排版方案.html",
+      "slug": "651-香港網站Resize Observer佈局自適應：容器尺寸變動觸發動態排版方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/651-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Resize%20Observer%E4%BD%88%E5%B1%80%E8%87%AA%E9%81%A9%E6%87%89%EF%BC%9A%E5%AE%B9%E5%99%A8%E5%B0%BA%E5%AF%B8%E8%AE%8A%E5%8B%95%E8%A7%B8%E7%99%BC%E5%8B%95%E6%85%8B%E6%8E%92%E7%89%88%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Mutation Observer表單監控",
+      "file": "652-香港網站Mutation Observer表單監控：動態表單欄位變更偵測與驗證觸發機制.html",
+      "slug": "652-香港網站Mutation Observer表單監控：動態表單欄位變更偵測與驗證觸發機制",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/652-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Mutation%20Observer%E8%A1%A8%E5%96%AE%E7%9B%A3%E6%8E%A7%EF%BC%9A%E5%8B%95%E6%85%8B%E8%A1%A8%E5%96%AE%E6%AC%84%E4%BD%8D%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E8%88%87%E9%A9%97%E8%AD%89%E8%A7%B8%E7%99%BC%E6%A9%9F%E5%88%B6"
+    },
+    {
+      "keyword": "香港網站Geolocation API地圖標記",
+      "file": "653-香港網站Geolocation API地圖標記：Google Maps與Leaflet定位整合實戰.html",
+      "slug": "653-香港網站Geolocation API地圖標記：Google Maps與Leaflet定位整合實戰",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/653-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Geolocation%20API%E5%9C%B0%E5%9C%96%E6%A8%99%E8%A8%98%EF%BC%9AGoogle%20Maps%E8%88%87Leaflet%E5%AE%9A%E4%BD%8D%E6%95%B4%E5%90%88%E5%AF%A6%E6%88%B0"
+    },
+    {
+      "keyword": "香港網站Notification API權限管理",
+      "file": "654-香港網站Notification API權限管理：用戶授權流程與定時通知排程方案.html",
+      "slug": "654-香港網站Notification API權限管理：用戶授權流程與定時通知排程方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/654-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Notification%20API%E6%AC%8A%E9%99%90%E7%AE%A1%E7%90%86%EF%BC%9A%E7%94%A8%E6%88%B6%E6%8E%88%E6%AC%8A%E6%B5%81%E7%A8%8B%E8%88%87%E5%AE%9A%E6%99%82%E9%80%9A%E7%9F%A5%E6%8E%92%E7%A8%8B%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Clipboard API富文本複製",
+      "file": "655-香港網站Clipboard API富文本複製：HTML格式剪貼簿與跨域貼上相容性處理.html",
+      "slug": "655-香港網站Clipboard API富文本複製：HTML格式剪貼簿與跨域貼上相容性處理",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/655-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Clipboard%20API%E5%AF%8C%E6%96%87%E6%9C%AC%E8%A4%87%E8%A3%BD%EF%BC%9AHTML%E6%A0%BC%E5%BC%8F%E5%89%AA%E8%B2%BC%E7%B0%BF%E8%88%87%E8%B7%A8%E5%9F%9F%E8%B2%BC%E4%B8%8A%E7%9B%B8%E5%AE%B9%E6%80%A7%E8%99%95%E7%90%86"
+    },
+    {
+      "keyword": "香港網站HTML5拖放排序功能",
+      "file": "656-香港網站HTML5拖放排序功能：DragEvent與Sortable.js列表排序完整實作.html",
+      "slug": "656-香港網站HTML5拖放排序功能：DragEvent與Sortable.js列表排序完整實作",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/656-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99HTML5%E6%8B%96%E6%94%BE%E6%8E%92%E5%BA%8F%E5%8A%9F%E8%83%BD%EF%BC%9ADragEvent%E8%88%87Sortable.js%E5%88%97%E8%A1%A8%E6%8E%92%E5%BA%8F%E5%AE%8C%E6%95%B4%E5%AF%A6%E4%BD%9C"
+    },
+    {
+      "keyword": "香港網站File API圖片預覽壓縮",
+      "file": "657-香港網站File API圖片預覽壓縮：FileReader與Canvas用戶頭像上傳處理流程.html",
+      "slug": "657-香港網站File API圖片預覽壓縮：FileReader與Canvas用戶頭像上傳處理流程",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/657-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99File%20API%E5%9C%96%E7%89%87%E9%A0%90%E8%A6%BD%E5%A3%93%E7%B8%AE%EF%BC%9AFileReader%E8%88%87Canvas%E7%94%A8%E6%88%B6%E9%A0%AD%E5%83%8F%E4%B8%8A%E5%82%B3%E8%99%95%E7%90%86%E6%B5%81%E7%A8%8B"
+    },
+    {
+      "keyword": "香港網站Web Share API檔案分享",
+      "file": "658-香港網站Web Share API檔案分享：原生分享面板與Share Target接收功能整合.html",
+      "slug": "658-香港網站Web Share API檔案分享：原生分享面板與Share Target接收功能整合",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/658-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Share%20API%E6%AA%94%E6%A1%88%E5%88%86%E4%BA%AB%EF%BC%9A%E5%8E%9F%E7%94%9F%E5%88%86%E4%BA%AB%E9%9D%A2%E6%9D%BF%E8%88%87Share%20Target%E6%8E%A5%E6%94%B6%E5%8A%9F%E8%83%BD%E6%95%B4%E5%90%88"
+    },
+    {
+      "keyword": "香港網站Payment Request API商家整合",
+      "file": "659-香港網站Payment Request API商家整合：Google Pay與信用卡結帳流程原生實作.html",
+      "slug": "659-香港網站Payment Request API商家整合：Google Pay與信用卡結帳流程原生實作",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/659-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Payment%20Request%20API%E5%95%86%E5%AE%B6%E6%95%B4%E5%90%88%EF%BC%9AGoogle%20Pay%E8%88%87%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%B5%90%E5%B8%B3%E6%B5%81%E7%A8%8B%E5%8E%9F%E7%94%9F%E5%AF%A6%E4%BD%9C"
+    },
+    {
+      "keyword": "香港網站Credentials API密碼less登入",
+      "file": "660-香港網站Credentials API密碼less登入：WebAuthn與指紋辨識無密碼認證方案.html",
+      "slug": "660-香港網站Credentials API密碼less登入：WebAuthn與指紋辨識無密碼認證方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/660-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Credentials%20API%E5%AF%86%E7%A2%BCless%E7%99%BB%E5%85%A5%EF%BC%9AWebAuthn%E8%88%87%E6%8C%87%E7%B4%8B%E8%BE%A8%E8%AD%98%E7%84%A1%E5%AF%86%E7%A2%BC%E8%AA%8D%E8%AD%89%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Web Storage資料加密",
+      "file": "661-香港網站Web Storage資料加密：localStorage敏感資保護與Web Crypto API整合.html",
+      "slug": "661-香港網站Web Storage資料加密：localStorage敏感資保護與Web Crypto API整合",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/661-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Storage%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86%EF%BC%9AlocalStorage%E6%95%8F%E6%84%9F%E8%B3%87%E4%BF%9D%E8%AD%B7%E8%88%87Web%20Crypto%20API%E6%95%B4%E5%90%88"
+    },
+    {
+      "keyword": "香港網站Performance Observer長任務監控",
+      "file": "662-香港網站Performance Observer長任務監控：Long Task API與主線程阻塞分析方案.html",
+      "slug": "662-香港網站Performance Observer長任務監控：Long Task API與主線程阻塞分析方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/662-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Performance%20Observer%E9%95%B7%E4%BB%BB%E5%8B%99%E7%9B%A3%E6%8E%A7%EF%BC%9ALong%20Task%20API%E8%88%87%E4%B8%BB%E7%B7%9A%E7%A8%8B%E9%98%BB%E5%A1%9E%E5%88%86%E6%9E%90%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Background Sync離線表單提交",
+      "file": "663-香港網站Background Sync離線表單提交：斷網資料暫存與恢復連線自動同步機制.html",
+      "slug": "663-香港網站Background Sync離線表單提交：斷網資料暫存與恢復連線自動同步機制",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/663-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Background%20Sync%E9%9B%A2%E7%B7%9A%E8%A1%A8%E5%96%AE%E6%8F%90%E4%BA%A4%EF%BC%9A%E6%96%B7%E7%B6%B2%E8%B3%87%E6%96%99%E6%9A%AB%E5%AD%98%E8%88%87%E6%81%A2%E5%BE%A9%E9%80%A3%E7%B7%9A%E8%87%AA%E5%8B%95%E5%90%8C%E6%AD%A5%E6%A9%9F%E5%88%B6"
+    },
+    {
+      "keyword": "香港網站Web Speech API語音指令",
+      "file": "664-香港網站Web Speech API語音指令：SpeechRecognition免手操作網頁導覽功能開發.html",
+      "slug": "664-香港網站Web Speech API語音指令：SpeechRecognition免手操作網頁導覽功能開發",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/664-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web%20Speech%20API%E8%AA%9E%E9%9F%B3%E6%8C%87%E4%BB%A4%EF%BC%9ASpeechRecognition%E5%85%8D%E6%89%8B%E6%93%8D%E4%BD%9C%E7%B6%B2%E9%A0%81%E5%B0%8E%E8%A6%BD%E5%8A%9F%E8%83%BD%E9%96%8B%E7%99%BC"
+    },
+    {
+      "keyword": "香港網站Beacon API頁面卸載分析",
+      "file": "665-香港網站Beacon API頁面卸載分析：用戶離開時閱讀進度與停留時間可靠性上報.html",
+      "slug": "665-香港網站Beacon API頁面卸載分析：用戶離開時閱讀進度與停留時間可靠性上報",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/665-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Beacon%20API%E9%A0%81%E9%9D%A2%E5%8D%B8%E8%BC%89%E5%88%86%E6%9E%90%EF%BC%9A%E7%94%A8%E6%88%B6%E9%9B%A2%E9%96%8B%E6%99%82%E9%96%B1%E8%AE%80%E9%80%B2%E5%BA%A6%E8%88%87%E5%81%9C%E7%95%99%E6%99%82%E9%96%93%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8A%E5%A0%B1"
+    },
+    {
+      "keyword": "香港網站Content Indexing API離線內容目錄",
+      "file": "666-香港網站Content Indexing API離線內容目錄：PWA離線文章索引與Share Target整合.html",
+      "slug": "666-香港網站Content Indexing API離線內容目錄：PWA離線文章索引與Share Target整合",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/666-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Content%20Indexing%20API%E9%9B%A2%E7%B7%9A%E5%85%A7%E5%AE%B9%E7%9B%AE%E9%8C%84%EF%BC%9APWA%E9%9B%A2%E7%B7%9A%E6%96%87%E7%AB%A0%E7%B4%A2%E5%BC%95%E8%88%87Share%20Target%E6%95%B4%E5%90%88"
+    },
+    {
+      "keyword": "香港網站Screen Wake Lock API影片播放",
+      "file": "667-香港網站Screen Wake Lock API影片播放：長影片與直播串流螢幕防休眠方案.html",
+      "slug": "667-香港網站Screen Wake Lock API影片播放：長影片與直播串流螢幕防休眠方案",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/667-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Screen%20Wake%20Lock%20API%E5%BD%B1%E7%89%87%E6%92%AD%E6%94%BE%EF%BC%9A%E9%95%B7%E5%BD%B1%E7%89%87%E8%88%87%E7%9B%B4%E6%92%AD%E4%B8%B2%E6%B5%81%E8%9E%A2%E5%B9%95%E9%98%B2%E4%BC%91%E7%9C%A0%E6%96%B9%E6%A1%88"
+    },
+    {
+      "keyword": "香港網站Page Visibility API資源管理",
+      "file": "668-香港網站Page Visibility API資源管理：分頁隱藏時動畫暫停與計時器降頻策略.html",
+      "slug": "668-香港網站Page Visibility API資源管理：分頁隱藏時動畫暫停與計時器降頻策略",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/668-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Page%20Visibility%20API%E8%B3%87%E6%BA%90%E7%AE%A1%E7%90%86%EF%BC%9A%E5%88%86%E9%A0%81%E9%9A%B1%E8%97%8F%E6%99%82%E5%8B%95%E7%95%AB%E6%9A%AB%E5%81%9C%E8%88%87%E8%A8%88%E6%99%82%E5%99%A8%E9%99%8D%E9%A0%BB%E7%AD%96%E7%95%A5"
+    },
+    {
+      "keyword": "香港網站Reporting API安全報告收集",
+      "file": "669-香港網站Reporting API安全報告收集：CSP違規與Deprecation警告自動化收集機制.html",
+      "slug": "669-香港網站Reporting API安全報告收集：CSP違規與Deprecation警告自動化收集機制",
+      "date": "2026-07-14",
+      "url": "https://www.easyappwebsite.com/articles/669-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Reporting%20API%E5%AE%89%E5%85%A8%E5%A0%B1%E5%91%8A%E6%94%B6%E9%9B%86%EF%BC%9ACSP%E9%81%95%E8%A6%8F%E8%88%87Deprecation%E8%AD%A6%E5%91%8A%E8%87%AA%E5%8B%95%E5%8C%96%E6%94%B6%E9%9B%86%E6%A9%9F%E5%88%B6"
     }
   ],
-  "generated_at": "2026-07-13T12:00:00+08:00",
+  "generated_at": "2026-07-14T12:00:00+08:00",
   "total_articles": 281,
   "total_keywords": 582
 }
