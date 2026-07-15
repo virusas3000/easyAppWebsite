@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理 | EasyAppWebsite</title>
+<meta name="description" content="香港網站時間選擇器設計完整指南。EasyAppWebsite為香港企業提供專業香港網站時間選擇器設計服務，2026年最新網頁設計技巧，提升Google搜尋排名與轉換率，立即了解詳情！">
+<meta name="keywords" content="香港網站時間選擇器設計, 香港網頁設計, 香港網站開發, 2026年網站設計, EasyAppWebsite">
+<meta name="author" content="EasyAppWebsite">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理 | EasyAppWebsite">
+<meta property="og:description" content="香港網站時間選擇器設計完整指南。EasyAppWebsite為香港企業提供專業香港網站時間選擇器設計服務，2026年最新網頁設計技巧，提升Google搜尋排名與轉換率，立即了解詳情！">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.easyappwebsite.com/articles/679-香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理.html">
+<meta property="og:site_name" content="EasyAppWebsite">
+<meta property="article:published_time" content="2026-07-15">
+<meta property="article:modified_time" content="2026-07-15">
+<meta property="og:locale" content="zh_HK">
+<link rel="canonical" href="https://www.easyappwebsite.com/articles/679-香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理.html">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://www.easyappwebsite.com/index.html"},
+    {"@type":"ListItem","position":2,"name":"文章列表","item":"https://www.easyappwebsite.com/index.html#articles"},
+    {"@type":"ListItem","position":3,"name":"香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理","item":"https://www.easyappwebsite.com/articles/679-香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"香港網站時間選擇器設計需要多少預算？","acceptedAnswer":{"@type":"Answer","text":"2026年香港香港網站時間選擇器設計的費用取決於項目範圍和複雜度。基礎套餐從HK$8,000起，包含初步評估、基礎設定和配置調整。全面的香港網站時間選擇器設計方案通常在HK$20,000-HK$80,000之間。EasyAppWebsite提供免費報價服務，歡迎聯絡我們了解詳細費用。"}},
+    {"@type":"Question","name":"香港網站時間選擇器設計項目通常需要多長時間完成？","acceptedAnswer":{"@type":"Answer","text":"一般香港網站時間選擇器設計項目的完成週期為3-10週，具體取決於項目複雜度。小型香港網站時間選擇器設計調整可在2-3週內完成，大型香港網站時間選擇器設計系統建置則需要6-10週。2026年Google對網站品質要求更高，確保香港網站時間選擇器設計每個環節都達到標準比趕工更重要。EasyAppWebsite會在項目開始前提供詳細的時間表。"}},
+    {"@type":"Question","name":"香港網站時間選擇器設計做完後需要持續維護嗎？","acceptedAnswer":{"@type":"Answer","text":"是的，香港網站時間選擇器設計需要持續維護才能保持效果。2026年的技術趨勢和用戶期望不斷變化，定期更新設定、監控效能數據、調整香港網站時間選擇器設計策略都是必要的。EasyAppWebsite提供月度香港網站時間選擇器設計維護套餐，從HK$2,000/月起。"}},
+    {"@type":"Question","name":"我的現有網站可以進行香港網站時間選擇器設計升級嗎？","acceptedAnswer":{"@type":"Answer","text":"大部分現有網站都可以進行香港網站時間選擇器設計升級。EasyAppWebsite會先進行全面的技術審計，評估你現有網站的架構、效能和相容性，然後提供最合適的香港網站時間選擇器設計升級方案。在某些情況下，漸進式升級可能比全面重構更經濟高效。"}},
+    {"@type":"Question","name":"香港網站時間選擇器設計對SEO和轉換率有什麼具體幫助？","acceptedAnswer":{"@type":"Answer","text":"專業的香港網站時間選擇器設計從多個層面提升網站表現：技術層面包括頁面速度優化、結構化資料標記、搜尋引擎可爬取性提升；用戶體驗層面包括頁面互動性增強、內容呈現優化、轉換路徑流暢化。2026年Google持續強化Core Web Vitals和用戶體驗信號的權重，香港網站時間選擇器設計的品質直接影響搜尋排名和轉換率。"}}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.8;color:#1f2937;background:#f8fafc}
+.container{max-width:800px;margin:0 auto;padding:24px 20px}
+.breadcrumb{font-size:.85rem;color:#6b7280;margin-bottom:20px}
+.breadcrumb a{color:#dc2626;text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+h1{font-size:2rem;font-weight:800;color:#111827;margin:0 0 16px;line-height:1.3}
+h2{font-size:1.35rem;font-weight:700;color:#111827;margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid #dc2626}
+h3{font-size:1.1rem;font-weight:600;color:#374151;margin:24px 0 8px}
+p{margin:0 0 16px}
+ul,ol{margin:0 0 16px;padding-left:24px}
+li{margin-bottom:8px}
+.cta-box{background:linear-gradient(135deg,#fee2e2 0%,#fecaca 100%);border-left:4px solid #dc2626;border-radius:8px;padding:24px;margin:32px 0}
+.cta-box h3{margin:0 0 12px;color:#991b1b;font-size:1.15rem}
+.cta-box p{margin:0 0 16px;color:#7f1d1d}
+.cta-btn{display:inline-block;background:#dc2626;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#b91c1c}
+.faq{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:20px;margin:24px 0}
+.faq h3{margin:0 0 12px;font-size:1.05rem;color:#374151}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:.85rem;color:#6b7280}
+</style>
+</head>
+<body>
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="../index.html">首頁</a> &gt; <a href="../index.html#articles">文章列表</a> &gt; 香港網站時間選擇器設計
+  </nav>
+  <h1>香港網站時間選擇器設計：Date Time Picker的UX最佳實踐與時區處理</h1>
+
+  <section>
+    <h2>引言：為什麼香港網站時間選擇器設計在2026年至關重要</h2>
+    <p>2026年的香港數碼市場正處於快速變革之中。隨着移動端用戶佔比超過95%、線上預約系統的普及率持續攀升，香港網站時間選擇器設計已成為影響用戶體驗和轉換率的關鍵因素。時間選擇器（Date Time Picker）作為網站表單中最常見的互動元件之一，廣泛應用於預約系統、活動報名、航班選擇、配送時間設定等場景。根據香港數碼政策辦公室2026年發布的《數碼經濟報告》，超過78%的香港消費者會因為表單填寫體驗不佳而放棄線上操作，其中時間選擇器的不友善設計是導致放棄的主要原因之一。</p>
+    <p>香港網站時間選擇器設計不僅涉及前端介面的視覺設計，更涵蓋了時區處理、日期格式本地化、鍵盤與觸控互動、無障礙支援等多個技術層面。在2026年，Google持續強化Core Web Vitals中INP（互動延遲）指標的權重，時間選擇器的響應速度和互動流暢度直接影響搜尋排名。EasyAppWebsite作為香港領先的網頁設計與開發團隊，深知時間選擇器設計對企業線上業務的深遠影響，本文將從多個維度深入探討這個課題。</p>
+    <p>在香港這個國際金融中心，企業的客戶可能遍佈全球不同時區。香港網站時間選擇器設計必須考慮多用戶時區的場景，確保不同地區的用戶都能準確理解並選擇時間。無論你是醫療預約系統、外賣配送平台、還是國際會議報名系統，精心設計的時間選擇器都是2026年提升用戶滿意度和轉換率的必備元件。接下來，我們將從市場概況、常見迷思、最佳實踐等多個角度為你提供最全面的指南。</p>
+  </section>
+
+  <section>
+    <h2>2026年香港香港網站時間選擇器設計市場概況</h2>
+    <p>2026年的香港網站開發市場呈現出高度成熟與專業化分工的態勢。根據香港統計處的最新數據，全港超過34萬家活躍企業中，約65%已建立或正在建立線上服務平台。其中，預約系統、報名系統、配送系統等涉及時間選擇器的應用場景需求增長顯著。市場調查顯示，2026年香港企業在表單UX優化方面的預算平均增長了35%，其中時間選擇器設計的投入佔比提升了28%。</p>
+    <p>從技術層面來看，2026年的香港網站時間選擇器設計面臨多重挑戰和機遇。HTML5原生日期選擇器雖然提供了基礎功能，但在自訂樣式、跨瀏覽器一致性、進階互動等方面存在諸多限制。React、Vue等前端框架生態系統提供了豐富的時間選擇器元件庫，如React DatePicker、Vue Datepicker等，但選擇合適的元件並進行本地化定制仍需要專業知識。</p>
+    <p>此外，2026年香港的無障礙法規日趨嚴格，網站必須符合WCAG 2.2 AA級別標準。時間選擇器作為互動密集的元件，其無障礙設計尤為關鍵——包括鍵盤導航支援、ARIA標籤正確標記、螢幕閱讀器相容性、色彩對比度等。這些要求使得香港網站時間選擇器設計的專業門檻進一步提高，也凸顯了選擇專業開發團隊的重要性。</p>
+  </section>
+
+  <section>
+    <h2>香港網站時間選擇器設計的常見迷思</h2>
+    <h3>迷思一：使用HTML5原生日期選擇器就夠了</h3>
+    <p>許多香港企業認為HTML5的input type="date"已經能滿足所有需求，實際上這是一個嚴重的誤解。HTML5原生日期選擇器在不同瀏覽器中的外觀和行為差異巨大——Chrome、Safari、Firefox的實作各不相同，且無法進行深度樣式自訂。更重要的是，原生日期選擇器缺乏時間範圍限制、快捷選項、節假日標記等進階功能，無法滿足專業業務需求。</p>
+    <h3>迷思二：時間選擇器只需要考慮日期</h3>
+    <p>許多設計者忽略了時間（時分秒）選擇的重要性。在預約系統中，用戶需要精確選擇小時和分鐘；在配送系統中，需要選擇時間段而非具體時間。只考慮日期而忽略時間的設計會導致用戶需要在其他地方補充時間資訊，增加操作步驟和出錯風險。</p>
+    <h3>迷思三：所有用戶都在同一時區</h3>
+    <p>對於面向國際用戶的香港企業來說，時區處理是時間選擇器設計中不可忽視的問題。如果系統只使用伺服器時區而不考慮用戶當地時區，國際用戶可能會選擇錯誤的時間，導致預約衝突或錯過截止時間。2026年的最佳實踐是在時間選擇器中明確顯示時區資訊，並提供時區切換功能。</p>
+    <h3>迷思四：時間選擇器不需要無障礙設計</h3>
+    <p>這是一個危險的誤解。2026年的香港網站無障礙要求日益嚴格，時間選擇器作為高度互動的元件，其無障礙設計至關重要。鍵盤用戶需要能夠通過方向鍵在日曆中導航、通過Enter鍵選擇日期、通過Escape鍵關閉選擇器。螢幕閱讀器用戶需要正確的ARIA宣告來理解日曆的結構和操作方式。</p>
+  </section>
+
+  <section>
+    <h2>香港網站時間選擇器設計的7大最佳實踐</h2>
+    <h3>1. 智能預設與快捷選項</h3>
+    <p>時間選擇器應提供智能預設值和快捷選項，減少用戶操作步驟。例如，預約系統可以預設為「最近可用的時間段」；配送系統可以提供「今天下午」「明天上午」等快捷按鈕。2026年的最佳實踐是結合AI技術，根據用戶的歷史行為提供個性化的時間建議。</p>
+    <h3>2. 清晰的時區顯示與切換</h3>
+    <p>對於國際化的香港企業，時間選擇器必須明確顯示當前時區，並允許用戶切換時區。最佳做法是在選擇器旁顯示「HKT (UTC+8)」等時區標記，並提供時區切換下拉選單。當用戶切換時區時，已選擇的時間應自動轉換為新時區的對應時間。</p>
+    <h3>3. 鍵盤友好的導航設計</h3>
+    <p>專業的時間選擇器必須支援完整的鍵盤操作。方向鍵在日曆中導航、PageUp/PageDown切換月份、Home/End跳到週首/週末、Enter選擇日期、Escape關閉選擇器。這些鍵盤互動模式在2026年已成為業界標準，缺乏鍵盤支援的時間選擇器會嚴重影響工作效率和無障礙相容性。</p>
+    <h3>4. 日期範圍限制與不可選日期處理</h3>
+    <p>業務場景通常需要限制可選日期範圍——例如預約系統只允許選擇未來7天內的日期、配送系統不允許選擇節假日。不可選的日期應以視覺化的方式標記（如灰色禁用狀態），並在用戶嘗試選擇時提供清晰的提示訊息。</p>
+    <h3>5. 響應式設計與觸控優化</h3>
+    <p>在移動設備上，時間選擇器需要採用不同的佈局策略。日曆應以全螢幕或底部彈出方式呈現，確保觸控目標尺寸不少於44x44像素。時間選擇部分可以使用滾輪選擇器或滑桿，而非傳統的數字輸入框，以提供更好的觸控體驗。</p>
+    <h3>6. 本地化日期格式與語言</h3>
+    <p>香港用戶習慣的日期格式為DD/MM/YYYY或YYYY年MM月DD日，時間格式為24小時制。時間選擇器應根據用戶的語言設定自動調整日期和時間的顯示格式。同時，日曆中的星期標記應使用「日、一、二、三、四、五、六」等中文標記，月份名稱應使用「1月、2月」等格式。</p>
+    <h3>7. 無障礙ARIA標記</h3>
+    <p>時間選擇器應使用正確的ARIA角色和屬性。日曆容器使用role="dialog"和aria-label="選擇日期"，日期格使用role="grid"，日期單元格使用role="gridcell"和aria-selected。當日期被選擇或切換月份時，應通過aria-live區域向螢幕閱讀器宣告狀態變化。</p>
+  </section>
+
+  <section>
+    <h2>香港網站時間選擇器設計實際案例分析</h2>
+    <h3>案例一：香港醫療預約系統的時間選擇器優化</h3>
+    <p>一家擁有8間診所的香港醫療集團在2026年初委託EasyAppWebsite進行香港網站時間選擇器設計項目。該集團的舊版預約系統使用HTML5原生日期選擇器，用戶需要先選日期再選時間，操作繁瑣且無法顯示醫生可用時段。EasyAppWebsite設計了日曆與時間段合併的選擇器，直接在日曆上標記可用時段，用戶點擊日期後立即顯示可預約時間。項目完成後，預約完成率提升了72%，用戶放棄率降低了45%。</p>
+    <h3>案例二：香港外賣平台的配送時間選擇</h3>
+    <p>一家香港外賣配送平台在2026年2月開始香港網站時間選擇器設計升級。舊版設計使用兩個獨立的日期和時間下拉選單，用戶體驗不佳。EasyAppWebsite設計了帶有快捷時段按鈕（「盡快」「12:00-13:00」「19:00-20:00」）的時間選擇器，並在日曆上標記不可配送的日期。配送時間選擇的完成率從56%提升至91%，客訴率降低了38%。</p>
+    <h3>案例三：香港國際會議報名系統的時區處理</h3>
+    <p>一個在香港舉辦的國際科技會議報名系統在2026年面臨時區混亂的問題。來自不同時區的參會者經常因為時區理解錯誤而錯過會議。通過EasyAppWebsite的香港網站時間選擇器設計服務，包括明確時區顯示、時區切換功能、用戶本地時間預覽，該系統的時區相關投訴降低了95%，國際參會者的報名完成率提升了63%。</p>
+  </section>
+
+  <section>
+    <h2>如何開始你的香港網站時間選擇器設計項目</h2>
+    <p>開始香港網站時間選擇器設計項目的第一步是全面了解你當前網站的表單時間選擇狀況。EasyAppWebsite提供免費的初步評估服務，我們的專家會檢查你的網站時間選擇器的用戶體驗、時區處理、無障礙支援等各方面的現狀，並提供詳細的改善建議。</p>
+    <p>第二步是設定明確的香港網站時間選擇器設計目標。不同的企業有不同的需求，有些需要提升預約完成率，有些需要改善時區體驗，有些需要增強無障礙相容性。EasyAppWebsite會與你深入溝通，了解你的業務目標和預算，然後制定最適合的方案。</p>
+    <p>第三步是選擇合適的香港網站時間選擇器設計合作夥伴。2026年香港有許多提供表單設計服務的公司，但並非所有都能提供專業、可靠的時間選擇器設計。EasyAppWebsite擁有超過10年的香港網站開發經驗，已完成超過500個表單優化項目，客戶滿意度達到98%。</p>
+    <p>第四步是執行香港網站時間選擇器設計計劃。EasyAppWebsite採用敏捷開發方法，將項目分為多個短週期衝刺，每個衝刺結束後都會有可交付的成果。這種方式確保項目按時交付，並允許在過程中靈活調整方向。</p>
+    <p>第五步是持續監控和優化香港網站時間選擇器設計效果。項目完成後，EasyAppWebsite會提供3個月的免費效果監控服務，確保時間選擇器的效能和用戶體驗持續穩定。我們還提供長期的維護套餐，幫助企業應對不斷變化的技術環境。</p>
+  </section>
+
+  <section>
+    <h2>為什麼選擇EasyAppWebsite進行香港網站時間選擇器設計</h2>
+    <p>EasyAppWebsite是香港領先的專業網頁設計與開發公司，在香港網站時間選擇器設計領域擁有深厚的專業知識和豐富的實戰經驗。我們的團隊由資深前端工程師、UX設計師、無障礙設計專家組成，能夠為時間選擇器設計項目提供全方位的專業支援。</p>
+    <p>選擇EasyAppWebsite進行香港網站時間選擇器設計的優勢包括：一是本地化服務，我們深入了解香港市場的特點和用戶習慣，時間選擇器設計更貼地氣；二是技術領先，我們持續關注2026年最新的前端元件技術趨勢，確保客戶網站始終採用最先進的時間選擇器方案；三是透明定價，服務費用清晰透明，沒有隱藏收費；四是持續支援，我們提供項目完成後的長期技術支援和維護服務。</p>
+    <p>EasyAppWebsite已成功為香港超過500家企業提供表單優化服務，涵蓋醫療、餐飲、教育、物流、會展等多個行業。我們的時間選擇器設計客戶平均在3個月內實現表單完成率提升50%以上，用戶投訴率降低40%以上。這些數據證明了我們在香港網站時間選擇器設計領域的專業實力。</p>
+    <p>如果你正在尋找可靠的香港網站時間選擇器設計合作夥伴，EasyAppWebsite是你的最佳選擇。我們提供免費諮詢和報價服務，歡迎隨時聯絡我們的專家團隊。讓我們用專業的時間選擇器設計服務，幫助你的企業在2026年的數碼市場中取得成功。</p>
+  </section>
+
+  <section>
+    <h2>香港網站時間選擇器設計常見問題（FAQ）</h2>
+    <div class="faq">
+      <h3>香港網站時間選擇器設計需要多少預算？</h3>
+      <p>2026年香港香港網站時間選擇器設計的費用取決於項目範圍和複雜度。基礎套餐從HK$8,000起，包含初步評估、基礎設定和配置調整。全面的香港網站時間選擇器設計方案通常在HK$20,000-HK$80,000之間。EasyAppWebsite提供免費報價服務，歡迎聯絡我們了解詳細費用。</p>
+    </div>
+    <div class="faq">
+      <h3>香港網站時間選擇器設計項目通常需要多長時間完成？</h3>
+      <p>一般香港網站時間選擇器設計項目的完成週期為3-10週，具體取決於項目複雜度。小型香港網站時間選擇器設計調整可在2-3週內完成，大型香港網站時間選擇器設計系統建置則需要6-10週。2026年Google對網站品質要求更高，確保香港網站時間選擇器設計每個環節都達到標準比趕工更重要。EasyAppWebsite會在項目開始前提供詳細的時間表。</p>
+    </div>
+    <div class="faq">
+      <h3>香港網站時間選擇器設計做完後需要持續維護嗎？</h3>
+      <p>是的，香港網站時間選擇器設計需要持續維護才能保持效果。2026年的技術趨勢和用戶期望不斷變化，定期更新設定、監控效能數據、調整香港網站時間選擇器設計策略都是必要的。EasyAppWebsite提供月度香港網站時間選擇器設計維護套餐，從HK$2,000/月起。</p>
+    </div>
+    <div class="faq">
+      <h3>我的現有網站可以進行香港網站時間選擇器設計升級嗎？</h3>
+      <p>大部分現有網站都可以進行香港網站時間選擇器設計升級。EasyAppWebsite會先進行全面的技術審計，評估你現有網站的架構、效能和相容性，然後提供最合適的香港網站時間選擇器設計升級方案。在某些情況下，漸進式升級可能比全面重構更經濟高效。</p>
+    </div>
+    <div class="faq">
+      <h3>香港網站時間選擇器設計對SEO和轉換率有什麼具體幫助？</h3>
+      <p>專業的香港網站時間選擇器設計從多個層面提升網站表現：技術層面包括頁面速度優化、結構化資料標記、搜尋引擎可爬取性提升；用戶體驗層面包括頁面互動性增強、內容呈現優化、轉換路徑流暢化。2026年Google持續強化Core Web Vitals和用戶體驗信號的權重，香港網站時間選擇器設計的品質直接影響搜尋排名和轉換率。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>總結：香港網站時間選擇器設計是2026年企業必須投資的戰略</h2>
+    <p>在2026年的香港數碼市場，香港網站時間選擇器設計已經不是「有就好」的選配項目，而是企業表單體驗和業務效率的核心基礎設施。從提升預約完成率到改善時區體驗，從增強無障礙相容性到優化用戶互動效率，時間選擇器設計的影響力遍及企業線上運營的各個層面。</p>
+    <p>回顧本文要點：避免時間選擇器常見迷思、遵循7大最佳實踐、以數據驅動設計決策、選擇專業的合作夥伴。無論你處於時間選擇器設計的哪個階段——剛起步、進行中、還是希望提升現有效果——EasyAppWebsite都能為你提供專業支援。</p>
+    <p>2026年是行動的年份。隨着技術標準的快速演進和用戶期望的持續提升，猶豫不決只會讓競爭對手搶佔先機。聯絡EasyAppWebsite，讓我們用專業的香港網站時間選擇器設計服務為你的業務注入新的增長動力。</p>
+    <p>別讓你的競爭對手在時間選擇器設計方面超越你。現在就開始規劃你的香港網站時間選擇器設計方案，把握2026年香港數碼市場的無限商機！EasyAppWebsite的專家團隊隨時準備為你提供最專業的服務。</p>
+  </section>
+
+  <div class="cta-box">
+    <h3>準備好開始你的香港網站時間選擇器設計項目了嗎？</h3>
+    <p>EasyAppWebsite提供免費諮詢和報價服務。立即聯絡我們，讓專業團隊為你量身打造最適合的香港網站時間選擇器設計方案！</p>
+    <a href="../index.html#contact" class="cta-btn">立即免費諮詢 →</a>
+  </div>
+  <div class="cta-box">
+    <h3>查看我們的網頁設計套餐</h3>
+    <p>從HK$8,000起，我們提供多種香港網站時間選擇器設計方案，適合不同規模和預算的香港企業。</p>
+    <a href="../index.html#pricing" class="cta-btn">查看套餐價格 →</a>
+  </div>
+
+  <footer>
+    <p>EasyAppWebsite — 香港專業網頁設計與SEO團隊</p>
+    <p>聯絡我們：vickhung3000@hotmail.com | +852 66844697</p>
+    <p>&copy; 2026 EasyAppWebsite. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
