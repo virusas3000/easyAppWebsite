@@ -842,7 +842,36 @@
     "香港網站設計貝葉斯AB測試",
     "香港網站開發Event Sourcing事件儲存",
     "香港網站設計對話式AI搜尋介面",
-    "香港網站開發API Gateway限流熔斷"
+    "香港網站開發API Gateway限流熔斷",
+    "香港網站開發Sagas模式分散式事務",
+    "香港網站設計智慧城市數據整合",
+    "香港網站開發CQRS命令查詢職責分離",
+    "香港網站設計數碼孿生Digital Twin應用",
+    "香港網站開發Saga Orchestrator協調器",
+    "香港網站設計聯邦學習Federated Learning",
+    "香港網站開發分散式鎖Distributed Lock",
+    "香港網站設計邊緣AI推論Edge AI Inference",
+    "香港網站開發租戶隔離Tenant Isolation",
+    "香港網站設計量子計算整合Quantum Computing",
+    "香港網站開發分散式快取Distributed Cache",
+    "香港網站設計神經網絡搜尋Neural Search",
+    "香港網站開發冪等性Idempotency設計",
+    "香港網站設計數位憑證Verifiable Credential",
+    "香港網站開發訊息佇列Message Queue進階",
+    "香港網站設計空間計算Spatial Computing",
+    "香港網站開發最終一致性Eventual Consistency",
+    "香港網站設計多模態AI Multimodal AI整合",
+    "香港網站開發補償交易Compensating Transaction",
+    "香港網站設計生成式AI Generative AI內容",
+    "香港網站開發讀寫分離Read Write Splitting",
+    "香港網站設計向量嵌入Vector Embedding搜尋",
+    "香港網站開發分片鍵Shard Key策略",
+    "香港網站設計大語言模型LLM微調整合",
+    "香港網站開發兩階段提交Two-Phase Commit",
+    "香港網站設計知識蒸餾Knowledge Distillation",
+    "香港網站開發CAP定理系統設計",
+    "香港網站設計適應性自適應佈局Adaptive Layout",
+    "香港網站開發背壓Backpressure流控機制"
   ],
   "articles": [
     {
@@ -4435,9 +4464,212 @@
       "slug": "901-香港網站開發API Gateway限流熔斷",
       "date": "2026-07-24",
       "url": "https://www.easyappwebsite.com/articles/901-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCAPI%20Gateway%E9%99%90%E6%B5%81%E7%86%94%E6%96%B7.html"
+    },
+    {
+      "keyword": "香港網站開發Sagas模式分散式事務",
+      "file": "902-香港網站開發Sagas模式分散式事務.html",
+      "slug": "902-香港網站開發Sagas模式分散式事務",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/902-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCSagas%E6%A8%A1%E5%BC%8F%E5%88%86%E6%95%A3%E5%BC%8F%E4%BA%8B%E5%8B%99.html"
+    },
+    {
+      "keyword": "香港網站設計智慧城市數據整合",
+      "file": "903-香港網站設計智慧城市數據整合.html",
+      "slug": "903-香港網站設計智慧城市數據整合",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/903-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82%E6%95%B8%E6%93%9A%E6%95%B4%E5%90%88.html"
+    },
+    {
+      "keyword": "香港網站開發CQRS命令查詢職責分離",
+      "file": "904-香港網站開發CQRS命令查詢職責分離.html",
+      "slug": "904-香港網站開發CQRS命令查詢職責分離",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/904-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCCQRS%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%A9%A2%E8%81%B7%E8%B2%AC%E5%88%86%E9%9B%A2.html"
+    },
+    {
+      "keyword": "香港網站設計數碼孿生Digital Twin應用",
+      "file": "905-香港網站設計數碼孿生Digital Twin應用.html",
+      "slug": "905-香港網站設計數碼孿生Digital Twin應用",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/905-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E6%95%B8%E7%A2%BC%E5%AD%BF%E7%94%9FDigital%20Twin%E6%87%89%E7%94%A8.html"
+    },
+    {
+      "keyword": "香港網站開發Saga Orchestrator協調器",
+      "file": "906-香港網站開發Saga Orchestrator協調器.html",
+      "slug": "906-香港網站開發Saga Orchestrator協調器",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/906-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCSaga%20Orchestrator%E5%8D%94%E8%AA%BF%E5%99%A8.html"
+    },
+    {
+      "keyword": "香港網站設計聯邦學習Federated Learning",
+      "file": "907-香港網站設計聯邦學習Federated Learning.html",
+      "slug": "907-香港網站設計聯邦學習Federated Learning",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/907-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E8%81%AF%E9%82%A6%E5%AD%B8%E7%BF%92Federated%20Learning.html"
+    },
+    {
+      "keyword": "香港網站開發分散式鎖Distributed Lock",
+      "file": "908-香港網站開發分散式鎖Distributed Lock.html",
+      "slug": "908-香港網站開發分散式鎖Distributed Lock",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/908-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%88%86%E6%95%A3%E5%BC%8F%E9%8E%96Distributed%20Lock.html"
+    },
+    {
+      "keyword": "香港網站設計邊緣AI推論Edge AI Inference",
+      "file": "909-香港網站設計邊緣AI推論Edge AI Inference.html",
+      "slug": "909-香港網站設計邊緣AI推論Edge AI Inference",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/909-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E9%82%8A%E7%B7%A3AI%E6%8E%A8%E8%AB%96Edge%20AI%20Inference.html"
+    },
+    {
+      "keyword": "香港網站開發租戶隔離Tenant Isolation",
+      "file": "910-香港網站開發租戶隔離Tenant Isolation.html",
+      "slug": "910-香港網站開發租戶隔離Tenant Isolation",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/910-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E7%A7%9F%E6%88%B6%E9%9A%94%E9%9B%A2Tenant%20Isolation.html"
+    },
+    {
+      "keyword": "香港網站設計量子計算整合Quantum Computing",
+      "file": "911-香港網站設計量子計算整合Quantum Computing.html",
+      "slug": "911-香港網站設計量子計算整合Quantum Computing",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/911-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97%E6%95%B4%E5%90%88Quantum%20Computing.html"
+    },
+    {
+      "keyword": "香港網站開發分散式快取Distributed Cache",
+      "file": "912-香港網站開發分散式快取Distributed Cache.html",
+      "slug": "912-香港網站開發分散式快取Distributed Cache",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/912-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%88%86%E6%95%A3%E5%BC%8F%E5%BF%AB%E5%8F%96Distributed%20Cache.html"
+    },
+    {
+      "keyword": "香港網站設計神經網絡搜尋Neural Search",
+      "file": "913-香港網站設計神經網絡搜尋Neural Search.html",
+      "slug": "913-香港網站設計神經網絡搜尋Neural Search",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/913-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E7%A5%9E%E7%B6%93%E7%B6%B2%E7%B5%A1%E6%90%9C%E5%B0%8BNeural%20Search.html"
+    },
+    {
+      "keyword": "香港網站開發冪等性Idempotency設計",
+      "file": "914-香港網站開發冪等性Idempotency設計.html",
+      "slug": "914-香港網站開發冪等性Idempotency設計",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/914-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%86%AA%E7%AD%89%E6%80%A7Idempotency%E8%A8%AD%E8%A8%88.html"
+    },
+    {
+      "keyword": "香港網站設計數位憑證Verifiable Credential",
+      "file": "915-香港網站設計數位憑證Verifiable Credential.html",
+      "slug": "915-香港網站設計數位憑證Verifiable Credential",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/915-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E6%95%B8%E4%BD%8D%E6%86%91%E8%AD%89Verifiable%20Credential.html"
+    },
+    {
+      "keyword": "香港網站開發訊息佇列Message Queue進階",
+      "file": "916-香港網站開發訊息佇列Message Queue進階.html",
+      "slug": "916-香港網站開發訊息佇列Message Queue進階",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/916-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E8%A8%8A%E6%81%AF%E4%BD%87%E5%88%97Message%20Queue%E9%80%B2%E9%9A%8E.html"
+    },
+    {
+      "keyword": "香港網站設計空間計算Spatial Computing",
+      "file": "917-香港網站設計空間計算Spatial Computing.html",
+      "slug": "917-香港網站設計空間計算Spatial Computing",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/917-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E7%A9%BA%E9%96%93%E8%A8%88%E7%AE%97Spatial%20Computing.html"
+    },
+    {
+      "keyword": "香港網站開發最終一致性Eventual Consistency",
+      "file": "918-香港網站開發最終一致性Eventual Consistency.html",
+      "slug": "918-香港網站開發最終一致性Eventual Consistency",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/918-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E6%9C%80%E7%B5%82%E4%B8%80%E8%87%B4%E6%80%A7Eventual%20Consistency.html"
+    },
+    {
+      "keyword": "香港網站設計多模態AI Multimodal AI整合",
+      "file": "919-香港網站設計多模態AI Multimodal AI整合.html",
+      "slug": "919-香港網站設計多模態AI Multimodal AI整合",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/919-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E5%A4%9A%E6%A8%A1%E6%85%8BAI%20Multimodal%20AI%E6%95%B4%E5%90%88.html"
+    },
+    {
+      "keyword": "香港網站開發補償交易Compensating Transaction",
+      "file": "920-香港網站開發補償交易Compensating Transaction.html",
+      "slug": "920-香港網站開發補償交易Compensating Transaction",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/920-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E8%A3%9C%E5%84%9F%E4%BA%A4%E6%98%93Compensating%20Transaction.html"
+    },
+    {
+      "keyword": "香港網站設計生成式AI Generative AI內容",
+      "file": "921-香港網站設計生成式AI Generative AI內容.html",
+      "slug": "921-香港網站設計生成式AI Generative AI內容",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/921-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E7%94%9F%E6%88%90%E5%BC%8FAI%20Generative%20AI%E5%85%A7%E5%AE%B9.html"
+    },
+    {
+      "keyword": "香港網站開發讀寫分離Read Write Splitting",
+      "file": "922-香港網站開發讀寫分離Read Write Splitting.html",
+      "slug": "922-香港網站開發讀寫分離Read Write Splitting",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/922-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E8%AE%80%E5%AF%AB%E5%88%86%E9%9B%A2Read%20Write%20Splitting.html"
+    },
+    {
+      "keyword": "香港網站設計向量嵌入Vector Embedding搜尋",
+      "file": "923-香港網站設計向量嵌入Vector Embedding搜尋.html",
+      "slug": "923-香港網站設計向量嵌入Vector Embedding搜尋",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/923-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E5%90%91%E9%87%8F%E5%B5%8C%E5%85%A5Vector%20Embedding%E6%90%9C%E5%B0%8B.html"
+    },
+    {
+      "keyword": "香港網站開發分片鍵Shard Key策略",
+      "file": "924-香港網站開發分片鍵Shard Key策略.html",
+      "slug": "924-香港網站開發分片鍵Shard Key策略",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/924-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%88%86%E7%89%87%E9%8D%B5Shard%20Key%E7%AD%96%E7%95%A5.html"
+    },
+    {
+      "keyword": "香港網站設計大語言模型LLM微調整合",
+      "file": "925-香港網站設計大語言模型LLM微調整合.html",
+      "slug": "925-香港網站設計大語言模型LLM微調整合",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/925-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E5%A4%A7%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8BLLM%E5%BE%AE%E8%AA%BF%E6%95%B4%E5%90%88.html"
+    },
+    {
+      "keyword": "香港網站開發兩階段提交Two-Phase Commit",
+      "file": "926-香港網站開發兩階段提交Two-Phase Commit.html",
+      "slug": "926-香港網站開發兩階段提交Two-Phase Commit",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/926-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%85%A9%E9%9A%8E%E6%AE%B5%E6%8F%90%E4%BA%A4Two-Phase%20Commit.html"
+    },
+    {
+      "keyword": "香港網站設計知識蒸餾Knowledge Distillation",
+      "file": "927-香港網站設計知識蒸餾Knowledge Distillation.html",
+      "slug": "927-香港網站設計知識蒸餾Knowledge Distillation",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/927-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E7%9F%A5%E8%AD%98%E8%92%B8%E9%A4%BEKnowledge%20Distillation.html"
+    },
+    {
+      "keyword": "香港網站開發CAP定理系統設計",
+      "file": "928-香港網站開發CAP定理系統設計.html",
+      "slug": "928-香港網站開發CAP定理系統設計",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/928-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCCAP%E5%AE%9A%E7%90%86%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88.html"
+    },
+    {
+      "keyword": "香港網站設計適應性自適應佈局Adaptive Layout",
+      "file": "929-香港網站設計適應性自適應佈局Adaptive Layout.html",
+      "slug": "929-香港網站設計適應性自適應佈局Adaptive Layout",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/929-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E9%81%A9%E6%87%89%E6%80%A7%E8%87%AA%E9%81%A9%E6%87%89%E4%BD%88%E5%B1%80Adaptive%20Layout.html"
+    },
+    {
+      "keyword": "香港網站開發背壓Backpressure流控機制",
+      "file": "930-香港網站開發背壓Backpressure流控機制.html",
+      "slug": "930-香港網站開發背壓Backpressure流控機制",
+      "date": "2026-07-25",
+      "url": "https://www.easyappwebsite.com/articles/930-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E8%83%8C%E5%A3%93Backpressure%E6%B5%81%E6%8E%A7%E6%A9%9F%E5%88%B6.html"
     }
   ],
-  "generated_at": "2026-07-24T12:00:00+08:00",
-  "total_articles": 513,
-  "total_keywords": 843
+  "generated_at": "2026-07-25T12:00:00+08:00",
+  "total_articles": 542,
+  "total_keywords": 872
 }
