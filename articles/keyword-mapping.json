@@ -1045,7 +1045,36 @@
     "香港網站開發Turborepo Monorepo管理",
     "香港網站設計Accessible Design System無障礙設計系統",
     "香港網站開發Edge Runtime邊緣運行時",
-    "香港網站設計Variable Fonts可變字體動畫進階"
+    "香港網站設計Variable Fonts可變字體動畫進階",
+    "香港網站設計AI生成式介面",
+    "香港網站開發Web Neural Network API",
+    "香港網站設計AI驅動A/B測試自動化",
+    "香港網站開發WebGPU Compute Shader運算著色器進階",
+    "香港網站設計AI個性化內容推薦引擎",
+    "香港網站開發WebCodecs影片編解碼API進階",
+    "香港網站設計AI聊天機器人RAG架構",
+    "香港網站開發WebTransport低延遲傳輸進階",
+    "香港網站設計AI圖片生成Stable Diffusion整合",
+    "香港網站開發WebGPU External Texture外部紋理進階應用",
+    "香港網站設計AI語音合成Web Speech API",
+    "香港網站開發WebGPU Render Bundle渲染捆綁進階應用",
+    "香港網站設計AI驅動搜尋引擎最佳化",
+    "香港網站開發WebGPU Render Pass渲染通道",
+    "香港網站設計AI情感分析用戶評論",
+    "香港網站開發WebGPU Query Set效能監測",
+    "香港網站設計AI智能客服路由系統",
+    "香港網站開發WebGPU Texture Compression紋理壓縮進階應用",
+    "香港網站設計AI多模態搜尋介面",
+    "香港網站開發WebNN神經網路API加速進階",
+    "香港網站設計AI生成式佈Layout設計",
+    "香港網站開發WebSocket Reconnection重連機制進階",
+    "香港網站設計AI文檔摘要生成系統",
+    "香港網站開發WebTransport Datagram資料報傳輸進階",
+    "香港網站設計AI向量搜尋語意匹配",
+    "香港網站開發WebGPU Compute Pipeline運算管線進階",
+    "香港網站設計AI驅動動態定價系統",
+    "香港網站開發Rust WASM高效能模組整合進階",
+    "香港網站設計AI智能表單OCR識別系統"
   ],
   "articles": [
     {
@@ -5943,9 +5972,241 @@
       "slug": "1104-Variable-Fonts可變字體動畫進階.html",
       "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1104-Variable-Fonts可變字體動畫進階.html",
       "date": "2026-07-31"
+    },
+    {
+      "id": 1105,
+      "keyword": "香港網站設計AI生成式介面",
+      "title": "香港AI生成式介面完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1105-AI生成式介面.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1105-AI生成式介面.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1106,
+      "keyword": "香港網站開發Web Neural Network API",
+      "title": "香港Web Neural Network API完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1106-Web Neural Network API.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1106-Web Neural Network API.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1107,
+      "keyword": "香港網站設計AI驅動A/B測試自動化",
+      "title": "香港AI驅動A/B測試自動化完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1107-AI驅動A-B測試自動化.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1107-AI驅動A-B測試自動化.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1108,
+      "keyword": "香港網站開發WebGPU Compute Shader運算著色器進階",
+      "title": "香港WebGPU Compute Shader運算著色器進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1108-WebGPU Compute Shader運算著色器進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1108-WebGPU Compute Shader運算著色器進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1109,
+      "keyword": "香港網站設計AI個性化內容推薦引擎",
+      "title": "香港AI個性化內容推薦引擎完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1109-AI個性化內容推薦引擎.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1109-AI個性化內容推薦引擎.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1110,
+      "keyword": "香港網站開發WebCodecs影片編解碼API進階",
+      "title": "香港WebCodecs影片編解碼API進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1110-WebCodecs影片編解碼API進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1110-WebCodecs影片編解碼API進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1111,
+      "keyword": "香港網站設計AI聊天機器人RAG架構",
+      "title": "香港AI聊天機器人RAG架構完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1111-AI聊天機器人RAG架構.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1111-AI聊天機器人RAG架構.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1112,
+      "keyword": "香港網站開發WebTransport低延遲傳輸進階",
+      "title": "香港WebTransport低延遲傳輸進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1112-WebTransport低延遲傳輸進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1112-WebTransport低延遲傳輸進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1113,
+      "keyword": "香港網站設計AI圖片生成Stable Diffusion整合",
+      "title": "香港AI圖片生成Stable Diffusion整合完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1113-AI圖片生成Stable Diffusion整合.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1113-AI圖片生成Stable Diffusion整合.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1114,
+      "keyword": "香港網站開發WebGPU External Texture外部紋理進階應用",
+      "title": "香港WebGPU External Texture外部紋理進階應用完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1114-WebGPU External Texture外部紋理進階應用.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1114-WebGPU External Texture外部紋理進階應用.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1115,
+      "keyword": "香港網站設計AI語音合成Web Speech API",
+      "title": "香港AI語音合成Web Speech API完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1115-AI語音合成Web Speech API.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1115-AI語音合成Web Speech API.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1116,
+      "keyword": "香港網站開發WebGPU Render Bundle渲染捆綁進階應用",
+      "title": "香港WebGPU Render Bundle渲染捆綁進階應用完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1116-WebGPU Render Bundle渲染捆綁進階應用.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1116-WebGPU Render Bundle渲染捆綁進階應用.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1117,
+      "keyword": "香港網站設計AI驅動搜尋引擎最佳化",
+      "title": "香港AI驅動搜尋引擎最佳化完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1117-AI驅動搜尋引擎最佳化.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1117-AI驅動搜尋引擎最佳化.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1118,
+      "keyword": "香港網站開發WebGPU Render Pass渲染通道",
+      "title": "香港WebGPU Render Pass渲染通道完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1118-WebGPU Render Pass渲染通道.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1118-WebGPU Render Pass渲染通道.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1119,
+      "keyword": "香港網站設計AI情感分析用戶評論",
+      "title": "香港AI情感分析用戶評論完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1119-AI情感分析用戶評論.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1119-AI情感分析用戶評論.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1120,
+      "keyword": "香港網站開發WebGPU Query Set效能監測",
+      "title": "香港WebGPU Query Set效能監測完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1120-WebGPU Query Set效能監測.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1120-WebGPU Query Set效能監測.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1121,
+      "keyword": "香港網站設計AI智能客服路由系統",
+      "title": "香港AI智能客服路由系統完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1121-AI智能客服路由系統.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1121-AI智能客服路由系統.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1122,
+      "keyword": "香港網站開發WebGPU Texture Compression紋理壓縮進階應用",
+      "title": "香港WebGPU Texture Compression紋理壓縮進階應用完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1122-WebGPU Texture Compression紋理壓縮進階應用.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1122-WebGPU Texture Compression紋理壓縮進階應用.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1123,
+      "keyword": "香港網站設計AI多模態搜尋介面",
+      "title": "香港AI多模態搜尋介面完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1123-AI多模態搜尋介面.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1123-AI多模態搜尋介面.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1124,
+      "keyword": "香港網站開發WebNN神經網路API加速進階",
+      "title": "香港WebNN神經網路API加速進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1124-WebNN神經網路API加速進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1124-WebNN神經網路API加速進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1125,
+      "keyword": "香港網站設計AI生成式佈Layout設計",
+      "title": "香港AI生成式佈Layout設計完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1125-AI生成式佈Layout設計.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1125-AI生成式佈Layout設計.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1126,
+      "keyword": "香港網站開發WebSocket Reconnection重連機制進階",
+      "title": "香港WebSocket Reconnection重連機制進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1126-WebSocket Reconnection重連機制進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1126-WebSocket Reconnection重連機制進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1127,
+      "keyword": "香港網站設計AI文檔摘要生成系統",
+      "title": "香港AI文檔摘要生成系統完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1127-AI文檔摘要生成系統.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1127-AI文檔摘要生成系統.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1128,
+      "keyword": "香港網站開發WebTransport Datagram資料報傳輸進階",
+      "title": "香港WebTransport Datagram資料報傳輸進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1128-WebTransport Datagram資料報傳輸進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1128-WebTransport Datagram資料報傳輸進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1129,
+      "keyword": "香港網站設計AI向量搜尋語意匹配",
+      "title": "香港AI向量搜尋語意匹配完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1129-AI向量搜尋語意匹配.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1129-AI向量搜尋語意匹配.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1130,
+      "keyword": "香港網站開發WebGPU Compute Pipeline運算管線進階",
+      "title": "香港WebGPU Compute Pipeline運算管線進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1130-WebGPU Compute Pipeline運算管線進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1130-WebGPU Compute Pipeline運算管線進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1131,
+      "keyword": "香港網站設計AI驅動動態定價系統",
+      "title": "香港AI驅動動態定價系統完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1131-AI驅動動態定價系統.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1131-AI驅動動態定價系統.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1132,
+      "keyword": "香港網站開發Rust WASM高效能模組整合進階",
+      "title": "香港Rust WASM高效能模組整合進階完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1132-Rust WASM高效能模組整合進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1132-Rust WASM高效能模組整合進階.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": 1133,
+      "keyword": "香港網站設計AI智能表單OCR識別系統",
+      "title": "香港AI智能表單OCR識別系統完整指南：2026年香港企業實戰策略與最佳實踐 | EasyAppWebsite",
+      "slug": "1133-AI智能表單OCR識別系統.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/1133-AI智能表單OCR識別系統.html",
+      "date": "2026-08-01"
     }
   ],
-  "generated_at": "2026-07-31T12:00:00+08:00",
-  "total_articles": 687,
-  "total_keywords": 1046
+  "generated_at": "2026-08-01",
+  "total_articles": 716,
+  "total_keywords": 1075
 }
