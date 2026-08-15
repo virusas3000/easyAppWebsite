@@ -1465,10 +1465,10 @@
     "香港網站Intersection Observer無限滾動實戰",
     "香港網站CSS @property自訂屬性動畫",
     "香港網站Resize Observer響應式監聽實戰",
-    "香港網站Mutation Observer DOM變動監控",
-    "香港網站Performance Observer效能追蹤",
+    "香港網站CSS Math Functions數學函數實戰",
+    "香港網站CSS Counter Style計數器樣式實戰",
     "香港網站CSS View Transitions跨頁面轉場實戰",
-    "香港網站Service Worker快取策略進階",
+    "香港網站CSS Shape Outside浮動環繞實戰",
     "香港網站Web Push推播通知系統開發",
     "香港網站CSS Anchor Positioning錨點定位實戰",
     "香港網站WebGPU渲染管線效能優化",
@@ -1478,7 +1478,7 @@
     "香港網站WebTransport低延遲通訊實戰",
     "香港網站CSS Scroll Snap滾動捕捉電商應用",
     "香港網站Web Speech API語音辨識整合",
-    "香港網站CSS Light Dark函數主題切換",
+    "香港網站CSS Writing Mode直書排版實戰",
     "香港網站IndexedDB離線資料同步進階",
     "香港網站CSS Subgrid子格線響應式佈局實戰"
   ],
@@ -9284,16 +9284,16 @@
       "url": "https://www.easyappwebsite.com/articles/1523-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Resize-Observer%E9%9F%BF%E6%87%89%E5%BC%8F%E7%9B%A3%E8%81%BD%E5%AF%A6%E6%88%B0.html"
     },
     {
-      "keyword": "香港網站Mutation Observer DOM變動監控",
-      "file": "1524-香港網站Mutation-Observer-DOM變動監控.html",
-      "slug": "1524-香港網站Mutation-Observer-DOM變動監控",
+      "keyword": "香港網站CSS Math Functions數學函數實戰",
+      "file": "1524-香港網站CSS-Math-Functions數學函數實戰.html",
+      "slug": "1524-香港網站CSS-Math-Functions數學函數實戰",
       "date": "2026-08-15",
       "url": "https://www.easyappwebsite.com/articles/1524-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Mutation-Observer-DOM%E8%AE%8A%E5%8B%95%E7%9B%A3%E6%8E%A7.html"
     },
     {
-      "keyword": "香港網站Performance Observer效能追蹤",
-      "file": "1525-香港網站Performance-Observer效能追蹤.html",
-      "slug": "1525-香港網站Performance-Observer效能追蹤",
+      "keyword": "香港網站CSS Counter Style計數器樣式實戰",
+      "file": "1525-香港網站CSS-Counter-Style計數器樣式實戰.html",
+      "slug": "1525-香港網站CSS-Counter-Style計數器樣式實戰",
       "date": "2026-08-15",
       "url": "https://www.easyappwebsite.com/articles/1525-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Performance-Observer%E6%95%88%E8%83%BD%E8%BF%BD%E8%B9%A4.html"
     },
@@ -9305,9 +9305,9 @@
       "url": "https://www.easyappwebsite.com/articles/1526-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99CSS-View-Transitions%E8%B7%A8%E9%A0%81%E9%9D%A2%E8%BD%89%E5%A0%B4%E5%AF%A6%E6%88%B0.html"
     },
     {
-      "keyword": "香港網站Service Worker快取策略進階",
-      "file": "1527-香港網站Service-Worker快取策略進階.html",
-      "slug": "1527-香港網站Service-Worker快取策略進階",
+      "keyword": "香港網站CSS Shape Outside浮動環繞實戰",
+      "file": "1527-香港網站CSS-Shape-Outside浮動環繞實戰.html",
+      "slug": "1527-香港網站CSS-Shape-Outside浮動環繞實戰",
       "date": "2026-08-15",
       "url": "https://www.easyappwebsite.com/articles/1527-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Service-Worker%E5%BF%AB%E5%8F%96%E7%AD%96%E7%95%A5%E9%80%B2%E9%9A%8E.html"
     },
@@ -9375,9 +9375,9 @@
       "url": "https://www.easyappwebsite.com/articles/1536-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99Web-Speech-API%E8%AA%9E%E9%9F%B3%E8%BE%A8%E8%AD%98%E6%95%B4%E5%90%88.html"
     },
     {
-      "keyword": "香港網站CSS Light Dark函數主題切換",
-      "file": "1537-香港網站CSS-Light-Dark函數主題切換.html",
-      "slug": "1537-香港網站CSS-Light-Dark函數主題切換",
+      "keyword": "香港網站CSS Writing Mode直書排版實戰",
+      "file": "1537-香港網站CSS-Writing-Mode直書排版實戰.html",
+      "slug": "1537-香港網站CSS-Writing-Mode直書排版實戰",
       "date": "2026-08-15",
       "url": "https://www.easyappwebsite.com/articles/1537-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99CSS-Light-Dark%E5%87%BD%E6%95%B8%E4%B8%BB%E9%A1%8C%E5%88%87%E6%8F%9B.html"
     },
