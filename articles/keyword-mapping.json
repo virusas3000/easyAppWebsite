@@ -1567,7 +1567,36 @@
     "香港網站設計CSS Place Items簡寫對齊",
     "香港網站開發WebGPU Vertex Step Mode頂點步進模式",
     "香港網站設計CSS Place Content簡寫內容對齊",
-    "香港網站開發WebGPU Render Bundle Encoder進階"
+    "香港網站開發WebGPU Render Bundle Encoder進階",
+    "香港網站設計CSS Place-Self簡寫自我對齊",
+    "香港網站設計CSS Align-Self交叉軸自我對齊",
+    "香港網站設計CSS Justify-Self主軸自我對齊",
+    "香港網站設計CSS Justify-Items主軸項目對齊",
+    "香港網站設計CSS Align-Content交叉軸內容對齊",
+    "香港網站設計CSS Flex-Basis彈性基礎尺寸",
+    "香港網站設計CSS Flex-Shrink彈性收縮比例",
+    "香港網站設計CSS Flex-Grow彈性增長比例",
+    "香港網站設計CSS Order彈性排序控制",
+    "香港網站設計CSS Writing-Mode書寫方向模式",
+    "香港網站設計CSS Unicode-Bidi雙向文字控制",
+    "香港網站設計CSS Text-Combine-Upright文字直排",
+    "香港網站設計CSS Ruby-Position注音標示位置",
+    "香港網站設計CSS Content-Visibility內容可見性進階",
+    "香港網站設計CSS Container-Type容器類型設定",
+    "香港網站開發WebGPU Color Write Mask色彩寫入遮罩",
+    "香港網站開發WebGPU Front Face正面判定模式",
+    "香港網站開發WebGPU Vertex Format頂點格式定義",
+    "香港網站開發WebGPU Buffer Usage緩衝區用途",
+    "香港網站開發WebGPU Texture Dimension紋理維度",
+    "香港網站開發WebGPU Sample Count取樣數量",
+    "香港網站開發WebGPU Texture Aspect紋理面向",
+    "香港網站開發WebGPU Copy External Texture外部紋理複製",
+    "香港網站開發WebGPU Image Copy Buffer影像緩衝區複製",
+    "香港網站開發WebGPU Image Copy Texture影像紋理複製",
+    "香港網站開發WebGPU Buffer Descriptor緩衝區描述元",
+    "香港網站開發WebGPU Texture Descriptor紋理描述元",
+    "香港網站開發WebGPU Sampler Descriptor取樣器描述元",
+    "香港網站開發WebGPU Texture Usage紋理用途旗標"
   ],
   "articles": [
     {
@@ -10090,9 +10119,212 @@
       "slug": "香港網站開發WebGPU-Render-Bundle-Encoder進階",
       "date": "2026-08-18",
       "url": "https://www.easyappwebsite.com/articles/1626-香港網站開發WebGPU-Render-Bundle-Encoder進階.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Place-Self簡寫自我對齊",
+      "file": "1627-香港網站設計CSS-Place-Self簡寫自我對齊.html",
+      "slug": "1627-香港網站設計CSS-Place-Self簡寫自我對齊",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1627-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Place-Self%E7%B0%A1%E5%AF%AB%E8%87%AA%E6%88%91%E5%B0%8D%E9%BD%8A.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Align-Self交叉軸自我對齊",
+      "file": "1628-香港網站設計CSS-Align-Self交叉軸自我對齊.html",
+      "slug": "1628-香港網站設計CSS-Align-Self交叉軸自我對齊",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1628-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Align-Self%E4%BA%A4%E5%8F%89%E8%BB%B8%E8%87%AA%E6%88%91%E5%B0%8D%E9%BD%8A.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Justify-Self主軸自我對齊",
+      "file": "1629-香港網站設計CSS-Justify-Self主軸自我對齊.html",
+      "slug": "1629-香港網站設計CSS-Justify-Self主軸自我對齊",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1629-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Justify-Self%E4%B8%BB%E8%BB%B8%E8%87%AA%E6%88%91%E5%B0%8D%E9%BD%8A.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Justify-Items主軸項目對齊",
+      "file": "1630-香港網站設計CSS-Justify-Items主軸項目對齊.html",
+      "slug": "1630-香港網站設計CSS-Justify-Items主軸項目對齊",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1630-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Justify-Items%E4%B8%BB%E8%BB%B8%E9%A0%85%E7%9B%AE%E5%B0%8D%E9%BD%8A.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Align-Content交叉軸內容對齊",
+      "file": "1631-香港網站設計CSS-Align-Content交叉軸內容對齊.html",
+      "slug": "1631-香港網站設計CSS-Align-Content交叉軸內容對齊",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1631-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Align-Content%E4%BA%A4%E5%8F%89%E8%BB%B8%E5%85%A7%E5%AE%B9%E5%B0%8D%E9%BD%8A.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Flex-Basis彈性基礎尺寸",
+      "file": "1632-香港網站設計CSS-Flex-Basis彈性基礎尺寸.html",
+      "slug": "1632-香港網站設計CSS-Flex-Basis彈性基礎尺寸",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1632-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Flex-Basis%E5%BD%88%E6%80%A7%E5%9F%BA%E7%A4%8E%E5%B0%BA%E5%AF%B8.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Flex-Shrink彈性收縮比例",
+      "file": "1633-香港網站設計CSS-Flex-Shrink彈性收縮比例.html",
+      "slug": "1633-香港網站設計CSS-Flex-Shrink彈性收縮比例",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1633-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Flex-Shrink%E5%BD%88%E6%80%A7%E6%94%B6%E7%B8%AE%E6%AF%94%E4%BE%8B.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Flex-Grow彈性增長比例",
+      "file": "1634-香港網站設計CSS-Flex-Grow彈性增長比例.html",
+      "slug": "1634-香港網站設計CSS-Flex-Grow彈性增長比例",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1634-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Flex-Grow%E5%BD%88%E6%80%A7%E5%A2%9E%E9%95%B7%E6%AF%94%E4%BE%8B.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Order彈性排序控制",
+      "file": "1635-香港網站設計CSS-Order彈性排序控制.html",
+      "slug": "1635-香港網站設計CSS-Order彈性排序控制",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1635-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Order%E5%BD%88%E6%80%A7%E6%8E%92%E5%BA%8F%E6%8E%A7%E5%88%B6.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Writing-Mode書寫方向模式",
+      "file": "1636-香港網站設計CSS-Writing-Mode書寫方向模式.html",
+      "slug": "1636-香港網站設計CSS-Writing-Mode書寫方向模式",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1636-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Writing-Mode%E6%9B%B8%E5%AF%AB%E6%96%B9%E5%90%91%E6%A8%A1%E5%BC%8F.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Unicode-Bidi雙向文字控制",
+      "file": "1637-香港網站設計CSS-Unicode-Bidi雙向文字控制.html",
+      "slug": "1637-香港網站設計CSS-Unicode-Bidi雙向文字控制",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1637-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Unicode-Bidi%E9%9B%99%E5%90%91%E6%96%87%E5%AD%97%E6%8E%A7%E5%88%B6.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Text-Combine-Upright文字直排",
+      "file": "1638-香港網站設計CSS-Text-Combine-Upright文字直排.html",
+      "slug": "1638-香港網站設計CSS-Text-Combine-Upright文字直排",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1638-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Text-Combine-Upright%E6%96%87%E5%AD%97%E7%9B%B4%E6%8E%92.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Ruby-Position注音標示位置",
+      "file": "1639-香港網站設計CSS-Ruby-Position注音標示位置.html",
+      "slug": "1639-香港網站設計CSS-Ruby-Position注音標示位置",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1639-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Ruby-Position%E6%B3%A8%E9%9F%B3%E6%A8%99%E7%A4%BA%E4%BD%8D%E7%BD%AE.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Content-Visibility內容可見性進階",
+      "file": "1640-香港網站設計CSS-Content-Visibility內容可見性進階.html",
+      "slug": "1640-香港網站設計CSS-Content-Visibility內容可見性進階",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1640-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Content-Visibility%E5%85%A7%E5%AE%B9%E5%8F%AF%E8%A6%8B%E6%80%A7%E9%80%B2%E9%9A%8E.html"
+    },
+    {
+      "keyword": "香港網站設計CSS Container-Type容器類型設定",
+      "file": "1641-香港網站設計CSS-Container-Type容器類型設定.html",
+      "slug": "1641-香港網站設計CSS-Container-Type容器類型設定",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1641-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88CSS-Container-Type%E5%AE%B9%E5%99%A8%E9%A1%9E%E5%9E%8B%E8%A8%AD%E5%AE%9A.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Color Write Mask色彩寫入遮罩",
+      "file": "1642-香港網站開發WebGPU-Color-Write-Mask色彩寫入遮罩.html",
+      "slug": "1642-香港網站開發WebGPU-Color-Write-Mask色彩寫入遮罩",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1642-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Color-Write-Mask%E8%89%B2%E5%BD%A9%E5%AF%AB%E5%85%A5%E9%81%AE%E7%BD%A9.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Front Face正面判定模式",
+      "file": "1643-香港網站開發WebGPU-Front-Face正面判定模式.html",
+      "slug": "1643-香港網站開發WebGPU-Front-Face正面判定模式",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1643-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Front-Face%E6%AD%A3%E9%9D%A2%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%BC%8F.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Vertex Format頂點格式定義",
+      "file": "1644-香港網站開發WebGPU-Vertex-Format頂點格式定義.html",
+      "slug": "1644-香港網站開發WebGPU-Vertex-Format頂點格式定義",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1644-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Vertex-Format%E9%A0%82%E9%BB%9E%E6%A0%BC%E5%BC%8F%E5%AE%9A%E7%BE%A9.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Buffer Usage緩衝區用途",
+      "file": "1645-香港網站開發WebGPU-Buffer-Usage緩衝區用途.html",
+      "slug": "1645-香港網站開發WebGPU-Buffer-Usage緩衝區用途",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1645-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Buffer-Usage%E7%B7%A9%E8%A1%9D%E5%8D%80%E7%94%A8%E9%80%94.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Texture Dimension紋理維度",
+      "file": "1646-香港網站開發WebGPU-Texture-Dimension紋理維度.html",
+      "slug": "1646-香港網站開發WebGPU-Texture-Dimension紋理維度",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1646-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Texture-Dimension%E7%B4%8B%E7%90%86%E7%B6%AD%E5%BA%A6.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Sample Count取樣數量",
+      "file": "1647-香港網站開發WebGPU-Sample-Count取樣數量.html",
+      "slug": "1647-香港網站開發WebGPU-Sample-Count取樣數量",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1647-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Sample-Count%E5%8F%96%E6%A8%A3%E6%95%B8%E9%87%8F.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Texture Aspect紋理面向",
+      "file": "1648-香港網站開發WebGPU-Texture-Aspect紋理面向.html",
+      "slug": "1648-香港網站開發WebGPU-Texture-Aspect紋理面向",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1648-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Texture-Aspect%E7%B4%8B%E7%90%86%E9%9D%A2%E5%90%91.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Copy External Texture外部紋理複製",
+      "file": "1649-香港網站開發WebGPU-Copy-External-Texture外部紋理複製.html",
+      "slug": "1649-香港網站開發WebGPU-Copy-External-Texture外部紋理複製",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1649-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Copy-External-Texture%E5%A4%96%E9%83%A8%E7%B4%8B%E7%90%86%E8%A4%87%E8%A3%BD.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Image Copy Buffer影像緩衝區複製",
+      "file": "1650-香港網站開發WebGPU-Image-Copy-Buffer影像緩衝區複製.html",
+      "slug": "1650-香港網站開發WebGPU-Image-Copy-Buffer影像緩衝區複製",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1650-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Image-Copy-Buffer%E5%BD%B1%E5%83%8F%E7%B7%A9%E8%A1%9D%E5%8D%80%E8%A4%87%E8%A3%BD.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Image Copy Texture影像紋理複製",
+      "file": "1651-香港網站開發WebGPU-Image-Copy-Texture影像紋理複製.html",
+      "slug": "1651-香港網站開發WebGPU-Image-Copy-Texture影像紋理複製",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1651-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Image-Copy-Texture%E5%BD%B1%E5%83%8F%E7%B4%8B%E7%90%86%E8%A4%87%E8%A3%BD.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Buffer Descriptor緩衝區描述元",
+      "file": "1652-香港網站開發WebGPU-Buffer-Descriptor緩衝區描述元.html",
+      "slug": "1652-香港網站開發WebGPU-Buffer-Descriptor緩衝區描述元",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1652-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Buffer-Descriptor%E7%B7%A9%E8%A1%9D%E5%8D%80%E6%8F%8F%E8%BF%B0%E5%85%83.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Texture Descriptor紋理描述元",
+      "file": "1653-香港網站開發WebGPU-Texture-Descriptor紋理描述元.html",
+      "slug": "1653-香港網站開發WebGPU-Texture-Descriptor紋理描述元",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1653-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Texture-Descriptor%E7%B4%8B%E7%90%86%E6%8F%8F%E8%BF%B0%E5%85%83.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Sampler Descriptor取樣器描述元",
+      "file": "1654-香港網站開發WebGPU-Sampler-Descriptor取樣器描述元.html",
+      "slug": "1654-香港網站開發WebGPU-Sampler-Descriptor取樣器描述元",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1654-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Sampler-Descriptor%E5%8F%96%E6%A8%A3%E5%99%A8%E6%8F%8F%E8%BF%B0%E5%85%83.html"
+    },
+    {
+      "keyword": "香港網站開發WebGPU Texture Usage紋理用途旗標",
+      "file": "1655-香港網站開發WebGPU-Texture-Usage紋理用途旗標.html",
+      "slug": "1655-香港網站開發WebGPU-Texture-Usage紋理用途旗標",
+      "date": "2026-08-19",
+      "url": "https://www.easyappwebsite.com/articles/1655-%E9%A6%99%E6%B8%AF%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BCWebGPU-Texture-Usage%E7%B4%8B%E7%90%86%E7%94%A8%E9%80%94%E6%97%97%E6%A8%99.html"
     }
   ],
-  "generated_at": "2026-08-18",
-  "total_articles": 1180,
-  "total_keywords": 1568
+  "generated_at": "2026-08-19",
+  "total_articles": 1209,
+  "total_keywords": 1597
 }
