@@ -2466,7 +2466,35 @@
     "香港網站開發Navigation API導航歷史管理",
     "香港網頁設計CSS Interpolate Size插值尺寸動畫",
     "香港網站開發Element Capture元素截取分享",
-    "香港網頁CSS Stepped Value Functions階梯值函數"
+    "香港網頁CSS Stepped Value Functions階梯值函數",
+    "香港網站設計碳中和綠色網頁",
+    "香港網頁設計空間運算Spatial Computing",
+    "香港網站開發WebGPU Copy Texture紋理複製進階",
+    "香港網頁設計CSS Inset Area定位區域進階",
+    "香港網頁設計CSS Custom Highlight自訂高亮進階",
+    "香港網站開發WebGPU Buffer Mapping緩衝區映射進階",
+    "香港網頁設計CSS View Progress Timeline視圖進度進階",
+    "香港網站開發WebGPU Primitive Topology基本拓撲進階",
+    "香港網頁設計CSS Light Dark函數主題切換進階",
+    "香港網頁設計CSS Scrollbar Gutter捲軸溝槽進階",
+    "香港網頁設計CSS Transition Behavior轉場行為進階",
+    "香港網站開發WebGPU Push Constants推送常數進階",
+    "香港網頁設計WCAG 2.2無障礙合規",
+    "香港網站開發WebXR擴增實境API",
+    "香港網頁設計數碼雙生Digital Twin網站",
+    "香港網站開發觸覺回饋Haptic Feedback API",
+    "香港網頁設計沉浸式3D產品展示",
+    "香港網站開發WebSocket Heartbeat心跳保活進階",
+    "香港網頁設計CSS @property動畫進階",
+    "香港網站開發ARIA Live Regions動態通知進階",
+    "香港網頁設計Variable Fonts可變字體動畫進階",
+    "香港網站開發WebGPU Texture Format紋理格式進階",
+    "香港網頁設計色彩對比度WCAG合規進階",
+    "香港網站開發WebGPU Sampler取樣器進階",
+    "香港網頁設計CSS Anchor Positioning Safety錨點安全",
+    "香港網站開發WebGPU Queue Submission佇列提交進階",
+    "香港網站開發WebGPU Device Loss裝置遺失處理進階",
+    "香港網頁設計CSS Field Sizing Content Auto內容自適應進階"
   ],
   "articles": [
     {
@@ -3860,6 +3888,209 @@
       "file": "2554-香港網頁CSS Stepped Value Functions階梯值函數.html",
       "date": "2026-09-21",
       "url": "https://www.easyappwebsite.com/articles/2554-%E9%A6%99%E6%B8%AF%E7%B6%B2%E9%A0%81CSS%20Stepped%20Value%20Functions%E9%9A%8E%E6%A2%AF%E5%80%BC%E5%87%BD%E6%95%B8"
+    },
+    {
+      "id": 2584,
+      "keyword": "香港網站設計碳中和綠色網頁",
+      "title": "香港網站設計碳中和綠色網頁完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2584-香港網站設計碳中和綠色網頁.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2584-香港網站設計碳中和綠色網頁.html"
+    },
+    {
+      "id": 2585,
+      "keyword": "香港網頁設計空間運算Spatial Computing",
+      "title": "香港網頁設計空間運算Spatial Computing完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2585-香港網頁設計空間運算Spatial Computing.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2585-香港網頁設計空間運算Spatial Computing.html"
+    },
+    {
+      "id": 2586,
+      "keyword": "香港網站開發WebGPU Copy Texture紋理複製進階",
+      "title": "香港網站開發WebGPU Copy Texture紋理複製進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2586-香港網站開發WebGPU Copy Texture紋理複製進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2586-香港網站開發WebGPU Copy Texture紋理複製進階.html"
+    },
+    {
+      "id": 2587,
+      "keyword": "香港網頁設計CSS Inset Area定位區域進階",
+      "title": "香港網頁設計CSS Inset Area定位區域進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2587-香港網頁設計CSS Inset Area定位區域進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2587-香港網頁設計CSS Inset Area定位區域進階.html"
+    },
+    {
+      "id": 2588,
+      "keyword": "香港網站開發WebGPU Timestamp Query時間戳查詢進階",
+      "title": "香港網站開發WebGPU Timestamp Query時間戳查詢進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2588-香港網站開發WebGPU Timestamp Query時間戳查詢進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2588-香港網站開發WebGPU Timestamp Query時間戳查詢進階.html"
+    },
+    {
+      "id": 2589,
+      "keyword": "香港網頁設計CSS Custom Highlight自訂高亮進階",
+      "title": "香港網頁設計CSS Custom Highlight自訂高亮進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2589-香港網頁設計CSS Custom Highlight自訂高亮進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2589-香港網頁設計CSS Custom Highlight自訂高亮進階.html"
+    },
+    {
+      "id": 2590,
+      "keyword": "香港網站開發WebGPU Buffer Mapping緩衝區映射進階",
+      "title": "香港網站開發WebGPU Buffer Mapping緩衝區映射進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2590-香港網站開發WebGPU Buffer Mapping緩衝區映射進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2590-香港網站開發WebGPU Buffer Mapping緩衝區映射進階.html"
+    },
+    {
+      "id": 2591,
+      "keyword": "香港網頁設計CSS View Progress Timeline視圖進度進階",
+      "title": "香港網頁設計CSS View Progress Timeline視圖進度進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2591-香港網頁設計CSS View Progress Timeline視圖進度進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2591-香港網頁設計CSS View Progress Timeline視圖進度進階.html"
+    },
+    {
+      "id": 2592,
+      "keyword": "香港網站開發WebGPU Primitive Topology基本拓撲進階",
+      "title": "香港網站開發WebGPU Primitive Topology基本拓撲進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2592-香港網站開發WebGPU Primitive Topology基本拓撲進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2592-香港網站開發WebGPU Primitive Topology基本拓撲進階.html"
+    },
+    {
+      "id": 2593,
+      "keyword": "香港網頁設計CSS Light Dark函數主題切換進階",
+      "title": "香港網頁設計CSS Light Dark函數主題切換進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2593-香港網頁設計CSS Light Dark函數主題切換進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2593-香港網頁設計CSS Light Dark函數主題切換進階.html"
+    },
+    {
+      "id": 2594,
+      "keyword": "香港網頁設計CSS Scrollbar Gutter捲軸溝槽進階",
+      "title": "香港網頁設計CSS Scrollbar Gutter捲軸溝槽進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2594-香港網頁設計CSS Scrollbar Gutter捲軸溝槽進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2594-香港網頁設計CSS Scrollbar Gutter捲軸溝槽進階.html"
+    },
+    {
+      "id": 2595,
+      "keyword": "香港網頁設計CSS Transition Behavior轉場行為進階",
+      "title": "香港網頁設計CSS Transition Behavior轉場行為進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2595-香港網頁設計CSS Transition Behavior轉場行為進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2595-香港網頁設計CSS Transition Behavior轉場行為進階.html"
+    },
+    {
+      "id": 2596,
+      "keyword": "香港網站開發WebGPU Push Constants推送常數進階",
+      "title": "香港網站開發WebGPU Push Constants推送常數進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2596-香港網站開發WebGPU Push Constants推送常數進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2596-香港網站開發WebGPU Push Constants推送常數進階.html"
+    },
+    {
+      "id": 2597,
+      "keyword": "香港網頁設計WCAG 2.2無障礙合規",
+      "title": "香港網頁設計WCAG 2.2無障礙合規完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2597-香港網頁設計WCAG 2.2無障礙合規.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2597-香港網頁設計WCAG 2.2無障礙合規.html"
+    },
+    {
+      "id": 2598,
+      "keyword": "香港網站開發WebXR擴增實境API",
+      "title": "香港網站開發WebXR擴增實境API完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2598-香港網站開發WebXR擴增實境API.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2598-香港網站開發WebXR擴增實境API.html"
+    },
+    {
+      "id": 2599,
+      "keyword": "香港網頁設計數碼雙生Digital Twin網站",
+      "title": "香港網頁設計數碼雙生Digital Twin網站完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2599-香港網頁設計數碼雙生Digital Twin網站.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2599-香港網頁設計數碼雙生Digital Twin網站.html"
+    },
+    {
+      "id": 2600,
+      "keyword": "香港網站開發觸覺回饋Haptic Feedback API",
+      "title": "香港網站開發觸覺回饋Haptic Feedback API完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2600-香港網站開發觸覺回饋Haptic Feedback API.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2600-香港網站開發觸覺回饋Haptic Feedback API.html"
+    },
+    {
+      "id": 2601,
+      "keyword": "香港網頁設計沉浸式3D產品展示",
+      "title": "香港網頁設計沉浸式3D產品展示完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2601-香港網頁設計沉浸式3D產品展示.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2601-香港網頁設計沉浸式3D產品展示.html"
+    },
+    {
+      "id": 2602,
+      "keyword": "香港網站開發WebSocket Heartbeat心跳保活進階",
+      "title": "香港網站開發WebSocket Heartbeat心跳保活進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2602-香港網站開發WebSocket Heartbeat心跳保活進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2602-香港網站開發WebSocket Heartbeat心跳保活進階.html"
+    },
+    {
+      "id": 2603,
+      "keyword": "香港網頁設計CSS @property動畫進階",
+      "title": "香港網頁設計CSS @property動畫進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2603-香港網頁設計CSS @property動畫進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2603-香港網頁設計CSS @property動畫進階.html"
+    },
+    {
+      "id": 2604,
+      "keyword": "香港網站開發ARIA Live Regions動態通知進階",
+      "title": "香港網站開發ARIA Live Regions動態通知進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2604-香港網站開發ARIA Live Regions動態通知進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2604-香港網站開發ARIA Live Regions動態通知進階.html"
+    },
+    {
+      "id": 2605,
+      "keyword": "香港網頁設計Variable Fonts可變字體動畫進階",
+      "title": "香港網頁設計Variable Fonts可變字體動畫進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2605-香港網頁設計Variable Fonts可變字體動畫進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2605-香港網頁設計Variable Fonts可變字體動畫進階.html"
+    },
+    {
+      "id": 2606,
+      "keyword": "香港網站開發WebGPU Texture Format紋理格式進階",
+      "title": "香港網站開發WebGPU Texture Format紋理格式進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2606-香港網站開發WebGPU Texture Format紋理格式進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2606-香港網站開發WebGPU Texture Format紋理格式進階.html"
+    },
+    {
+      "id": 2607,
+      "keyword": "香港網頁設計色彩對比度WCAG合規進階",
+      "title": "香港網頁設計色彩對比度WCAG合規進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2607-香港網頁設計色彩對比度WCAG合規進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2607-香港網頁設計色彩對比度WCAG合規進階.html"
+    },
+    {
+      "id": 2608,
+      "keyword": "香港網站開發WebGPU Sampler取樣器進階",
+      "title": "香港網站開發WebGPU Sampler取樣器進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2608-香港網站開發WebGPU Sampler取樣器進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2608-香港網站開發WebGPU Sampler取樣器進階.html"
+    },
+    {
+      "id": 2609,
+      "keyword": "香港網頁設計CSS Anchor Positioning Safety錨點安全",
+      "title": "香港網頁設計CSS Anchor Positioning Safety錨點安全完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2609-香港網頁設計CSS Anchor Positioning Safety錨點安全.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2609-香港網頁設計CSS Anchor Positioning Safety錨點安全.html"
+    },
+    {
+      "id": 2610,
+      "keyword": "香港網站開發WebGPU Queue Submission佇列提交進階",
+      "title": "香港網站開發WebGPU Queue Submission佇列提交進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2610-香港網站開發WebGPU Queue Submission佇列提交進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2610-香港網站開發WebGPU Queue Submission佇列提交進階.html"
+    },
+    {
+      "id": 2611,
+      "keyword": "香港網站開發WebGPU Device Loss裝置遺失處理進階",
+      "title": "香港網站開發WebGPU Device Loss裝置遺失處理進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2611-香港網站開發WebGPU Device Loss裝置遺失處理進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2611-香港網站開發WebGPU Device Loss裝置遺失處理進階.html"
+    },
+    {
+      "id": 2612,
+      "keyword": "香港網頁設計CSS Field Sizing Content Auto內容自適應進階",
+      "title": "香港網頁設計CSS Field Sizing Content Auto內容自適應進階完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2612-香港網頁設計CSS Field Sizing Content Auto內容自適應進階.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2612-香港網頁設計CSS Field Sizing Content Auto內容自適應進階.html"
     }
   ]
 }
