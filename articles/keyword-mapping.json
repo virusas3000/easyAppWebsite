@@ -2581,7 +2581,36 @@
     "香港髮型師工作室網站設計",
     "香港麵包店網站設計",
     "香港黃金投資網站開發",
-    "香港點心店網站設計"
+    "香港點心店網站設計",
+    "香港網站CloseWatcher關閉監聽器",
+    "香港網站Interest Invokers興趣觸發器",
+    "香港網站Command Invokers指令觸發器",
+    "香港網站Inert屬性惰性區域",
+    "香港網站Light-Dismiss輕觸關閉",
+    "香港網站Custom State Set自訂狀態",
+    "香港網站Scoped Custom Element Registry",
+    "香港網站ElementInternals元素內部API",
+    "香港網站Visual Viewport視覺視口",
+    "香港網站Dynamic Viewport Units動態視口單位",
+    "香港網頁設計OKLCH色彩空間",
+    "香港網站設計CSS Color 4色彩等級",
+    "香港網站設計prefers-reduced-motion減少動態",
+    "香港網站設計prefers-color-scheme色彩偏好",
+    "香港網站開發File Handling API檔案處理",
+    "香港網站開發Launch Handler API啟動處理器",
+    "香港網站開發OPFS原始私有檔案系統",
+    "香港網站開發File System Observer檔案系統觀察者",
+    "香港網站開發Local Font Access本地字型存取",
+    "香港網站設計CSS Font Loading API字型載入",
+    "香港網站開發Window Controls Overlay視窗控制覆層",
+    "香港網站開發Window Placement API視窗定位",
+    "香港網站Desktop PWA桌面應用",
+    "香港網站開發SharedArrayBuffer共享記憶體",
+    "香港網站開發Atomics原子操作",
+    "香港網站開發Web Locks API鎖定管理",
+    "香港網站設計Media Query Range Syntax範圍語法",
+    "香港網站設計CSS Scroll State容器查詢",
+    "香港網站設計Anchor Scope錨點範圍"
   ],
   "articles": [
     {
@@ -4585,5 +4614,6 @@
       "slug": "2699-香港網頁設計Scheduler API任務排程.html",
       "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2699-香港網頁設計Scheduler API任務排程.html"
     }
-  ]
+  ],
+  "generated_at": "2026-09-29"
 }
