@@ -2726,7 +2726,36 @@
     "香港網站設計CSS Media Query Range媒體查詢範圍",
     "香港網站開發WebTransport Server伺服器端",
     "香港網站設計CSS @layer分層規則",
-    "香港網站開發Window Management API視窗管理"
+    "香港網站開發Window Management API視窗管理",
+    "香港網站開發Web Workers背景執行緒",
+    "香港網站設計CSS @property自定義屬性",
+    "香港網站設計View Transitions API頁面轉場",
+    "香港網站開發File System Access API檔案存取",
+    "香港網站設計CSS :has()選擇器應用",
+    "香港網站開發WebCodecs影片編解碼",
+    "香港網站設計Popover API彈出視窗",
+    "香港網站開發EyeDropper API取色器",
+    "香港網站設計CSS Subgrid巢狀網格",
+    "香港網站開發Scheduler.postTask任務優先級",
+    "香港網站設計CSS initial-letter首字放大",
+    "香港網站開發Screen Wake Lock螢幕喚醒",
+    "香港網站設計CSS text-wrap平衡排版",
+    "香港網站開發WebNN裝置端機器學習",
+    "香港網站設計Scroll Snap滾動吸附",
+    "香港網站開發Document Picture-in-Picture子母畫面",
+    "香港網站開發Prioritized Task Scheduling任務調度",
+    "香港網站設計CSS @starting-style起始樣式",
+    "香港網站開發Sanitizer API XSS防護",
+    "香港網站設計CSS color-mix混色函數",
+    "香港網站開發Navigation API導航攔截",
+    "香港網站設計CSS @scope作用域DOM",
+    "香港網站開發Cookie Store API狀態管理",
+    "香港網站設計CSS oklch色彩空間",
+    "香港網站開發Speculation Rules API預載入",
+    "香港網站設計CSS :user-valid表單驗證",
+    "香港網站開發Compute Pressure CPU壓力偵測",
+    "香港網站設計CSS @font-palette-values字體調色",
+    "香港網站開發Ink API手寫筆跡"
   ],
   "articles": [
     {
@@ -5599,7 +5628,212 @@
       "url": "https://www.easyappwebsite.com/articles/香港網站開發window-management-api視窗管理",
       "date": "2026-10-03",
       "title": "香港網站開發Window Management API視窗管理"
+    },
+    {
+      "id": 2845,
+      "keyword": "香港網站開發Web Workers背景執行緒",
+      "title": "香港網站開發Web Workers背景執行緒完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2845-香港網站開發Web-Workers背景執行緒.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2845-香港網站開發Web-Workers背景執行緒.html"
+    },
+    {
+      "id": 2846,
+      "keyword": "香港網站設計CSS @property自定義屬性",
+      "title": "香港網站設計CSS @property自定義屬性完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2846-香港網站設計CSS-@property自定義屬性.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2846-香港網站設計CSS-@property自定義屬性.html"
+    },
+    {
+      "id": 2847,
+      "keyword": "香港網站設計View Transitions API頁面轉場",
+      "title": "香港網站設計View Transitions API頁面轉場完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2847-香港網站設計View-Transitions-API頁面轉場.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2847-香港網站設計View-Transitions-API頁面轉場.html"
+    },
+    {
+      "id": 2848,
+      "keyword": "香港網站開發File System Access API檔案存取",
+      "title": "香港網站開發File System Access API檔案存取完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2848-香港網站開發File-System-Access-API檔案存取.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2848-香港網站開發File-System-Access-API檔案存取.html"
+    },
+    {
+      "id": 2849,
+      "keyword": "香港網站設計CSS :has()選擇器應用",
+      "title": "香港網站設計CSS :has()選擇器應用完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2849-香港網站設計CSS-:has()選擇器應用.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2849-香港網站設計CSS-:has()選擇器應用.html"
+    },
+    {
+      "id": 2850,
+      "keyword": "香港網站開發WebCodecs影片編解碼",
+      "title": "香港網站開發WebCodecs影片編解碼完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2850-香港網站開發WebCodecs影片編解碼.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2850-香港網站開發WebCodecs影片編解碼.html"
+    },
+    {
+      "id": 2851,
+      "keyword": "香港網站設計Popover API彈出視窗",
+      "title": "香港網站設計Popover API彈出視窗完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2851-香港網站設計Popover-API彈出視窗.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2851-香港網站設計Popover-API彈出視窗.html"
+    },
+    {
+      "id": 2852,
+      "keyword": "香港網站開發EyeDropper API取色器",
+      "title": "香港網站開發EyeDropper API取色器完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2852-香港網站開發EyeDropper-API取色器.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2852-香港網站開發EyeDropper-API取色器.html"
+    },
+    {
+      "id": 2853,
+      "keyword": "香港網站設計CSS Subgrid巢狀網格",
+      "title": "香港網站設計CSS Subgrid巢狀網格完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2853-香港網站設計CSS-Subgrid巢狀網格.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2853-香港網站設計CSS-Subgrid巢狀網格.html"
+    },
+    {
+      "id": 2854,
+      "keyword": "香港網站開發Scheduler.postTask任務優先級",
+      "title": "香港網站開發Scheduler.postTask任務優先級完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2854-香港網站開發Scheduler.postTask任務優先級.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2854-香港網站開發Scheduler.postTask任務優先級.html"
+    },
+    {
+      "id": 2855,
+      "keyword": "香港網站設計CSS initial-letter首字放大",
+      "title": "香港網站設計CSS initial-letter首字放大完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2855-香港網站設計CSS-initial-letter首字放大.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2855-香港網站設計CSS-initial-letter首字放大.html"
+    },
+    {
+      "id": 2856,
+      "keyword": "香港網站開發Screen Wake Lock螢幕喚醒",
+      "title": "香港網站開發Screen Wake Lock螢幕喚醒完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2856-香港網站開發Screen-Wake-Lock螢幕喚醒.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2856-香港網站開發Screen-Wake-Lock螢幕喚醒.html"
+    },
+    {
+      "id": 2857,
+      "keyword": "香港網站設計CSS text-wrap平衡排版",
+      "title": "香港網站設計CSS text-wrap平衡排版完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2857-香港網站設計CSS-text-wrap平衡排版.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2857-香港網站設計CSS-text-wrap平衡排版.html"
+    },
+    {
+      "id": 2858,
+      "keyword": "香港網站開發WebNN裝置端機器學習",
+      "title": "香港網站開發WebNN裝置端機器學習完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2858-香港網站開發WebNN裝置端機器學習.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2858-香港網站開發WebNN裝置端機器學習.html"
+    },
+    {
+      "id": 2859,
+      "keyword": "香港網站設計Scroll Snap滾動吸附",
+      "title": "香港網站設計Scroll Snap滾動吸附完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2859-香港網站設計Scroll-Snap滾動吸附.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2859-香港網站設計Scroll-Snap滾動吸附.html"
+    },
+    {
+      "id": 2860,
+      "keyword": "香港網站開發Document Picture-in-Picture子母畫面",
+      "title": "香港網站開發Document Picture-in-Picture子母畫面完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2860-香港網站開發Document-Picture-in-Picture子母畫面.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2860-香港網站開發Document-Picture-in-Picture子母畫面.html"
+    },
+    {
+      "id": 2861,
+      "keyword": "香港網站開發Prioritized Task Scheduling任務調度",
+      "title": "香港網站開發Prioritized Task Scheduling任務調度完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2861-香港網站開發Prioritized-Task-Scheduling任務調度.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2861-香港網站開發Prioritized-Task-Scheduling任務調度.html"
+    },
+    {
+      "id": 2862,
+      "keyword": "香港網站設計CSS @starting-style起始樣式",
+      "title": "香港網站設計CSS @starting-style起始樣式完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2862-香港網站設計CSS-@starting-style起始樣式.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2862-香港網站設計CSS-@starting-style起始樣式.html"
+    },
+    {
+      "id": 2863,
+      "keyword": "香港網站開發Sanitizer API XSS防護",
+      "title": "香港網站開發Sanitizer API XSS防護完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2863-香港網站開發Sanitizer-API-XSS防護.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2863-香港網站開發Sanitizer-API-XSS防護.html"
+    },
+    {
+      "id": 2864,
+      "keyword": "香港網站設計CSS color-mix混色函數",
+      "title": "香港網站設計CSS color-mix混色函數完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2864-香港網站設計CSS-color-mix混色函數.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2864-香港網站設計CSS-color-mix混色函數.html"
+    },
+    {
+      "id": 2865,
+      "keyword": "香港網站開發Navigation API導航攔截",
+      "title": "香港網站開發Navigation API導航攔截完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2865-香港網站開發Navigation-API導航攔截.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2865-香港網站開發Navigation-API導航攔截.html"
+    },
+    {
+      "id": 2866,
+      "keyword": "香港網站設計CSS @scope作用域DOM",
+      "title": "香港網站設計CSS @scope作用域DOM完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2866-香港網站設計CSS-@scope作用域DOM.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2866-香港網站設計CSS-@scope作用域DOM.html"
+    },
+    {
+      "id": 2867,
+      "keyword": "香港網站開發Cookie Store API狀態管理",
+      "title": "香港網站開發Cookie Store API狀態管理完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2867-香港網站開發Cookie-Store-API狀態管理.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2867-香港網站開發Cookie-Store-API狀態管理.html"
+    },
+    {
+      "id": 2868,
+      "keyword": "香港網站設計CSS oklch色彩空間",
+      "title": "香港網站設計CSS oklch色彩空間完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2868-香港網站設計CSS-oklch色彩空間.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2868-香港網站設計CSS-oklch色彩空間.html"
+    },
+    {
+      "id": 2869,
+      "keyword": "香港網站開發Speculation Rules API預載入",
+      "title": "香港網站開發Speculation Rules API預載入完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2869-香港網站開發Speculation-Rules-API預載入.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2869-香港網站開發Speculation-Rules-API預載入.html"
+    },
+    {
+      "id": 2870,
+      "keyword": "香港網站設計CSS :user-valid表單驗證",
+      "title": "香港網站設計CSS :user-valid表單驗證完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2870-香港網站設計CSS-:user-valid表單驗證.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2870-香港網站設計CSS-:user-valid表單驗證.html"
+    },
+    {
+      "id": 2871,
+      "keyword": "香港網站開發Compute Pressure CPU壓力偵測",
+      "title": "香港網站開發Compute Pressure CPU壓力偵測完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2871-香港網站開發Compute-Pressure-CPU壓力偵測.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2871-香港網站開發Compute-Pressure-CPU壓力偵測.html"
+    },
+    {
+      "id": 2872,
+      "keyword": "香港網站設計CSS @font-palette-values字體調色",
+      "title": "香港網站設計CSS @font-palette-values字體調色完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2872-香港網站設計CSS-@font-palette-values字體調色.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2872-香港網站設計CSS-@font-palette-values字體調色.html"
+    },
+    {
+      "id": 2873,
+      "keyword": "香港網站開發Ink API手寫筆跡",
+      "title": "香港網站開發Ink API手寫筆跡完整指南：2026年香港企業實戰策略與最佳實踐",
+      "slug": "2873-香港網站開發Ink-API手寫筆跡.html",
+      "path": "/Users/vickhung/Desktop/easyappwebsite/articles/2873-香港網站開發Ink-API手寫筆跡.html"
     }
   ],
-  "generated_at": "2026-10-03T12:03:11.994680"
+  "generated_at": "2026-10-04",
+  "total_articles": 406,
+  "total_keywords": 2756
 }
