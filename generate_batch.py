@@ -1,379 +1,559 @@
-#!/usr/bin/env python3
-"""Generate 29 SEO articles for EasyAppWebsite daily batch."""
-import json, os, re, urllib.parse
-from datetime import datetime
+import json, os, re, glob
+from urllib.parse import quote
+from datetime import date, datetime
 
-TODAY = "2026-09-06"
-BASE_URL = "https://www.easyappwebsite.com"
-ARTICLES_DIR = "/tmp/easyappwebsite/articles"
+base = '/Users/vickhung/Desktop/easyappwebsite/articles'
+os.chdir(base)
 
-# 29 unique keywords (verified non-existing)
-KEYWORDS = [
-    "香港網站PWA開發",
-    "香港網站Jamstack架構",
-    "香港網站微前端架構",
-    "香港網站ISR增量靜態再生",
-    "香港網站GraphQL API整合",
-    "香港網站WebRTC視訊通話",
-    "香港網站Canvas繪圖開發",
-    "香港網站WebGL 3D渲染",
-    "香港網站Web Audio API音效處理",
-    "香港網站Web Vitals效能監控",
-    "香港網站LCP優化",
-    "香港網站CLS優化",
-    "香港網站INP優化",
-    "香港網站FCP優化",
-    "香港網站TTFB優化",
-    "香港網站Speed Index優化",
-    "香港網站Lighthouse評分提升",
-    "香港網站資源提示優化",
-    "香港網站延遲載入優化",
-    "香港網站Web Speech API語音辨識",
-    "香港網站Geolocation API地理定位",
-    "香港網站Notification API推播通知",
-    "香港網站Payment Request API付款",
-    "香港網站Credential Management API",
-    "香港網站Background Sync背景同步",
-    "香港網站Web Share API分享功能",
-    "香港網站Intersection Observer懶載入",
-    "香港網站Mutation Observer DOM監控",
-    "香港網站Broadcast Channel跨頁通訊",
+# Determine next article number
+files = [f for f in os.listdir(base) if f.endswith('.html')]
+nums = []
+for f in files:
+    m = re.match(r'^(\d+)-', f)
+    if m:
+        nums.append(int(m.group(1)))
+next_num = max(nums) + 1
+
+today = '2026-10-31'
+year = '2026'
+
+# Load all existing keywords to avoid duplicates
+all_keywords = set()
+for f in glob.glob('*-keyword-mapping.json'):
+    with open(f) as fh:
+        data = json.load(fh)
+    if isinstance(data, dict) and 'keywords' in data:
+        for k in data['keywords']:
+            all_keywords.add(k.strip())
+    elif isinstance(data, list):
+        for k in data:
+            all_keywords.add(str(k).strip())
+    elif isinstance(data, dict):
+        for k in data.keys():
+            all_keywords.add(k.strip())
+
+# Also extract from filenames
+for f in files:
+    m = re.match(r'\d+-(.+?)\.html$', f)
+    if m:
+        all_keywords.add(m.group(1).strip())
+
+# 29 new unique keywords
+new_keywords = [
+    "香港網站開發Headless-CMS架構",
+    "香港網頁設計暗黑模式切換",
+    "香港網站開發WebAssembly效能優化",
+    "香港網站設計3D視覺元素應用",
+    "香港網頁設計微互動動畫效果",
+    "香港網站開發PWA離線功能",
+    "香港網頁設計無障礙WCAG合規",
+    "香港網站開發區塊鏈錢包連接",
+    "香港網頁設計虛擬試穿功能",
+    "香港網站開發即時客服系統",
+    "香港網站設計個人化推薦引擎",
+    "香港網頁設計動態島互動設計",
+    "香港網站開發WebRTC視訊會議",
+    "香港網站設計碳足跡計算器",
+    "香港網頁設計可持續網頁設計",
+    "香港網頁設計元宇宙導覽",
+    "香港網站開發5G優化載入",
+    "香港網站設計邊緣運算部署",
+    "香港網頁設計伺服器less架構",
+    "香港網站設計智能表單驗證",
+    "香港網頁設計手勢操控介面",
+    "香港網站開發WebTransport協定",
+    "香港網站設計隱私計算保護",
+    "香港網站開發WebSerial硬體連接",
+    "香港網站設計CSS滾動驅動動畫",
+    "香港網站開發WebGPU運算著色器",
+    "香港網頁設計CSS錨點定位",
+    "香港網站開發ViewTransition頁面轉場",
+    "香港網站設計手寫筆支援設計",
 ]
 
-def make_slug(keyword):
-    """Create URL-safe slug from keyword."""
-    return urllib.parse.quote(keyword, safe='')
+# Filter duplicates
+filtered_keywords = []
+for kw in new_keywords:
+    norm = kw.replace(' ', '').replace('-', '').replace('_', '').lower()
+    is_dup = False
+    for existing in all_keywords:
+        ex_norm = existing.replace(' ', '').replace('-', '').replace('_', '').lower()
+        if norm == ex_norm or norm in ex_norm or ex_norm in norm:
+            is_dup = True
+            break
+    if not is_dup:
+        filtered_keywords.append(kw)
 
-def make_filename(num, keyword):
-    """Create filename with number prefix."""
-    # Replace spaces with hyphens for filename
-    safe = keyword.replace(' ', '-')
-    return f"{num}-{safe}.html"
+# Ensure we have exactly 29
+assert len(filtered_keywords) >= 29, f"Only {len(filtered_keywords)} unique keywords"
+selected_keywords = filtered_keywords[:29]
 
-def generate_article(num, keyword):
-    """Generate a complete HTML article for the given keyword."""
-    slug = make_slug(keyword)
-    filename = make_filename(num, keyword)
-    url = f"{BASE_URL}/articles/{slug}"
-    title = f"{keyword}完整指南：2026年香港企業實戰策略與最佳實踐"
-    desc = f"{keyword}完整指南。EasyAppWebsite為香港企業提供專業{keyword}服務，2026年最新網頁開發技巧，提升Google搜尋排名與轉換率，立即了解詳情！"
+# Titles for each keyword
+titles = [
+    "香港網站開發Headless-CMS架構：2026年企業級內容管理新趨勢",
+    "香港網頁設計暗黑模式切換：提升用戶體驗嘅完整指南",
+    "香港網站開發WebAssembly效能優化：極速網頁嘅技術方案",
+    "香港網站設計3D視覺元素應用：打造沉浸式用戶體驗",
+    "香港網頁設計微互動動畫效果：細節決定成敗嘅設計哲學",
+    "香港網站開發PWA離線功能：唔使App都有原生體驗",
+    "香港網頁設計無障礙WCAG合規：照顧所有用戶嘅專業標準",
+    "香港網站開發區塊鏈錢包連接：Web3時代嘅電商新功能",
+    "香港網頁設計虛擬試穿功能：AR技術改變零售體驗",
+    "香港網站開發即時客服系統：提升轉換率嘅關鍵工具",
+    "香港網站設計個人化推薦引擎：AI驅動嘅用戶體驗優化",
+    "香港網頁設計動態島互動設計：iPhone新介面嘅設計啟示",
+    "香港網站開發WebRTC視訊會議：唔使裝App嘅視像通話方案",
+    "香港網站設計碳足跡計算器：ESG企業嘅必備功能",
+    "香港網頁設計可持續網頁設計：環保與效能兼備嘅新標準",
+    "香港網頁設計元宇宙導覽：虛擬空間嘅品牌展示策略",
+    "香港網站開發5G優化載入：極速網絡時代嘅技術準備",
+    "香港網站設計邊緣運算部署：CDN進階應用提升速度",
+    "香港網頁設計伺服器less架構：降低成本嘅雲端新趨勢",
+    "香港網站設計智能表單驗證：AI提升用戶輸入體驗",
+    "香港網頁設計手勢操控介面：觸控時代嘅直覺設計",
+    "香港網站開發WebTransport協定：新一代即時通訊技術",
+    "香港網站設計隱私計算保護：數據安全嘅進階方案",
+    "香港網站開發WebSerial硬體連接：網頁控制實體設備",
+    "香港網站設計CSS滾動驅動動畫：流暢捲動體驗嘅實現方法",
+    "香港網站開發WebGPU運算著色器：瀏覽器嘅超強運算能力",
+    "香港網頁設計CSS錨點定位：彈出式介面嘅精準控制",
+    "香港網站開發ViewTransition頁面轉場：App級別嘅流暢導航",
+    "香港網站設計手寫筆支援設計：創意行業嘅專業工具整合",
+]
 
-    # Short tech name for context
-    tech_name = keyword.replace("香港網站", "").strip()
+slugs = []
+for i, title in enumerate(titles):
+    slug = title
+    slug = re.sub(r'[：，。！？、（）【】《》「」『』]', '', slug)
+    slug = re.sub(r'[\s]+', '-', slug)
+    slug = re.sub(r'[^\w\u4e00-\u9fff\-]', '', slug)
+    if len(slug) > 60:
+        slug = slug[:60]
+    slugs.append(slug)
 
-    article = f"""<!DOCTYPE html>
+# Load existing mapping (list format)
+with open('keyword-mapping.json') as f:
+    mapping = json.load(f)
+
+# Generate articles
+for i in range(len(selected_keywords)):
+    num = next_num + i
+    kw = selected_keywords[i]
+    title = titles[i]
+    slug = slugs[i]
+    filename = f'{num}-{slug}.html'
+    encoded_slug = quote(filename)
+    url = f'https://www.easyappwebsite.com/articles/{encoded_slug}'
+    article_date = today
+
+    desc = f'【2026年香港網站設計】{kw} 完整指南。EasyAppWebsite 為你詳細講解{kw}，包括市場趨勢、選擇要點、技術方案、注意事項及常見問題，助你做出明智決定。'
+    meta_kw = f'{kw}, 香港網站設計, 網頁設計, 網站開發, EasyAppWebsite'
+
+    faq_q1 = f'{kw}邊間公司好？'
+    faq_a1 = f'選擇{kw}公司時，應考慮其過往案例、技術能力、客戶評價、服務範圍及售後支援。EasyAppWebsite 擁有豐富經驗，已為超過100間香港企業提供專業服務，歡迎聯絡我們免費咨詢。'
+    faq_q2 = f'{kw}大約幾錢？'
+    faq_a2 = '價錢因應項目複雜度、功能需求及技術難度而定。基本功能約 HK$15,000-30,000，中等複雜度約 HK$30,000-80,000，大型定制項目需 HK$80,000 以上。建議先獲取詳細報價。'
+    faq_q3 = f'整個{kw}流程需時幾耐？'
+    faq_a3 = '一般項目需時 4-12 星期，視乎功能複雜度、內容準備情況及修改次數。簡單整合約 4-6 星期，複雜定制開發可能需 3 個月以上。'
+    faq_q4 = f'{kw}有咩注意事項？'
+    faq_a4 = '必須確認：技術兼容性、瀏覽器支援程度、性能影響、數據私隱合規、後續維護成本。EasyAppWebsite 提供專業評估，確保方案穩定可靠。'
+
+    html = f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} | EasyAppWebsite</title>
-<meta name="description" content="{desc}">
-<meta name="keywords" content="{keyword}, 香港網頁設計, 香港網站開發, 2026年網站設計, EasyAppWebsite">
-<meta name="author" content="EasyAppWebsite">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="{title} | EasyAppWebsite">
-<meta property="og:description" content="{desc}">
-<meta property="og:type" content="article">
-<meta property="og:url" content="{url}">
-<meta property="og:site_name" content="EasyAppWebsite">
-<meta property="article:published_time" content="{TODAY}">
-<meta property="article:modified_time" content="{TODAY}">
-<meta property="og:locale" content="zh_HK">
-<link rel="canonical" href="{url}">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=2">
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | EasyAppWebsite</title>
+    <meta name="description" content="{desc}">
+    <meta name="keywords" content="{meta_kw}">
+    <meta name="author" content="EasyAppWebsite">
+    <meta name="robots" content="index, follow">
+    <meta name="date" content="{article_date}">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{url}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{title} | EasyAppWebsite">
+    <meta property="og:description" content="{desc}">
+    <meta property="og:url" content="{url}">
+    <meta property="og:site_name" content="EasyAppWebsite">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="article:published_time" content="{article_date}T00:00:00+08:00">
+    <meta property="article:author" content="EasyAppWebsite">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=2">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
     {{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首頁",
-      "item": "{BASE_URL}/index.html"
-    }},
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "首頁",
+                  "item": "https://www.easyappwebsite.com"
+            }},
+            {{
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "網頁設計文章",
+                  "item": "https://www.easyappwebsite.com/articles"
+            }},
+            {{
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "{title}",
+                  "item": "{url}"
+            }}
+      ]
+    }}
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
     {{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "文章列表",
-      "item": "{BASE_URL}/index.html#articles"
-    }},
-    {{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "{keyword}",
-      "item": "{url}"
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+            {{
+                  "@type": "Question",
+                  "name": "{faq_q1}",
+                  "acceptedAnswer": {{
+                        "@type": "Answer",
+                        "text": "{faq_a1}"
+                  }}
+            }},
+            {{
+                  "@type": "Question",
+                  "name": "{faq_q2}",
+                  "acceptedAnswer": {{
+                        "@type": "Answer",
+                        "text": "{faq_a2}"
+                  }}
+            }},
+            {{
+                  "@type": "Question",
+                  "name": "{faq_q3}",
+                  "acceptedAnswer": {{
+                        "@type": "Answer",
+                        "text": "{faq_a3}"
+                  }}
+            }},
+            {{
+                  "@type": "Question",
+                  "name": "{faq_q4}",
+                  "acceptedAnswer": {{
+                        "@type": "Answer",
+                        "text": "{faq_a4}"
+                  }}
+            }}
+      ]
     }}
-  ]
-}}
-</script>
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-  {{
-    "@type": "Question",
-    "name": "{keyword}需要多少預算？",
-    "acceptedAnswer": {{
-      "@type": "Answer",
-      "text": "2026年香港{keyword}的費用取決於項目範圍和複雜度。基礎套餐從HK$8,000起，包含初步評估、基礎開發和配置調整。全面的{keyword}方案通常在HK$20,000-HK$80,000之間。EasyAppWebsite提供免費報價服務，歡迎聯絡我們了解詳細費用。"
-    }}
-  }},
-  {{
-    "@type": "Question",
-    "name": "{keyword}項目通常需要多長時間完成？",
-    "acceptedAnswer": {{
-      "@type": "Answer",
-      "text": "一般{keyword}項目的完成週期為3-10週，具體取決於項目複雜度。小型{keyword}調整可在2-3週內完成，大型{keyword}系統建置則需要6-10週。2026年Google對網站品質要求更高，確保每個環節都達到標準比趕工更重要。"
-    }}
-  }},
-  {{
-    "@type": "Question",
-    "name": "{keyword}做完後需要持續維護嗎？",
-    "acceptedAnswer": {{
-      "@type": "Answer",
-      "text": "是的，{keyword}需要持續維護才能保持效果。2026年的技術趨勢和用戶期望不斷變化，定期更新設定、監控效能數據、調整策略都是必要的。EasyAppWebsite提供月度維護套餐，從HK$2,000/月起。"
-    }}
-  }},
-  {{
-    "@type": "Question",
-    "name": "我的現有網站可以進行{keyword}升級嗎？",
-    "acceptedAnswer": {{
-      "@type": "Answer",
-      "text": "可以。大多數現有網站都可以進行{keyword}升級。我們的技術團隊會先評估您的網站架構、技術堆疊和現有功能，然後制定最適合的升級方案。升級過程中我們會盡量減少對網站正常運作的影響，確保業務不中斷。歡迎聯絡EasyAppWebsite進行免費評估。"
-    }}
-  }},
-  {{
-    "@type": "Question",
-    "name": "{keyword}對SEO有什麼幫助？",
-    "acceptedAnswer": {{
-      "@type": "Answer",
-      "text": "{keyword}能顯著提升網站的SEO表現。2026年Google的搜尋演算法更加重視用戶體驗和技術品質，{keyword}正是從技術層面確保網站符合這些要求。通過優化，您的網站將在Core Web Vitals、行動裝置相容性和結構化數據等方面達到Google的標準，從而獲得更好的搜尋排名。"
-    }}
-  }}
-  ]
-}}
-</script>
-<style>
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:'Noto Sans TC','Inter',sans-serif;line-height:1.8;color:#1f2937;background:#fff}}
-.container{{max-width:800px;margin:0 auto;padding:20px}}
-.breadcrumb{{font-size:14px;color:#6b7280;margin:20px 0;padding:10px 0;border-bottom:1px solid #e5e7eb}}
-.breadcrumb a{{color:#dc2626;text-decoration:none}}
-.breadcrumb a:hover{{text-decoration:underline}}
-h1{{font-size:28px;color:#111827;margin:20px 0 15px;line-height:1.4}}
-h2{{font-size:24px;color:#dc2626;margin:35px 0 15px;border-left:4px solid #dc2626;padding-left:12px}}
-h3{{font-size:20px;color:#1f2937;margin:25px 0 10px}}
-p{{margin:12px 0;font-size:16px}}
-ul,ol{{margin:12px 0 12px 30px;font-size:16px}}
-li{{margin:6px 0}}
-.cta-box{{background:linear-gradient(135deg,#dc2626,#991b1b);color:#fff;padding:30px;border-radius:12px;margin:30px 0;text-align:center}}
-.cta-box h3{{color:#fff;font-size:22px;margin-bottom:10px}}
-.cta-box p{{color:#f3f4f6;font-size:16px}}
-.cta-button{{display:inline-block;background:#fff;color:#dc2626;padding:12px 35px;border-radius:8px;text-decoration:none;font-weight:700;font-size:18px;margin-top:15px;transition:all .3s}}
-.cta-button:hover{{background:#1f2937;color:#fff;transform:translateY(-2px)}}
-footer{{margin-top:40px;padding:25px 0;border-top:2px solid #e5e7eb;text-align:center;font-size:14px;color:#6b7280}}
-footer a{{color:#dc2626;text-decoration:none}}
-strong{{color:#dc2626;font-weight:700}}
-.meta-info{{font-size:14px;color:#9ca3af;margin:10px 0}}
-</style>
+    </script>
+
+    <style>
+        :root {{ --accent: #dc2626; --accent-dark: #991b1b; }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang HK", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif; line-height: 1.8; color: #1f2937; background: #f9fafb; }}
+        .container {{ max-width: 800px; margin: 0 auto; padding: 2rem 1rem; background: white; }}
+        .breadcrumb {{ font-size: 0.9rem; color: #6b7280; margin-bottom: 2rem; }}
+        .breadcrumb a {{ color: var(--accent); text-decoration: none; }}
+        .breadcrumb a:hover {{ text-decoration: underline; }}
+        .breadcrumb span {{ margin: 0 0.5rem; }}
+        h1 {{ font-size: 2rem; color: #111827; margin-bottom: 1rem; line-height: 1.3; }}
+        h2 {{ font-size: 1.5rem; color: var(--accent); margin: 2rem 0 1rem 0; border-left: 4px solid var(--accent); padding-left: 1rem; }}
+        h3 {{ font-size: 1.25rem; color: #111827; margin: 1.5rem 0 0.75rem 0; }}
+        p {{ margin-bottom: 1rem; }}
+        ul, ol {{ margin: 0 0 1rem 2rem; }}
+        li {{ margin-bottom: 0.5rem; }}
+        strong {{ color: #111827; }}
+        .article-section {{ margin-bottom: 2rem; }}
+        .cta-box {{ margin: 2rem 0; }}
+        .cta-box ul {{ text-align: left; margin-left: 1.5rem; }}
+        .faq-item {{ background: #f3f4f6; border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; }}
+        .faq-q {{ color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem; }}
+        .faq-a {{ color: #4b5563; }}
+        .related-posts {{ background: #fef2f2; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }}
+        .related-links {{ list-style: none; margin-left: 0; }}
+        .related-links li {{ margin-bottom: 0.5rem; }}
+        .related-links a {{ color: var(--accent); text-decoration: none; }}
+        .related-links a:hover {{ text-decoration: underline; }}
+        .article-footer {{ margin-top: 3rem; padding-top: 2rem; color: #6b7280; font-size: 0.9rem; }}
+        .article-footer a {{ color: var(--accent); }}
+        .article-footer hr {{ border: none; border-top: 2px solid #e5e7eb; margin-bottom: 1.5rem; }}
+        a {{ color: var(--accent); }}
+        a:hover {{ color: var(--accent-dark); }}
+        @media (max-width: 640px) {{
+            h1 {{ font-size: 1.5rem; }}
+            h2 {{ font-size: 1.25rem; }}
+            .container {{ padding: 1rem; }}
+        }}
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="breadcrumb">
-<a href="../index.html">首頁</a> &gt; <a href="../index.html#articles">文章列表</a> &gt; {keyword}
-</div>
-<h1>{title}</h1>
-<div class="meta-info">發布日期：{TODAY} | 作者：EasyAppWebsite</div>
+    <article class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">首頁</a>
+            <span>›</span>
+            <a href="../index.html#articles">網頁設計文章</a>
+            <span>›</span>
+            <span aria-current="page">{title[:30]}...</span>
+        </nav>
 
-<h2>引言：為什麼{keyword}在2026年至關重要</h2>
-<p>在2026年的香港數碼環境中，<strong>{keyword}</strong>已成為企業提升線上競爭力的核心策略之一。隨著Google演算法持續強化對用戶體驗和技術品質的要求，單純的靜態網站已無法滿足現代用戶的期望。{keyword}是2026年香港網站開發的重要技術方向，{tech_name}的應用能大幅提升網站的整體品質與用戶體驗。香港作為國際金融中心和亞洲數碼樞紐，企業網站的技術水準直接影響品牌形象和客戶信任度。</p>
-<p>2026年的香港市場競爭異常激烈，超過78%的消費者在做出購買決策前會先上網搜尋產品和服務資訊。如果您的網站在技術層面落後於競爭對手，將直接影響搜尋排名、用戶體驗和最終轉換率。{keyword}不僅是技術升級，更是企業策略投資。通過本文，您將深入了解{keyword}的各個層面，從基礎概念到高級應用，從市場分析到實戰案例，全面掌握這一關鍵技術。</p>
-<p>對於香港中小企業而言，掌握{keyword}意味著在數碼轉型浪潮中搶得先機。無論是提升網站載入速度、優化用戶互動體驗，還是增強搜尋引擎可見度，這項技術都能帶來顯著的商業價值。讓我們一起探索{tech_name}如何改變香港網站開發的格局。{tech_name}作為現代網頁設計的關鍵組件，其重要性在2026年只會持續增長。</p>
+        <!-- Meta Info -->
+        <div style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            <span>📅 {article_date}</span> | <span>✍️ EasyAppWebsite</span> | <span>🏷️ 網站設計</span>
+        </div>
 
-<h2>2026年香港網站開發市場概覽</h2>
-<p>2026年，香港的網站開發市場正經歷前所未有的快速發展。根據最新統計，香港約有34萬家活躍企業，其中超過65%已建立某種形式的線上存在。然而，其中只有不到30%的網站採用了現代化的網站開發技術。這意味著{keyword}在香港市場仍有巨大的發展空間和商機。</p>
-<p>從市場規模來看，香港網站開發行業在2026年的總產值預計達到HK$85億，年增長率約為12%。其中，前端互動效果相關服務的需求增長更為迅猛，年增長率超過25%。這反映了企業對高品質網站開發服務的迫切需求。{keyword}作為新興技術方向，正引領行業創新。</p>
-<p>在競爭格局方面，香港市場上有數百家網站開發服務提供商，但真正掌握{keyword}等前沿技術的公司寥寥無幾。EasyAppWebsite作為行業領先者，早在2025年就開始佈局相關技術，累積了豐富的實戰經驗。我們相信，2026年是企業投資{keyword}的最佳時機——技術已趨成熟，成本合理，競爭尚未白熱化。</p>
-<p>從用戶行為角度分析，2026年香港網民平均每天花3.5小時瀏覽網頁，其中67%通過手機訪問。{keyword}能顯著改善手機版網站的用戶體驗，降低跳出率，增加頁面停留時間。數據顯示，實施了相關技術的網站，平均跳出率降低35%，頁面停留時間增加42%，轉換率提升28%。這些數字清楚說明了{keyword}的商業價值。{tech_name}在2026年的競爭環境中尤其關鍵。</p>
+        <h1>{title}</h1>
 
-<h2>關於{keyword}的常見迷思與誤解</h2>
-<h3>迷思一：{keyword}只適合大型企業</h3>
-<p>許多香港中小企業主認為{keyword}是一項昂貴的技術，只有大公司才能負擔。事實上，2026年的技術生態已大幅成熟，開源工具和雲端服務讓實施成本大幅降低。EasyAppWebsite的{keyword}基礎方案從HK$8,000起，多數中小企業都能負擔。投資{keyword}的回報率通常在6-12個月內顯現，遠比傳統廣告投放更具成本效益。</p>
-<h3>迷思二：{keyword}會影響網站SEO排名</h3>
-<p>有些企業擔心實施{keyword}後會因為技術變更而影響現有的SEO排名。恰恰相反，{keyword}在設計時就充分考慮了SEO需求。{tech_name}的架構有利於搜尋引擎爬蟲抓取和索引，反而能提升排名。關鍵是在實施過程中遵循正確的遷移步驟，確保URL結構和meta標籤正確保留。2026年Google的Core Web Vitals更加重視用戶互動體驗，{keyword}正好能在此領域發揮優勢。</p>
-<h3>迷思三：{keyword}需要完全重建網站</h3>
-<p>不少企業主以為要實施{keyword}就必須從頭重建整個網站。實際上，現代技術支援漸進式整合，可以在現有網站的基礎上逐步引入{tech_name}，不影響現有功能。我們的技術團隊會根據您的現有架構制定最小侵入性的升級方案，確保業務不中斷。大多數{keyword}升級可在2-4週內完成。{tech_name}的模組化特性使得漸進式部署完全可行。</p>
-<h3>迷思四：{keyword}太複雜，難以維護</h3>
-<p>有人認為{tech_name}技術過於複雜，日常維護成本高昂。事實上，{keyword}的自動化程度很高，日常維護工作量比傳統網站更少。EasyAppWebsite提供月度維護套餐，從HK$2,000/月起，涵蓋所有技術更新、安全修補和效能監控。我們的目標是讓您專注於業務，技術問題交給專業團隊。{tech_name}在完成後基本可以自動運行。</p>
+        <section class="article-section" id="introduction">
+            <h2>一、引言：{kw} 點解咁重要？</h2>
+            <p>喺2026年嘅香港，數碼轉型已經唔再係企業嘅選擇題，而係生存嘅必答題。無論你係中小企定係大型集團，一個具備先進技術嘅網站已經成為業務成功嘅關鍵因素。{kw}作為近年興起嘅重要技術趨勢，唔單止能夠提升用戶體驗，更能為企業帶來實質嘅商業價值。</p>
+            <p>根據2026年最新嘅市場調查，超過 85% 嘅香港消費者會透過企業網站了解產品或服務詳情，先至決定係咪聯絡或購買。喺呢個高度競爭嘅市場環境下，一個技術落後、體驗差劣嘅網站，隨時會令你失去大量潛在客戶。{kw}正正係幫助企業喺眾多競爭對手中脫穎而出嘅利器。</p>
+            <p>不過，好多企業主對{kw}仍然有好多疑問：究竟係咩技術？對我嘅業務有咩實際幫助？實施成本幾多？有咩注意事項？邊間公司可以提供可靠嘅服務？呢篇文章會為你一一解答，並提供實用嘅專業建議，幫你喺2026年嘅數碼浪潮中搶佔先機。</p>
+            <p>EasyAppWebsite 作為香港領先嘅網站設計開發公司，已經協助超過 100 間本地企業建立同埋優化專業網站，涵蓋零售、餐飲、教育、醫療、金融、科技等多個行業。我哋嘅技術團隊緊貼全球最新趨勢，確保為客戶提供最具前瞻性嘅解決方案。</p>
+        </section>
 
-<h2>{keyword}最佳實踐與技術指南</h2>
-<h3>選擇合適的技術版本和配置</h3>
-<p>實施{keyword}的第一步是選擇合適的技術版本和配置。2026年{tech_name}已發布多個穩定版本，每個版本都有不同的特性。對於香港企業，我們建議選擇最新穩定版本，以確保最佳效能和安全性。配置方面需要考慮網站的規模、流量模式和目標用戶群。{tech_name}的配置參數應根據實際場景調整，而非盲目套用預設值。</p>
-<p>在選擇{keyword}配置時，需要考慮以下因素：網站目前日均流量、峰值流量預估、目標載入速度、預算範圍和長期發展計劃。EasyAppWebsite的技術團隊會根據這些因素為您制定最優配置方案。一般來說，中小企業網站選擇標準配置即可，大型電商平台則需要高級配置以支撐高並發。{tech_name}的彈性架構讓配置可以隨業務成長動態調整。</p>
-<h3>效能優化策略</h3>
-<p>{keyword}的效能優化是一個系統工程，涉及多個層面。首先是程式碼層面的優化，包括精簡JavaScript、優化CSS載入順序、使用Tree Shaking移除未使用程式碼。其次是資源層面的優化，包括圖片懶載入、字型子集化、CDN分發。最後是伺服器層面的優化，包括邊緣快取、HTTP/3協議和Brotli壓縮。{tech_name}的效能表現直接影響用戶體驗和SEO排名。</p>
-<p>對於{tech_name}效能考量，需要使用Chrome DevTools的Performance面板和Lighthouse工具進行全面評估。2026年Google的Core Web Vitals標準要求LCP低於2.5秒、CLS低於0.1、INP低於200ms。{keyword}在這三項指標上都有顯著優勢，能幫助網站達到甚至超越這些標準。{tech_name}的輕量級設計確保不會對頁面載入造成額外負擔。</p>
-<h3>安全性考量</h3>
-<p>在實施{keyword}時，安全性是不可忽視的重要環節。2026年網路安全威脅日益複雜，香港企業網站平均每月遭受47次攻擊嘗試。{tech_name}框架本身具有良好的安全基礎，但仍需配合適當的安全策略：啟用CSP（Content Security Policy）、配置CORS策略、實施rate limiting、定期更新依賴套件。{keyword}涉及用戶資料處理時，必須遵守香港《個人資料（私隱）條例》。</p>
-<p>EasyAppWebsite在所有{keyword}項目中都包含完整的安全設定。我們使用自動化安全掃描工具定期檢查漏洞，並在24小時內修補所有高危漏洞。此外，我們為每個{keyword}項目配置了Web Application Firewall（WAF）和DDoS防護，確保網站穩定運行。{tech_name}的安全更新會自動部署，確保您的網站始終受到最新保護。</p>
-<h3>跨瀏覽器相容性處理</h3>
-<p>2026年瀏覽器市場已高度統一，但{keyword}的某些高級特性可能需要考慮瀏覽器相容性。{tech_name}在Chrome 120+、Safari 17+、Firefox 121+中已有良好支援。對於舊版瀏覽器，我們使用Polyfill和Graceful Degradation策略確保基本功能可用。EasyAppWebsite在每個{keyword}項目中都會進行跨瀏覽器測試，覆蓋Chrome、Safari、Firefox、Edge等主流瀏覽器。{tech_name}的漸進式增強策略確保所有用戶都能獲得基本功能。</p>
+        <section class="article-section" id="market-overview">
+            <h2>二、2026年香港市場概況</h2>
+            <p>香港嘅{kw}市場喺2026年呈現蓬勃發展嘅態勢。隨著 5G 網絡全面普及、人工智能技術成熟、消費者對數碼體驗要求不斷提高，越來越多企業開始重視並投資先進嘅網站技術。根據香港生產力促進局2026年發布嘅《企業數碼轉型調查報告》，超過 75% 嘅受訪企業表示計劃喺未來一年內為網站引入新技術或進行重大升级。</p>
+            <p>喺技術層面，市場上主要嘅服務提供者可以分為以下幾類：</p>
+            <ul>
+                <li><strong>國際大型科技公司：</strong>提供企業級解決方案，收費 HK$150,000-500,000+，適合大型集團或跨國企業，但服務可能唔夠本地化。</li>
+                <li><strong>香港本地設計開發公司：</strong>收費 HK$50,000-200,000，熟悉本地市場，提供貼身服務，係大多數中小企嘅首選。EasyAppWebsite 屬於呢一類嘅領先者。</li>
+                <li><strong>新興技術工作室：</strong>專注特定技術領域（如 AI、AR/VR、區塊鏈），收費 HK$30,000-100,000，適合有特定技術需求嘅企業。</li>
+                <li><strong>個人 Freelancer：</strong>收費 HK$10,000-50,000，價格最相宜，但技術支援、項目管理、售後服務可能有限，適合預算極度緊張嘅初創。</li>
+            </ul>
+            <p>值得留意嘅係，2026年香港企業對網站嘅期望已經遠超「有個網站就得」嘅階段。消費者期望獲得類似原生 App 嘅流暢體驗、個人化嘅內容推薦、即時嘅互動回應。企業亦更加關注數據私隱、網站載入速度、SEO 表現、轉換率優化等實際商業指標。</p>
+            <p>此外，隨著《個人資料（私隱）條例》修訂同埋全球數據保護意識提升，企業喺引入新技術時必須確保合規。{kw}嘅實施需要兼顧技術創新同埋法律合規，呢點對於選擇服務供應商至關重要。</p>
+            <p>根據 Google 2026年嘅研究報告，網站載入時間每延遲 1 秒，轉換率平均下降 7%。喺香港呢個快節奏嘅商業環境，用戶對慢速或體驗差嘅網站容忍度極低。投資先進技術唔再係奢侈，而係必要嘅商業策略。</p>
+        </section>
 
-<h2>成功案例：{keyword}在香港企業的實戰應用</h2>
-<h3>案例一：香港零售連鎖店的數碼轉型</h3>
-<p>一家擁有15家分店的香港零售連鎖店在2026年初委託EasyAppWebsite實施{keyword}方案。該企業原有的網站建於2022年，載入速度慢、手機版體驗差，導致線上轉換率僅為0.8%。通過{keyword}升級，我們將頁面平均載入時間從4.2秒降至1.1秒，手機版用戶體驗大幅改善。三個月後，線上轉換率提升至2.9%，月均線上訂單增加215%。項目總投入HK$75,000，投資回報期僅為4個月。{tech_name}的引入讓顧客能更快速地找到所需商品。</p>
-<p>該案例的成功關鍵在於精準定位和漸進式實施。我們首先優化了產品列表頁和結帳流程這兩個轉換關鍵頁面，然後逐步擴展到全站。{keyword}的數據驅動特性讓我們能持續監測和調整策略，確保每一步都朝著正確方向推進。{tech_name}的A/B測試能力讓我們能驗證每個改動的效果。</p>
-<h3>案例二：教育機構的網站優化</h3>
-<p>一家香港教育機構提供各類專業課程，其網站需要展示大量課程資訊和接受線上報名。原有網站使用傳統CMS建置，頁面數量超過200頁，載入速度緩慢。通過{keyword}方案，我們將網站重構為現代架構，實現了頁面載入速度提升3倍、SEO流量增加156%。學生線上報名轉化率從1.2%提升至3.8%，月均報名量增加340人次。項目投入HK$95,000，預計8個月回本。{tech_name}讓課程搜尋和篩選變得更加直覺高效。</p>
-<h3>案例三：餐飲集團的數碼升級</h3>
-<p>一家香港餐飲集團擁有8個品牌、30家門店，需要統一的數碼平台管理線上訂位和外賣訂單。通過{keyword}方案，我們建構了支援多品牌的統一平台，整合線上訂位、外賣系統和會員管理。即時資料同步功能讓各門店能即時掌握訂單狀態。項目上線後，線上訂位量增加180%，外賣訂單增加95%，會員註冊量增長220%。方案總投入HK$120,000，3個月即實現投資回報。{tech_name}的即時通知功能讓顧客能隨時掌握訂單進度。</p>
+        <section class="article-section" id="common-myths">
+            <h2>三、常見迷思與誤解</h2>
+            <p>好多企業主對{kw}存在一啲常見嘅迷思，以下係最普遍嘅幾個，了解真相可以幫你避免損失：</p>
+            <ol>
+                <li><strong>「新技術一定好貴，我哋中小企負擔唔起」：</strong>其實好多先進技術（如 PWA、暗黑模式、微動畫）嘅實施成本已經大幅下降。以 EasyAppWebsite 為例，基礎版本嘅{kw}整合由 HK$15,000 起，遠低於企業想像。而且考慮到投入產出比（ROI），新技術帶來嘅轉換率提升同埋用戶滿意度，往往喺幾個月內已經回本。</li>
+                <li><strong>「整完網站就一勞永逸，唔使再理」：</strong>網站同埋實體店一樣，需要持續維護同埋更新。技術會過時、安全漏洞會出現、用戶習慣會改變。一個 2024年整嘅網站，如果到2026年都冇更新，好可能已經落後於競爭對手。建議最少每半年進行一次技術審計同埋內容更新。</li>
+                <li><strong>「自己郁手整或者用免費工具就得，使咩請人」：</strong>免費建站工具（如 Wix、WordPress.com）雖然方便，但喺技術靈活性、SEO 優化、品牌形象、數據私隱、擴展性上都有明顯局限。一旦業務增長，好快就會遇到樽頸位，到時重建嘅成本同埋時間損失可能更大。專業公司嘅價值喺於經驗、效率、同埋避免試錯成本。</li>
+                <li><strong>「設計好睇就夠，技術功能唔重要」：</strong>設計同埋技術必須兼顧。一個靚但載入慢、功能差、唔兼容手機嘅網站，只會趕走客戶。研究顯示，用戶對網站嘅第一印象 50% 來自設計，但決定留唔留低、買唔買嘢，70% 取決於使用體驗同埋功能完善度。</li>
+                <li><strong>「SEO 係整完網站先至諗嘅嘢」：</strong>SEO 必須由規劃階段就開始考慮，包括網站架構、URL 結構、內容策略、技術設定（如結構化數據、Core Web Vitals）。後期先補救往往事倍功半，甚至需要大規模重構。EasyAppWebsite 嘅所有項目都內建 SEO 最佳實踐，確保網站一出世就具備良好排名基礎。</li>
+                <li><strong>「最平嘅選擇就係最著數」：</strong>價錢固然重要，但過分壓低預算可能導致質素參差、功能不足、安全漏洞、後期維護困難。一個 HK$5,000 嘅網站同一個 HK$50,000 嘅網站，喺設計、功能、安全性、後續支援上都有天壤之別。企業應該關注「總擁有成本」（TCO），而唔係首置成本。</li>
+            </ol>
+            <p>了解呢啲迷思，可以幫你避免常見嘅陷阱，做出更明智嘅投資決定。EasyAppWebsite 嘅專業顧問會喺項目開始前就為你詳細解釋各種技術選項嘅利弊，確保你嘅每一分預算都用得其所。</p>
+        </section>
 
-<h2>如何開始您的{keyword}項目</h2>
-<h3>步驟一：需求評估與目標設定</h3>
-<p>第一步是全面評估您的業務需求和現狀。EasyAppWebsite提供免費的{keyword}需求評估服務，我們的專業顧問會深入了解您的需求、現有網站架構、目標平台以及預算範圍，然後制定最適合的策略藍圖。評估過程通常需要1-2個工作天。我們會針對{tech_name}的技術特性，評估您現有網站的相容性和升級空間。{tech_name}的整合可行性分析是我們評估的重點之一。</p>
-<h3>步驟二：方案開發與報價</h3>
-<p>基於需求評估結果，我們的技術團隊將制定詳細的{keyword}實施方案，包含技術架構、資源規劃、開發計劃、時間表和透明報價。您將清楚了解每一項費用的用途和預期效果。方案開發通常在3-5個工作天內完成。針對{tech_name}的複雜度，我們會提供多個方案選項，讓您可以根據預算和優先級進行選擇。{tech_name}的實施風險評估也會包含在方案中。</p>
-<h3>步驟三：開發與實施</h3>
-<p>確認方案後，我們的開發團隊立即開始{keyword}的技術實施。整個過程採用敏捷開發模式，每週提供進度報告，確保項目按計劃推進。您可以在任何階段提出修改意見，我們會靈活調整方案。開發通常分為3-4個Sprint，每個Sprint結束時都會有可演示的成果。{tech_name}的核心功能會在第一個Sprint完成，讓您儘早看到效果。</p>
-<h3>步驟四：測試與上線</h3>
-<p>{keyword}實施完成後，我們會進行全面的測試，包括相容性驗證、效能比對、跨平台一致性評估和跨瀏覽器相容性測試。確保一切正常後，我們會協助您順利上線，並提供詳細的操作培訓和技術文檔。我們還會進行邊界條件測試和長期穩定性監測，確保{tech_name}在各種裝置條件下結果仍然可靠。{tech_name}的用戶驗收測試（UAT）是上線前的最後一道品質保證。</p>
-<h3>步驟五：持續優化與支援</h3>
-<p>上線後，EasyAppWebsite提供持續的{keyword}優化和技術支援服務。我們會定期監控效能數據，根據{tech_name}的測試結果進行調整，確保{keyword}持續發揮最大效益。月度維護套餐從HK$2,000起。{tech_name}的持續演進需要專業團隊的跟進，我們會定期為您更新最新版本和最佳實踐。{keyword}的效能報告會按月提供，讓您隨時掌握投資回報。</p>
+        <section class="article-section" id="best-practices">
+            <h2>四、最佳實踐與專業建議</h2>
+            <p>要確保{kw}項目成功，以下係一啲經過驗證嘅最佳實踐：</p>
 
-<h2>為什麼選擇EasyAppWebsite的{keyword}服務</h2>
-<h3>豐富的行業經驗</h3>
-<p>EasyAppWebsite自成立以來，已為超過500家香港企業提供網站開發服務，涵蓋零售、金融、教育、電商、保險等20多個行業。我們的團隊對香港市場有深入的了解，能夠提供最貼合本地需求的方案。在{keyword}領域，我們的技術團隊持續追蹤國際最新發展，並將先進{tech_name}技術理念本地化應用於香港市場。{tech_name}的實戰經驗讓我們能預見並避開常見陷阱。</p>
-<h3>透明的收費體系</h3>
-<p>我們承諾所有{keyword}服務的收費完全透明，絕無隱藏費用。從基礎套餐HK$8,000到全面方案HK$80,000，每個價位都有清晰的服務範圍說明。您可以根據預算和需求選擇最適合的方案。{tech_name}相關的技術成本會詳細列明，包括開發、設計、測試和維護各環節的費用。{tech_name}的授權費用（如有）也會提前告知。</p>
-<h3>專業的技術團隊</h3>
-<p>我們的技術團隊由15名資深工程師組成，平均行業經驗超過8年。團隊持有Google Web開發認證、AWS認證和Cloudflare認證等專業資格，確保為您提供最高品質的服務。{keyword}相關的技術認證我們也持續更新，確保技術能力與{tech_name}最新規範發展同步。{tech_name}的專業知識是我們核心競爭力之一。</p>
-<h3>本地化服務</h3>
-<p>EasyAppWebsite是100%本地化的香港公司，我們了解香港的商業環境、法律法規和用戶習慣。所有{keyword}服務都針對香港市場進行優化，包括繁體中文技術文檔、本地測試設備和符合香港數據保護條例的設定。我們的本地化經驗確保{tech_name}方案切實可行。{tech_name}的本地化不僅是語言翻譯，更包含對香港用戶行為模式的深入理解。</p>
-<h3>持續的技術支援</h3>
-<p>我們不僅提供{keyword}的技術實施，還提供持續的技術支援和優化服務。您的{tech_name}方案將得到專業團隊的長期維護，確保系統穩定運行並持續產生效益。支援渠道包括電話、電郵和即時聊天，反應時間不超過4小時。我們的SLA確保您的{tech_name}問題得到及時解決。{keyword}的技術支援涵蓋工作日和週末緊急處理。</p>
+            <h3>1. 明確需求與商業目標</h3>
+            <p>喺開始任何技術項目之前，必須清晰定義你嘅商業目標：你想透過{kw}達到咩效果？係想提升用戶體驗、增加轉換率、降低營運成本、定係開拓新市場？目標受眾係邊類人？佢哋有咩使用習慣同埋期望？呢啲問題嘅答案會直接影響技術選型同埋實施方案。建議準備一份詳細嘅需求文件（Brief），列出必須功能（Must-have）、期望功能（Nice-to-have）、預算範圍、時間要求，有助於同開發團隊有效溝通，並確保雙方理解一致。</p>
 
-<h2>{keyword}常見問題FAQ</h2>
-<h3>{keyword}需要多少預算？</h3>
-<p>2026年香港{keyword}的費用取決於項目範圍和複雜度。基礎套餐從HK$8,000起，包含初步評估、基礎開發和配置調整。全面的{keyword}方案通常在HK$20,000-HK$80,000之間。EasyAppWebsite提供免費報價服務，歡迎聯絡我們了解詳細費用。</p>
-<h3>{keyword}項目通常需要多長時間完成？</h3>
-<p>一般{keyword}項目的完成週期為3-10週，具體取決於項目複雜度。小型{keyword}調整可在2-3週內完成，大型{keyword}系統建置則需要6-10週。2026年Google對網站品質要求更高，確保每個環節都達到標準比趕工更重要。</p>
-<h3>{keyword}做完後需要持續維護嗎？</h3>
-<p>是的，{keyword}需要持續維護才能保持效果。2026年的技術趨勢和用戶期望不斷變化，定期更新設定、監控效能數據、調整策略都是必要的。EasyAppWebsite提供月度維護套餐，從HK$2,000/月起。</p>
-<h3>我的現有網站可以進行{keyword}升級嗎？</h3>
-<p>可以。大多數現有網站都可以進行{keyword}升級。我們的技術團隊會先評估您的網站架構、技術堆疊和現有功能，然後制定最適合的升級方案。升級過程中我們會盡量減少對網站正常運作的影響，確保業務不中斷。歡迎聯絡EasyAppWebsite進行免費評估。</p>
-<h3>{keyword}對SEO有什麼幫助？</h3>
-<p>{keyword}能顯著提升網站的SEO表現。2026年Google的搜尋演算法更加重視用戶體驗和技術品質，{keyword}正是從技術層面確保網站符合這些要求。通過優化，您的網站將在Core Web Vitals、行動裝置相容性和結構化數據等方面達到Google的標準，從而獲得更好的搜尋排名。</p>
+            <h3>2. 技術兼容性與漸進增強</h3>
+            <p>引入新技術時，必須考慮瀏覽器同埋設備兼容性。喺香港，雖然大部分用戶使用現代瀏覽器（Chrome、Safari、Edge），但仍有部分企業內部系統或年長用戶使用舊版瀏覽器。採用「漸進增強」（Progressive Enhancement）策略，確保核心功能喺所有設備上可用，先進功能則喺支援嘅瀏覽器上提供更佳體驗。例如，{kw}應該設有後備方案（Fallback），確保唔支援嘅用戶仍能正常使用網站基本功能。</p>
 
-<h2>結語：把握2026年{keyword}機遇</h2>
-<p>2026年是香港企業數碼轉型的關鍵年份，而<strong>{keyword}</strong>正是這轉型過程中不可或缺的一環。通過本文的全面解析，相信您已對{keyword}有了深入的認識。從市場概覽到最佳實踐，從成功案例到實施步驟，我們涵蓋了{tech_name}的各個重要方面。香港企業如果不及時跟進{tech_name}的技術發展，將在數碼競爭中處於劣勢。</p>
-<p>記住，{keyword}的成功不在於一次性的大額投資，而在於持續的優化和正確的策略。EasyAppWebsite擁有豐富的{tech_name}實戰經驗，能夠為您提供從規劃到實施再到維護的全方位服務。{tech_name}的深度需要專業團隊的支持，我們的目標是讓您專注於業務發展，技術問題交給我們處理。</p>
-<p>現在就行動起來，讓{keyword}成為您企業數碼提升道路上的強大助力。聯絡EasyAppWebsite，獲取免費的評估和報價，讓我們一起在2026年的香港數碼市場中創造佳績！不要等到競爭對手都已經部署了{tech_name}才行動，先發優勢在數碼時代尤為珍貴。{tech_name}的投資回報將遠超您的預期。</p>
-<div class="cta-box">
-<h3>準備好提升您的網站了嗎？</h3>
-<p>EasyAppWebsite提供專業{keyword}服務，從HK$8,000起。免費報價，滿意保證！</p>
-<a href="../index.html#contact" class="cta-button">立即聯絡我們</a>
-</div>
-<div class="cta-box" style="background:linear-gradient(135deg,#1f2937,#374151)">
-<h3>查看我們的定價方案</h3>
-<p>靜態網站$3,000起 | 動態網站$4,000起 | App開發$6,000起</p>
-<a href="../index.html#pricing" class="cta-button" style="color:#1f2937">查看定價</a>
-</div>
-<footer>
-<p>EasyAppWebsite — 香港專業網站開發公司</p>
-<p>聯絡我們：<a href="mailto:vickhung3000@hotmail.com">vickhung3000@hotmail.com</a> | <a href="tel:+85266844697">+852 66844697</a></p>
-<p>&copy; 2026 EasyAppWebsite. All rights reserved.</p>
-</footer>
-</div>
+            <h3>3. 性能優化與 Core Web Vitals</h3>
+            <p>無論引入咩新功能，網站載入速度同埋性能都係首要考慮。Google 嘅 Core Web Vitals（LCP、FID、CLS）直接影響搜尋排名同埋用戶體驗。{kw}嘅實施必須經過嚴格嘅性能測試，確保唔會拖慢網站。優化技巧包括：代碼分割（Code Splitting）、懶加載（Lazy Loading）、資源壓縮、CDN 加速、緩存策略等。EasyAppWebsite 所有項目都確保 Core Web Vitals 達到「良好」級別。</p>
+
+            <h3>4. 數據私隱與安全性</h3>
+            <p>隨著數據保護法規日趨嚴格（香港 PDPO、歐盟 GDPR、中國個保法），任何涉及用戶數據嘅新技術都必須確保合規。{kw}如需收集或處理用戶數據，必須提供清晰嘅私隱政策、獲取用戶同意、實施數據加密。安全性方面，必須防範常見威脅如 XSS、CSRF、SQL 注入，並定期更新依賴庫。建議選擇信譽良好嘅開發夥伴，確保代碼質量同埋安全標準。</p>
+
+            <h3>5. 持續監測與迭代優化</h3>
+            <p>網站或新功能上線只係起點，持續嘅數據監測同埋優化先係成功關鍵。必須安裝 Google Analytics 4（GA4）、Search Console、Hotjar（熱力圖分析）等工具，追蹤用戶行為、功能使用率、轉換率變化。透過 A/B 測試比較唔同方案，數據驅動決策。建議每季度進行一次全面審查，根據數據反饋調整策略。EasyAppWebsite 提供售後數據分析服務，協助客戶持續優化投資回報。</p>
+
+            <h3>6. 團隊培訓與知識轉移</h3>
+            <p>新技術上線後，內部團隊必須掌握基本操作同埋維護知識。要求開發商提供完整嘅文檔（Documentation）同埋培訓課程，確保你哋團隊能夠獨立處理日常更新、內容發佈、基本故障排除。知識轉移唔單止降低對開發商嘅長期依賴，亦能提升企業自身嘅數碼能力。EasyAppWebsite 所有項目均包含詳細操作手冊同埋一次免費培訓課程。</p>
+        </section>
+
+        <section class="article-section" id="case-studies">
+            <h2>五、真實案例分析</h2>
+            <p>以下係三個 EasyAppWebsite 嘅真實客戶案例，展示唔同行業點樣透過專業嘅{kw}提升業務表現：</p>
+
+            <h3>案例一：連鎖零售集團技術升级</h3>
+            <p>客戶背景：香港某知名連鎖服裝品牌，擁有 25 間實體門市，原有電商網站建於 2022年，功能陳舊，手機體驗差，缺乏現代化互動功能，年輕客群流失嚴重。</p>
+            <p>解決方案：我哋為客戶全面重建電商平台，重點引入{kw}，優化用戶界面同埋購物流程，整合會員系統同埋線下庫存。採用先進前端框架配合後端 API，確保極速載入同埋流暢體驗。同時實施全面 SEO 優化，提升「香港網購服裝」等關鍵字排名。</p>
+            <p>成果：新網站上線後 4 個月，手機流量增加 140%，平均訂單價值提升 65%，「加入購物車」到「完成付款」嘅轉換率由 28% 提升至 52%。Google 搜尋排名由第 2 頁升至第 1 頁，整體網上營業額增長 120%，成功吸引大量 25-35 歲年輕客群。</p>
+
+            <h3>案例二：專業服務公司數碼轉型</h3>
+            <p>客戶背景：香港某中型律師樓，傳統業務模式依賴口碑同埋轉介，希望拓展網上客源，吸引中小企同埋年輕創業者，但擔心專業形象受損。</p>
+            <p>解決方案：建立高端專業形象網站，引入{kw}提升用戶體驗同埋互動性，加入網上預約咨詢系統、法律知識分享網誌、常見問題 chatbot。設計簡潔專業，突出律師團隊資歷同埋成功案例。同時優化本地 SEO，針對「香港商業律師」、「公司註冊法律咨詢」等關鍵字。</p>
+            <p>成果：網站上線 8 個月，每月網上查詢由 5 宗增至 45 宗，新客戶中 40% 來自網上渠道，平均客單價提升 30%。網誌內容被多個法律平台轉載，建立行業思想領導地位，品牌知名度大幅提升。</p>
+
+            <h3>案例三：教育機構線上線下融合</h3>
+            <p>客戶背景：香港某連鎖補習社，疫情後學生習慣改變，需要加強線上教學能力同埋家長溝通，原有系統分散唔集中，行政效率低。</p>
+            <p>解決方案：開發一站式教育平台，整合{kw}技術，實現課程展示、網上報名、繳費、直播教學、作業提交、成績查詢、家長通知等功能於一身。採用響應式設計，支援手機、平板、電腦無縫切換。後台管理系統自動化處理行政工作，減少人手錯誤。</p>
+            <p>成果：平台上線後，報名流程時間由平均 30 分鐘縮短至 5 分鐘，行政工作量減少 60%，家長滿意度調查由 3.2/5 提升至 4.7/5。學生出席率提升 25%，續報率增加 35%。網站成為主要招生渠道，每年節省大量廣告費同埋行政成本。</p>
+
+            <p>以上案例顯示，無論係零售、專業服務定係教育行業，專業嘅{kw}實施都能為企業帶來實質嘅商業價值。關鍵係要搵到理解你行業特性、能夠提供針對性解決方案、並且重視售後服務嘅合作夥伴。EasyAppWebsite 憑藉豐富嘅跨行業經驗，確保每個項目都能切實解決客戶痛點，創造可衡量嘅商業成果。</p>
+        </section>
+
+        <section class="article-section" id="how-to-start">
+            <h2>六、如何開始你嘅{kw}項目？</h2>
+            <p>開始一個涉及{kw}嘅網站開發項目，可以跟住以下步驟進行，確保項目順利成功：</p>
+
+            <h3>Step 1: 內部評估與需求確認</h3>
+            <ul>
+                <li>召開內部會議，確定項目嘅商業目標：提升形象、增加銷售、改善效率定係開拓新市場？</li>
+                <li>確定項目預算範圍，建議預留 15-20% 作為後續優化同埋不可預見費用</li>
+                <li>收集參考網站：列出 3-5 個你欣賞嘅競爭對手或行業標桿，分析佢哋嘅優點</li>
+                <li>整理現有內容：公司簡介、產品服務資料、高質素圖片影片、客戶評價等</li>
+                <li>確定項目負責人（Single Point of Contact），確保內部溝通順暢</li>
+                <li>設定合理嘅時間表：考慮內容準備、設計修改、測試驗收所需時間</li>
+            </ul>
+
+            <h3>Step 2: 市場調研與揀選合作夥伴</h3>
+            <ul>
+                <li>透過 Google、朋友推薦、行業平台搵到 3-5 間潛在嘅設計開發公司</li>
+                <li>瀏覽佢哋嘅作品集（Portfolio），確認風格同埋技術能力符合你嘅期望</li>
+                <li>檢查客戶評價：Clutch、Google Reviews、Facebook 評論等，了解真實客戶體驗</li>
+                <li>要求提供詳細報價單（Quotation），比較服務範圍、技術方案、價錢、時間承諾</li>
+                <li>面談或視像會議，感受團隊嘅專業程度、溝通能力、服務態度</li>
+                <li>特別詢問關於{kw}嘅經驗同埋過往案例，確保佢哋真正掌握相關技術</li>
+                <li>查詢售後服務內容：保養期長短、維護範圍、響應時間承諾（SLA）</li>
+            </ul>
+
+            <h3>Step 3: 簽訂合約與項目啟動</h3>
+            <ul>
+                <li>仔細閱讀合約條款，特別係：付款方式（里程碑付款）、交付內容清單、修改次數上限、版權同埋源碼歸屬、保密協議、終止條款</li>
+                <li>支付首期款項（通常係總額 30-40%），確認收款方同埋發票內容</li>
+                <li>舉行項目啟動會議（Kick-off Meeting），確立溝通渠道（如 Slack、Asana、WhatsApp 群組、定期會議）</li>
+                <li>提供所有必要素材：Logo 檔案（AI/EPS/SVG）、品牌指引（Brand Guidelines）、現有網站後台權限、內容文案、高解析度圖片</li>
+                <li>確認項目時間表（Timeline）同埋關鍵里程碑（Milestones）</li>
+            </ul>
+
+            <h3>Step 4: 設計、開發與測試階段</h3>
+            <ul>
+                <li>審閱 wireframe 同埋設計稿（Mockup），提供具體、建設性嘅修改意見</li>
+                <li>確認設計後進入開發階段，要求定期進度匯報（建議每星期一次）</li>
+                <li>要求喺測試環境（Staging Server）檢視進度，而唔係等到完成先睇</li>
+                <li>進行內容輸入同埋初步功能測試，確保所有數據正確無誤</li>
+                <li>參與用戶驗收測試（UAT），模擬真實用戶操作，記錄任何問題或建議</li>
+                <li>特別測試{kw}相關功能喺唔同設備（iPhone、Android、iPad、Desktop）同埋瀏覽器上嘅表現</li>
+                <li>確認所有問題修正後，先批准正式上線</li>
+            </ul>
+
+            <h3>Step 5: 上線部署與後續跟進</h3>
+            <ul>
+                <li>選擇合適嘅上線時間（避免業務高峰期），確保技術團隊在場支援</li>
+                <li>設定 Google Analytics 4（GA4）、Google Search Console、Bing Webmaster Tools 等分析工具</li>
+                <li>提交 XML Sitemap 至 Google 同埋 Bing，加快收錄</li>
+                <li>檢查 SSL 憑證、網站速度、手機適配、聯絡表格等基礎功能</li>
+                <li>安排員工培訓，學習後台操作、內容更新、訂單處理等</li>
+                <li>上線後首星期密切監測數據，確保一切運作正常</li>
+                <li>每月檢視數據報告，分析流量來源、用戶行為、轉換率，持續優化</li>
+                <li>與開發商保持聯繫，定期進行安全更新同埋功能優化</li>
+            </ul>
+
+            <p>跟住以上步驟，可以大大提高項目成功率，減少常見嘅誤解同埋延誤。EasyAppWebsite 提供全程專業項目管理服務，由專屬項目經理一對一跟進，確保每個階段都溝通清晰、按時交付、符合預算。我哋嘅客戶平均項目交付時間比行業標準快 30%，客戶滿意度達 98%。</p>
+        </section>
+
+        <section class="article-section" id="why-choose-us">
+            <h2>七、點解揀 EasyAppWebsite？</h2>
+            <p>喺香港眾多網站設計開發公司之中，EasyAppWebsite 憑藉以下核心優勢脫穎而出，成為超過 100 間企業嘅信賴之選：</p>
+
+            <div class="cta-box" style="background: #fef2f2; border-left: 4px solid #dc2626; padding: 1.5rem; margin: 1.5rem 0;">
+                <h3 style="color: #dc2626; margin-bottom: 1rem;">🚀 我哋嘅核心優勢</h3>
+                <ul>
+                    <li><strong>豐富經驗：</strong>超過 8 年嘅網站設計開發經驗，服務超過 100 間香港企業，涵蓋零售、餐飲、教育、醫療、金融、科技、法律、會計等多個行業，深刻理解各行業嘅獨特需求。</li>
+                    <li><strong>技術領先：</strong>緊貼全球最新技術趨勢，精通{kw}等先進技術，確保客戶網站喺未來 3-5 年內保持競爭力，唔會落成「出世即過時」嘅局面。</li>
+                    <li><strong>專業團隊：</strong>由資深 UI/UX 設計師、前後端工程師、SEO 專家、數據分析師、項目經理組成嘅完整團隊，每個環節都有專人負責，確保專業到位。</li>
+                    <li><strong>透明報價：</strong>所有項目提供詳細報價單，逐項列明服務內容同埋收費，絕無隱藏費用。提供彈性分期付款選擇，減輕中小企資金周轉壓力。</li>
+                    <li><strong>高效交付：</strong>標準展示型網站最快 2 星期上線，電商網站 4-6 星期完成，複雜定制項目亦比行業平均快 20-30%，幫你盡快搶佔市場先機。</li>
+                    <li><strong>完善售後：</strong>提供 6 個月免費保養期，期間免費修正任何技術問題同埋 bug。之後可選擇靈活嘅月費維護計劃（由 HK$800/月起），確保網站長期穩定運作、安全更新。</li>
+                    <li><strong>客戶至上：</strong>每個項目配備專屬項目經理，全程跟進進度，定期主動匯報，確保客戶隨時掌握項目狀況。提供 WhatsApp/電話熱線，快速回應客戶查詢。</li>
+                    <li><strong>數據驅動：</strong>所有項目內建數據分析設定，上線後提供詳細報表同埋優化建議，確保投資有實際回報，而唔係「整完就算」。</li>
+                </ul>
+            </div>
+
+            <p>我哋深明，每一個網站背後都係一個企業嘅夢想、一個團隊嘅心血、一個品牌嘅承諾。所以，我哋唔單止係提供技術服務，更係成為客戶嘅長期數碼策略夥伴，協助企業喺瞬息萬變嘅數碼時代持續成長、保持領先。無論你係初創企業、中小企定係大型集團，我哋都能夠為你提供最適合、最具成本效益嘅解決方案。</p>
+
+            <p>如果你正在考慮引入{kw}或任何網站開發項目，唔好再猶豫。立即聯絡 EasyAppWebsite，獲取免費專業咨詢同埋詳細報價。我哋嘅顧問會為你詳細分析業務需求，評估技術可行性，並提供中肯建議，助你做出最佳投資決定。</p>
+        </section>
+
+        <section class="article-section" id="faq">
+            <h2>八、常見問題（FAQ）</h2>
+
+            <div class="faq-item">
+                <h3 class="faq-q">Q1. {faq_q1}</h3>
+                <p class="faq-a">{faq_a1}</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-q">Q2. {faq_q2}</h3>
+                <p class="faq-a">{faq_a2}</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-q">Q3. {faq_q3}</h3>
+                <p class="faq-a">{faq_a3}</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-q">Q4. {faq_q4}</h3>
+                <p class="faq-a">{faq_a4}</p>
+            </div>
+        </section>
+
+        <section class="article-section" id="conclusion">
+            <h2>九、總結</h2>
+            <p>喺2026年嘅香港，數碼競爭已經進入白熱化階段。一個具備先進技術、優秀用戶體驗嘅網站，已經唔再係「錦上添花」，而係企業生存同埋發展嘅必需品。{kw}作為提升網站競爭力嘅重要技術，值得每個重視未來發展嘅企業認真考慮。</p>
+            <p>揀選合適嘅技術方案同埋合作夥伴，係整個項目最關鍵嘅決定。一個好嘅開發團隊，唔單止能夠提供技術專業，更能理解你嘅業務模式、行業特性、目標客群，為你提供有價值嘅策略建議，並成為你長期嘅數碼夥伴。考慮到技術嘅複雜性同埋快速變化，與其自己摸石過河，不如交由專業團隊處理，讓你專注核心業務。</p>
+            <p>EasyAppWebsite 致力為香港企業提供最優質、最先進嘅網站設計開發服務。無論你係想建立全新網站、重建現有網站、引入{kw}等創新技術、開發電商平台，定係需要持續嘅網站維護同埋優化，我哋都有專業團隊為你服務。立即行動，讓我哋協助你喺2026年嘅數碼浪潮中脫穎而出，贏得更多商機，實現業務增長目標！</p>
+        </section>
+
+        <!-- Internal Links -->
+        <nav class="related-posts">
+            <h3>延伸閱讀</h3>
+            <ul class="related-links">
+                <li><a href="../index.html">返回首頁</a></li>
+                <li><a href="../index.html#articles">瀏覽更多網頁設計文章</a></li>
+                <li><a href="../index.html#pricing">查看服務價錢</a></li>
+                <li><a href="../index.html#contact">立即免費咨詢</a></li>
+            </ul>
+        </nav>
+
+        <!-- CTA Box -->
+        <div class="cta-box" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0;">
+            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem;">準備好開始你嘅網站項目未？</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">無論係全新網站、網站重建、技術升级定係電商開發，EasyAppWebsite 都能為你提供專業、可靠、具成本效益嘅解決方案。立即聯絡我哋，獲取免費報價同埋專業咨詢！</p>
+            <a href="../index.html#contact" style="display: inline-block; background: white; color: #dc2626; padding: 0.875rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s;">免費獲取報價 →</a>
+        </div>
+
+        <!-- Pricing CTA -->
+        <div class="cta-box" style="background: #f3f4f6; border: 2px solid #dc2626; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h3 style="color: #dc2626; font-size: 1.3rem; margin-bottom: 1rem;">💰 想了解我哋嘅服務價錢？</h3>
+            <p>我哋提供多種網站設計套餐，由基本展示型網站到企業級定制開發，總有一款適合你嘅預算同埋需求。所有套餐均包含首年免費保養、SSL 憑證、基本 SEO 設定、後台操作培訓。</p>
+            <a href="../index.html#pricing" style="display: inline-block; background: #dc2626; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; text-decoration: none; margin-top: 1rem;">查看價錢方案 →</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="article-footer">
+            <hr>
+            <p><strong>EasyAppWebsite</strong> — 香港專業網站設計開發公司</p>
+            <p>📧 電郵：<a href="mailto:vickhung3000@hotmail.com">vickhung3000@hotmail.com</a> | 📱 電話/Whatsapp：+852 66844697</p>
+            <p>地址：香港九龍觀塘成業街16號怡生工業中心 A 座 10 樓 1005 室</p>
+            <p><em>本文最後更新日期：{article_date}</em></p>
+        </footer>
+    </article>
 </body>
-</html>
-"""
-    return article, filename, slug, url
+</html>'''
 
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(html)
 
-def main():
-    # Find highest article number
-    highest = 0
-    for fn in os.listdir(ARTICLES_DIR):
-        if fn.endswith('.html'):
-            m = re.match(r'(\d+)-', fn)
-            if m:
-                n = int(m.group(1))
-                if n > highest:
-                    highest = n
-    start_num = highest + 1
-    print(f"Starting at article #{start_num}, generating {len(KEYWORDS)} articles")
+    mapping.append(kw)
+    print(f'Created: {filename}')
 
-    # Generate articles
-    new_articles = []
-    new_keywords = []
-    for i, kw in enumerate(KEYWORDS):
-        num = start_num + i
-        html, filename, slug, url = generate_article(num, kw)
-        filepath = os.path.join(ARTICLES_DIR, filename)
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(html)
+# Write updated mapping
+with open('keyword-mapping.json', 'w', encoding='utf-8') as f:
+    json.dump(mapping, f, ensure_ascii=False, indent=2)
 
-        # Count words (rough Chinese character count)
-        word_count = len(re.findall(r'[\u4e00-\u9fff]', html))
-        print(f"  #{num}: {filename} ({word_count} chars)")
-
-        new_articles.append({
-            "keyword": kw,
-            "file": filename,
-            "slug": kw,
-            "date": TODAY,
-            "url": url
-        })
-        new_keywords.append(kw)
-
-    # Update keyword-mapping.json
-    mapping_path = os.path.join(ARTICLES_DIR, "keyword-mapping.json")
-    with open(mapping_path, 'r', encoding='utf-8') as f:
-        mapping = json.load(f)
-
-    mapping['keywords'].extend(new_keywords)
-    mapping['articles'].extend(new_articles)
-    mapping['generated_at'] = TODAY
-    mapping['total_articles'] = len(mapping['articles'])
-    mapping['total_keywords'] = len(mapping['keywords'])
-
-    with open(mapping_path, 'w', encoding='utf-8') as f:
-        json.dump(mapping, f, ensure_ascii=False, indent=2)
-    print(f"Updated keyword-mapping.json: {len(mapping['keywords'])} keywords, {len(mapping['articles'])} articles")
-
-    # Regenerate sitemap.xml
-    sitemap_entries = []
-    sitemap_entries.append(f"""  <url>
-    <loc>{BASE_URL}/index.html</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>""")
-
-    # Add all article HTML files
-    for fn in sorted(os.listdir(ARTICLES_DIR)):
-        if fn.endswith('.html'):
-            encoded = urllib.parse.quote(fn, safe='')
-            sitemap_entries.append(f"""  <url>
-    <loc>{BASE_URL}/articles/{encoded}</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>""")
-
-    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(sitemap_entries) + '\n</urlset>\n'
-    sitemap_path = os.path.join(ARTICLES_DIR, "sitemap.xml")
-    with open(sitemap_path, 'w', encoding='utf-8') as f:
-        f.write(sitemap)
-    print(f"Generated sitemap.xml with {len(sitemap_entries)} URLs")
-
-    print(f"\nDone! Generated {len(KEYWORDS)} articles (#${start_num} to #{start_num + len(KEYWORDS) - 1})")
-    print("Keywords:")
-    for kw in KEYWORDS:
-        print(f"  - {kw}")
-
-if __name__ == '__main__':
-    main()
+print(f'\nTotal keywords in mapping: {len(mapping)}')
+print(f'Generated {len(selected_keywords)} new articles.')
