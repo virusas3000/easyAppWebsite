@@ -1,6 +1,5 @@
 import json, os, re, glob
 from urllib.parse import quote
-from datetime import date, datetime
 
 base = '/Users/vickhung/Desktop/easyappwebsite/articles'
 os.chdir(base)
@@ -14,23 +13,31 @@ for f in files:
         nums.append(int(m.group(1)))
 next_num = max(nums) + 1
 
-today = '2026-10-31'
+today = '2026-11-02'
 year = '2026'
 
 # Load all existing keywords to avoid duplicates
 all_keywords = set()
 for f in glob.glob('*-keyword-mapping.json'):
-    with open(f) as fh:
-        data = json.load(fh)
+    try:
+        with open(f) as fh:
+            data = json.load(fh)
+    except Exception:
+        continue
     if isinstance(data, dict) and 'keywords' in data:
         for k in data['keywords']:
-            all_keywords.add(k.strip())
+            all_keywords.add(str(k).strip())
     elif isinstance(data, list):
         for k in data:
-            all_keywords.add(str(k).strip())
+            if isinstance(k, str):
+                all_keywords.add(k.strip())
+            elif isinstance(k, dict):
+                for v in k.values():
+                    if isinstance(v, str):
+                        all_keywords.add(v.strip())
     elif isinstance(data, dict):
         for k in data.keys():
-            all_keywords.add(k.strip())
+            all_keywords.add(str(k).strip())
 
 # Also extract from filenames
 for f in files:
@@ -38,92 +45,113 @@ for f in files:
     if m:
         all_keywords.add(m.group(1).strip())
 
-# 29 new unique keywords
+def norm(s):
+    return re.sub(r'[\s\-_：，。！？、（）【】《》「」『』]', '', s).lower()
+
+blocked_norm = {norm(k) for k in all_keywords}
+
+# 60+ candidate keywords — we'll pick 29 fresh ones after filtering
 new_keywords = [
-    "香港網站開發Headless-CMS架構",
-    "香港網頁設計暗黑模式切換",
-    "香港網站開發WebAssembly效能優化",
-    "香港網站設計3D視覺元素應用",
-    "香港網頁設計微互動動畫效果",
-    "香港網站開發PWA離線功能",
-    "香港網頁設計無障礙WCAG合規",
-    "香港網站開發區塊鏈錢包連接",
-    "香港網頁設計虛擬試穿功能",
-    "香港網站開發即時客服系統",
-    "香港網站設計個人化推薦引擎",
-    "香港網頁設計動態島互動設計",
-    "香港網站開發WebRTC視訊會議",
-    "香港網站設計碳足跡計算器",
-    "香港網頁設計可持續網頁設計",
-    "香港網頁設計元宇宙導覽",
-    "香港網站開發5G優化載入",
-    "香港網站設計邊緣運算部署",
-    "香港網頁設計伺服器less架構",
-    "香港網站設計智能表單驗證",
-    "香港網頁設計手勢操控介面",
-    "香港網站開發WebTransport協定",
-    "香港網站設計隱私計算保護",
-    "香港網站開發WebSerial硬體連接",
-    "香港網站設計CSS滾動驅動動畫",
-    "香港網站開發WebGPU運算著色器",
-    "香港網頁設計CSS錨點定位",
-    "香港網站開發ViewTransition頁面轉場",
-    "香港網站設計手寫筆支援設計",
+    # HK industry verticals (fresh)
+    "香港寵物用品店網站開發",
+    "香港園藝店網站設計",
+    "香港五金店網站開發",
+    "香港電訊服務商網站設計",
+    "香港冷氣維修網站開發",
+    "香港防水工程網站設計",
+    "香港木工裝修網站設計",
+    "香港窗簾店網站開發",
+    "香港嬰兒用品店網站設計",
+    "香港書店網站開發",
+    "香港電競網吧網站開發",
+    "香港瑜伽館網站開發",
+    "香港桌遊咖啡店網站設計",
+    "香港射箭場網站設計",
+    "香港移民顧問網站開發",
+    "香港陪月服務網站開發",
+    "香港物理治療診所網站開發",
+    "香港陶藝工作室網站開發",
+    "香港盆栽店網站設計",
+    "香港鎖匠網站開發",
+    "香港寬頻公司網站設計",
+    "香港水電工程網站開發",
+    "香港泥水工程網站設計",
+    "香港油漆工程網站設計",
+    "香港地板工程網站設計",
+    "香港床上用品店網站設計",
+    "香港廚具店網站開發",
+    "香港浴室潔具店網站設計",
+    "香港燈飾店網站設計",
+    "香港家居安全系統網站設計",
+    "香港玩具店網站開發",
+    "香港文具店網站開發",
+    "香港唱片店網站設計",
+    "香港漫畫店網站開發",
+    "香港網球會網站設計",
+    "香港高爾夫球教學網站設計",
+    "香港普拉提工作室網站開發",
+    "香港太極班網站開發",
+    "香港密室逃脫網站開發",
+    "香港保齡球場網站設計",
+    "香港溜冰場網站設計",
+    "香港攀石場網站開發",
+    # Modern web tech (specific new APIs)
+    "香港網站開發Speculation-Rules-API預載推測",
+    "香港網站開發Prompt-API瀏覽器內建AI",
+    "香港網頁設計CSS-Masonry-Layout瀑布流佈局",
+    "香港網站開發Document-Picture-in-Picture文件畫中畫",
+    "香港網站開發Popover-API彈出層",
+    "香港網站開發Language-Detector-API語言偵測",
+    "香港網站開發Summarizer-API內容摘要",
+    "香港網站開發Translator-API即時翻譯",
+    "香港網站開發Rewriter-API內容改寫",
+    "香港網站開發Fenced-Frames隱私嵌入",
+    "香港網站開發Shared-Storage共享儲存",
+    "香港網站開發Topics-API興趣分類",
+    "香港網站開發Web-Socket-Stream串流套接字",
+    "香港網頁設計CSS-Round-Display圓形螢幕",
+    "香港網頁設計CSS-Initial-Letter首字下沉",
+    "香港網頁設計CSS-Reading-Flow閱讀流順序",
+    "香港網頁設計CSS-Carousel滾動輪播",
+    "香港網頁設計CSS-Scroll-Marker滾動標記",
+    "香港網頁設計CSS-Animation-Range動畫區間",
+    "香港網頁設計CSS-If-Function條件樣式",
+    "香港網頁設計CSS-Field-Sizing欄位尺寸",
+    "香港網頁設計CSS-Custom-Highlight自訂高亮",
+    "香港網站開發View-Transitions-API-V2視圖轉場",
+    "香港網站開發Invoker-Commands宣告式觸發",
+    "香港網站開發Custom-State-Pseudo-Class自訂狀態偽類",
+    "香港網站開發Web-App-Manifest-ID應用辨識",
+    "香港網站開發Window-Management-API多視窗",
+    "香港網站開發Media-Capabilities媒體能力偵測",
 ]
 
-# Filter duplicates
-filtered_keywords = []
+# Filter duplicates — keep first 29 unique ones, in pairs (keyword + title)
+def gen_title(kw):
+    """Generate a title from a keyword."""
+    if 'CSS-' in kw or 'API' in kw or 'HTTP' in kw or 'Web' in kw:
+        # tech-focused
+        return f'{kw}：2026年最新前端技術完整指南'
+    else:
+        # industry vertical
+        # extract industry part
+        ind = kw.replace('香港','').replace('網站設計','').replace('網站開發','')
+        return f'{kw}：2026年{ind}嘅數碼轉型完整指南'
+
+filtered_pairs = []
 for kw in new_keywords:
-    norm = kw.replace(' ', '').replace('-', '').replace('_', '').lower()
-    is_dup = False
-    for existing in all_keywords:
-        ex_norm = existing.replace(' ', '').replace('-', '').replace('_', '').lower()
-        if norm == ex_norm or norm in ex_norm or ex_norm in norm:
-            is_dup = True
-            break
-    if not is_dup:
-        filtered_keywords.append(kw)
+    if norm(kw) in blocked_norm:
+        print(f'SKIP dup: {kw}')
+        continue
+    filtered_pairs.append((kw, gen_title(kw)))
 
-# Ensure we have exactly 29
-assert len(filtered_keywords) >= 29, f"Only {len(filtered_keywords)} unique keywords"
-selected_keywords = filtered_keywords[:29]
-
-# Titles for each keyword
-titles = [
-    "香港網站開發Headless-CMS架構：2026年企業級內容管理新趨勢",
-    "香港網頁設計暗黑模式切換：提升用戶體驗嘅完整指南",
-    "香港網站開發WebAssembly效能優化：極速網頁嘅技術方案",
-    "香港網站設計3D視覺元素應用：打造沉浸式用戶體驗",
-    "香港網頁設計微互動動畫效果：細節決定成敗嘅設計哲學",
-    "香港網站開發PWA離線功能：唔使App都有原生體驗",
-    "香港網頁設計無障礙WCAG合規：照顧所有用戶嘅專業標準",
-    "香港網站開發區塊鏈錢包連接：Web3時代嘅電商新功能",
-    "香港網頁設計虛擬試穿功能：AR技術改變零售體驗",
-    "香港網站開發即時客服系統：提升轉換率嘅關鍵工具",
-    "香港網站設計個人化推薦引擎：AI驅動嘅用戶體驗優化",
-    "香港網頁設計動態島互動設計：iPhone新介面嘅設計啟示",
-    "香港網站開發WebRTC視訊會議：唔使裝App嘅視像通話方案",
-    "香港網站設計碳足跡計算器：ESG企業嘅必備功能",
-    "香港網頁設計可持續網頁設計：環保與效能兼備嘅新標準",
-    "香港網頁設計元宇宙導覽：虛擬空間嘅品牌展示策略",
-    "香港網站開發5G優化載入：極速網絡時代嘅技術準備",
-    "香港網站設計邊緣運算部署：CDN進階應用提升速度",
-    "香港網頁設計伺服器less架構：降低成本嘅雲端新趨勢",
-    "香港網站設計智能表單驗證：AI提升用戶輸入體驗",
-    "香港網頁設計手勢操控介面：觸控時代嘅直覺設計",
-    "香港網站開發WebTransport協定：新一代即時通訊技術",
-    "香港網站設計隱私計算保護：數據安全嘅進階方案",
-    "香港網站開發WebSerial硬體連接：網頁控制實體設備",
-    "香港網站設計CSS滾動驅動動畫：流暢捲動體驗嘅實現方法",
-    "香港網站開發WebGPU運算著色器：瀏覽器嘅超強運算能力",
-    "香港網頁設計CSS錨點定位：彈出式介面嘅精準控制",
-    "香港網站開發ViewTransition頁面轉場：App級別嘅流暢導航",
-    "香港網站設計手寫筆支援設計：創意行業嘅專業工具整合",
-]
+assert len(filtered_pairs) >= 29, f"Only {len(filtered_pairs)} unique keywords"
+selected_keywords = [p[0] for p in filtered_pairs[:29]]
+titles = [p[1] for p in filtered_pairs[:29]]
 
 slugs = []
 for i, title in enumerate(titles):
-    slug = title
+    slug = selected_keywords[i]  # use the keyword as the slug base
     slug = re.sub(r'[：，。！？、（）【】《》「」『』]', '', slug)
     slug = re.sub(r'[\s]+', '-', slug)
     slug = re.sub(r'[^\w\u4e00-\u9fff\-]', '', slug)
@@ -135,30 +163,7 @@ for i, title in enumerate(titles):
 with open('keyword-mapping.json') as f:
     mapping = json.load(f)
 
-# Generate articles
-for i in range(len(selected_keywords)):
-    num = next_num + i
-    kw = selected_keywords[i]
-    title = titles[i]
-    slug = slugs[i]
-    filename = f'{num}-{slug}.html'
-    encoded_slug = quote(filename)
-    url = f'https://www.easyappwebsite.com/articles/{encoded_slug}'
-    article_date = today
-
-    desc = f'【2026年香港網站設計】{kw} 完整指南。EasyAppWebsite 為你詳細講解{kw}，包括市場趨勢、選擇要點、技術方案、注意事項及常見問題，助你做出明智決定。'
-    meta_kw = f'{kw}, 香港網站設計, 網頁設計, 網站開發, EasyAppWebsite'
-
-    faq_q1 = f'{kw}邊間公司好？'
-    faq_a1 = f'選擇{kw}公司時，應考慮其過往案例、技術能力、客戶評價、服務範圍及售後支援。EasyAppWebsite 擁有豐富經驗，已為超過100間香港企業提供專業服務，歡迎聯絡我們免費咨詢。'
-    faq_q2 = f'{kw}大約幾錢？'
-    faq_a2 = '價錢因應項目複雜度、功能需求及技術難度而定。基本功能約 HK$15,000-30,000，中等複雜度約 HK$30,000-80,000，大型定制項目需 HK$80,000 以上。建議先獲取詳細報價。'
-    faq_q3 = f'整個{kw}流程需時幾耐？'
-    faq_a3 = '一般項目需時 4-12 星期，視乎功能複雜度、內容準備情況及修改次數。簡單整合約 4-6 星期，複雜定制開發可能需 3 個月以上。'
-    faq_q4 = f'{kw}有咩注意事項？'
-    faq_a4 = '必須確認：技術兼容性、瀏覽器支援程度、性能影響、數據私隱合規、後續維護成本。EasyAppWebsite 提供專業評估，確保方案穩定可靠。'
-
-    html = f'''<!DOCTYPE html>
+TEMPLATE = '''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
@@ -305,7 +310,7 @@ for i in range(len(selected_keywords)):
             <span>›</span>
             <a href="../index.html#articles">網頁設計文章</a>
             <span>›</span>
-            <span aria-current="page">{title[:30]}...</span>
+            <span aria-current="page">{title_short}...</span>
         </nav>
 
         <!-- Meta Info -->
@@ -342,12 +347,12 @@ for i in range(len(selected_keywords)):
             <h2>三、常見迷思與誤解</h2>
             <p>好多企業主對{kw}存在一啲常見嘅迷思，以下係最普遍嘅幾個，了解真相可以幫你避免損失：</p>
             <ol>
-                <li><strong>「新技術一定好貴，我哋中小企負擔唔起」：</strong>其實好多先進技術（如 PWA、暗黑模式、微動畫）嘅實施成本已經大幅下降。以 EasyAppWebsite 為例，基礎版本嘅{kw}整合由 HK$15,000 起，遠低於企業想像。而且考慮到投入產出比（ROI），新技術帶來嘅轉換率提升同埋用戶滿意度，往往喺幾個月內已經回本。</li>
-                <li><strong>「整完網站就一勞永逸，唔使再理」：</strong>網站同埋實體店一樣，需要持續維護同埋更新。技術會過時、安全漏洞會出現、用戶習慣會改變。一個 2024年整嘅網站，如果到2026年都冇更新，好可能已經落後於競爭對手。建議最少每半年進行一次技術審計同埋內容更新。</li>
-                <li><strong>「自己郁手整或者用免費工具就得，使咩請人」：</strong>免費建站工具（如 Wix、WordPress.com）雖然方便，但喺技術靈活性、SEO 優化、品牌形象、數據私隱、擴展性上都有明顯局限。一旦業務增長，好快就會遇到樽頸位，到時重建嘅成本同埋時間損失可能更大。專業公司嘅價值喺於經驗、效率、同埋避免試錯成本。</li>
+                <li><strong>「新技術一定好貴，我哋中小企負擔唔起」：</strong>其實好多先進技術嘅實施成本已經大幅下降。以 EasyAppWebsite 為例，基礎版本嘅{kw}整合由 HK$15,000 起，遠低於企業想像。而且考慮到投入產出比（ROI），新技術帶來嘅轉換率提升同埋用戶滿意度，往往喺幾個月內已經回本。</li>
+                <li><strong>「整完網站就一勞永逸，唔使再理」：</strong>網站同埋實體店一樣，需要持續維護同埋更新。技術會過時、安全漏洞會出現、用戶習慣會改變。一個2026年整嘅網站，如果唔持續更新，好快就會落後於競爭對手。建議最少每半年進行一次技術審計同埋內容更新。</li>
+                <li><strong>「自己郁手整或者用免費工具就得，使咩請人」：</strong>免費建站工具雖然方便，但喺技術靈活性、SEO 優化、品牌形象、數據私隱、擴展性上都有明顯局限。一旦業務增長，好快就會遇到樽頸位，到時重建嘅成本同埋時間損失可能更大。專業公司嘅價值喺於經驗、效率、同埋避免試錯成本。</li>
                 <li><strong>「設計好睇就夠，技術功能唔重要」：</strong>設計同埋技術必須兼顧。一個靚但載入慢、功能差、唔兼容手機嘅網站，只會趕走客戶。研究顯示，用戶對網站嘅第一印象 50% 來自設計，但決定留唔留低、買唔買嘢，70% 取決於使用體驗同埋功能完善度。</li>
                 <li><strong>「SEO 係整完網站先至諗嘅嘢」：</strong>SEO 必須由規劃階段就開始考慮，包括網站架構、URL 結構、內容策略、技術設定（如結構化數據、Core Web Vitals）。後期先補救往往事倍功半，甚至需要大規模重構。EasyAppWebsite 嘅所有項目都內建 SEO 最佳實踐，確保網站一出世就具備良好排名基礎。</li>
-                <li><strong>「最平嘅選擇就係最著數」：</strong>價錢固然重要，但過分壓低預算可能導致質素參差、功能不足、安全漏洞、後期維護困難。一個 HK$5,000 嘅網站同一個 HK$50,000 嘅網站，喺設計、功能、安全性、後續支援上都有天壤之別。企業應該關注「總擁有成本」（TCO），而唔係首置成本。</li>
+                <li><strong>「最平嘅選擇就係最著數」：</strong>價錢固然重要，但過分壓低預算可能導致質素參差、功能不足、安全漏洞、後期維護困難。企業應該關注「總擁有成本」（TCO），而唔係首置成本。</li>
             </ol>
             <p>了解呢啲迷思，可以幫你避免常見嘅陷阱，做出更明智嘅投資決定。EasyAppWebsite 嘅專業顧問會喺項目開始前就為你詳細解釋各種技術選項嘅利弊，確保你嘅每一分預算都用得其所。</p>
         </section>
@@ -545,13 +550,41 @@ for i in range(len(selected_keywords)):
 </body>
 </html>'''
 
+for i in range(len(selected_keywords)):
+    num = next_num + i
+    kw = selected_keywords[i]
+    title = titles[i]
+    slug = slugs[i]
+    filename = f'{num}-{slug}.html'
+    encoded_slug = quote(filename)
+    url = f'https://www.easyappwebsite.com/articles/{encoded_slug}'
+    article_date = today
+
+    desc = f'【2026年香港網站設計】{kw} 完整指南。EasyAppWebsite 為你詳細講解{kw}，包括市場趨勢、選擇要點、技術方案、注意事項及常見問題，助你做出明智決定。'
+    meta_kw = f'{kw}, 香港網站設計, 網頁設計, 網站開發, EasyAppWebsite'
+
+    faq_q1 = f'{kw}邊間公司好？'
+    faq_a1 = f'選擇{kw}公司時，應考慮其過往案例、技術能力、客戶評價、服務範圍及售後支援。EasyAppWebsite 擁有豐富經驗，已為超過100間香港企業提供專業服務，歡迎聯絡我們免費咨詢。'
+    faq_q2 = f'{kw}大約幾錢？'
+    faq_a2 = '價錢因應項目複雜度、功能需求及技術難度而定。基本功能約 HK$15,000-30,000，中等複雜度約 HK$30,000-80,000，大型定制項目需 HK$80,000 以上。建議先獲取詳細報價。'
+    faq_q3 = f'整個{kw}流程需時幾耐？'
+    faq_a3 = '一般項目需時 4-12 星期，視乎功能複雜度、內容準備情況及修改次數。簡單整合約 4-6 星期，複雜定制開發可能需 3 個月以上。'
+    faq_q4 = f'{kw}有咩注意事項？'
+    faq_a4 = '必須確認：技術兼容性、瀏覽器支援程度、性能影響、數據私隱合規、後續維護成本。EasyAppWebsite 提供專業評估，確保方案穩定可靠。'
+
+    html = TEMPLATE.format(
+        title=title, title_short=title[:30], desc=desc, meta_kw=meta_kw,
+        article_date=article_date, url=url, kw=kw,
+        faq_q1=faq_q1, faq_a1=faq_a1, faq_q2=faq_q2, faq_a2=faq_a2,
+        faq_q3=faq_q3, faq_a3=faq_a3, faq_q4=faq_q4, faq_a4=faq_a4,
+    )
+
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(html)
 
     mapping.append(kw)
     print(f'Created: {filename}')
 
-# Write updated mapping
 with open('keyword-mapping.json', 'w', encoding='utf-8') as f:
     json.dump(mapping, f, ensure_ascii=False, indent=2)
 
