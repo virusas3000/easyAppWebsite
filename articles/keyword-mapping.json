@@ -10903,5 +10903,237 @@
     "slug": "3888-香港網站開發碳足跡追蹤器.html",
     "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3888-香港網站開發碳足跡追蹤器.html",
     "date": "2026-11-10"
+  },
+  {
+    "id": 3889,
+    "keyword": "香港網站開發WebTransport即時通訊協議",
+    "title": "香港網站開發WebTransport即時通訊協議完整指南2026年：策略、流程與實戰案例",
+    "slug": "3889-香港網站開發WebTransport即時通訊協議.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3889-香港網站開發WebTransport即時通訊協議.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3890,
+    "keyword": "香港網站開發WebCodecs媒體編解碼",
+    "title": "香港網站開發WebCodecs媒體編解碼完整指南2026年：策略、流程與實戰案例",
+    "slug": "3890-香港網站開發WebCodecs媒體編解碼.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3890-香港網站開發WebCodecs媒體編解碼.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3891,
+    "keyword": "香港網站開發WebSerial硬件串口通訊",
+    "title": "香港網站開發WebSerial硬件串口通訊完整指南2026年：策略、流程與實戰案例",
+    "slug": "3891-香港網站開發WebSerial硬件串口通訊.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3891-香港網站開發WebSerial硬件串口通訊.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3892,
+    "keyword": "香港網站開發WebBluetooth低功耗藍牙",
+    "title": "香港網站開發WebBluetooth低功耗藍牙完整指南2026年：策略、流程與實戰案例",
+    "slug": "3892-香港網站開發WebBluetooth低功耗藍牙.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3892-香港網站開發WebBluetooth低功耗藍牙.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3893,
+    "keyword": "香港網站開發WebNFC近場通訊整合",
+    "title": "香港網站開發WebNFC近場通訊整合完整指南2026年：策略、流程與實戰案例",
+    "slug": "3893-香港網站開發WebNFC近場通訊整合.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3893-香港網站開發WebNFC近場通訊整合.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3894,
+    "keyword": "香港網站開發WebUSB通用串口總線",
+    "title": "香港網站開發WebUSB通用串口總線完整指南2026年：策略、流程與實戰案例",
+    "slug": "3894-香港網站開發WebUSB通用串口總線.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3894-香港網站開發WebUSB通用串口總線.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3895,
+    "keyword": "香港網站開發WebShare Target分享目標",
+    "title": "香港網站開發WebShare Target分享目標完整指南2026年：策略、流程與實戰案例",
+    "slug": "3895-香港網站開發WebShare Target分享目標.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3895-香港網站開發WebShare Target分享目標.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3896,
+    "keyword": "香港網站開發Web Payments支付請求API",
+    "title": "香港網站開發Web Payments支付請求API完整指南2026年：策略、流程與實戰案例",
+    "slug": "3896-香港網站開發Web Payments支付請求API.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3896-香港網站開發Web Payments支付請求API.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3897,
+    "keyword": "香港網站開發Credential Management憑證管理",
+    "title": "香港網站開發Credential Management憑證管理完整指南2026年：策略、流程與實戰案例",
+    "slug": "3897-香港網站開發Credential Management憑證管理.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3897-香港網站開發Credential Management憑證管理.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3898,
+    "keyword": "香港網站開發Web Authentication無密碼登入",
+    "title": "香港網站開發Web Authentication無密碼登入完整指南2026年：策略、流程與實戰案例",
+    "slug": "3898-香港網站開發Web Authentication無密碼登入.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3898-香港網站開發Web Authentication無密碼登入.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3899,
+    "keyword": "香港網站開發Web Locks資源鎖定機制",
+    "title": "香港網站開發Web Locks資源鎖定機制完整指南2026年：策略、流程與實戰案例",
+    "slug": "3899-香港網站開發Web Locks資源鎖定機制.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3899-香港網站開發Web Locks資源鎖定機制.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3900,
+    "keyword": "香港網站開發Web Idle Detection閒置偵測",
+    "title": "香港網站開發Web Idle Detection閒置偵測完整指南2026年：策略、流程與實戰案例",
+    "slug": "3900-香港網站開發Web Idle Detection閒置偵測.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3900-香港網站開發Web Idle Detection閒置偵測.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3901,
+    "keyword": "香港網站開發Web Vibration震動回饋API",
+    "title": "香港網站開發Web Vibration震動回饋API完整指南2026年：策略、流程與實戰案例",
+    "slug": "3901-香港網站開發Web Vibration震動回饋API.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3901-香港網站開發Web Vibration震動回饋API.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3902,
+    "keyword": "香港網站開發Web Battery Status電量狀態",
+    "title": "香港網站開發Web Battery Status電量狀態完整指南2026年：策略、流程與實戰案例",
+    "slug": "3902-香港網站開發Web Battery Status電量狀態.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3902-香港網站開發Web Battery Status電量狀態.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3903,
+    "keyword": "香港網站開發Web Network Information網絡資訊",
+    "title": "香港網站開發Web Network Information網絡資訊完整指南2026年：策略、流程與實戰案例",
+    "slug": "3903-香港網站開發Web Network Information網絡資訊.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3903-香港網站開發Web Network Information網絡資訊.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3904,
+    "keyword": "香港網站開發Web Device Memory記憶體偵測",
+    "title": "香港網站開發Web Device Memory記憶體偵測完整指南2026年：策略、流程與實戰案例",
+    "slug": "3904-香港網站開發Web Device Memory記憶體偵測.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3904-香港網站開發Web Device Memory記憶體偵測.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3905,
+    "keyword": "香港網站開發Web Hardware Concurrency硬件並發",
+    "title": "香港網站開發Web Hardware Concurrency硬件並發完整指南2026年：策略、流程與實戰案例",
+    "slug": "3905-香港網站開發Web Hardware Concurrency硬件並發.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3905-香港網站開發Web Hardware Concurrency硬件並發.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3906,
+    "keyword": "香港網站開發Web Storage Access儲存存取",
+    "title": "香港網站開發Web Storage Access儲存存取完整指南2026年：策略、流程與實戰案例",
+    "slug": "3906-香港網站開發Web Storage Access儲存存取.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3906-香港網站開發Web Storage Access儲存存取.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3907,
+    "keyword": "香港網站開發Web Cookie Store Cookie管理",
+    "title": "香港網站開發Web Cookie Store Cookie管理完整指南2026年：策略、流程與實戰案例",
+    "slug": "3907-香港網站開發Web Cookie Store Cookie管理.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3907-香港網站開發Web Cookie Store Cookie管理.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3908,
+    "keyword": "香港網站開發Web Cache Storage快取儲存",
+    "title": "香港網站開發Web Cache Storage快取儲存完整指南2026年：策略、流程與實戰案例",
+    "slug": "3908-香港網站開發Web Cache Storage快取儲存.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3908-香港網站開發Web Cache Storage快取儲存.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3909,
+    "keyword": "香港網站開發Web Background Sync背景同步",
+    "title": "香港網站開發Web Background Sync背景同步完整指南2026年：策略、流程與實戰案例",
+    "slug": "3909-香港網站開發Web Background Sync背景同步.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3909-香港網站開發Web Background Sync背景同步.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3910,
+    "keyword": "香港網站開發Web Periodic Background Sync定期同步",
+    "title": "香港網站開發Web Periodic Background Sync定期同步完整指南2026年：策略、流程與實戰案例",
+    "slug": "3910-香港網站開發Web Periodic Background Sync定期同步.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3910-香港網站開發Web Periodic Background Sync定期同步.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3911,
+    "keyword": "香港網站開發Web Push Notification推送通知",
+    "title": "香港網站開發Web Push Notification推送通知完整指南2026年：策略、流程與實戰案例",
+    "slug": "3911-香港網站開發Web Push Notification推送通知.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3911-香港網站開發Web Push Notification推送通知.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3912,
+    "keyword": "香港網站開發Web Badging應用圖標標記",
+    "title": "香港網站開發Web Badging應用圖標標記完整指南2026年：策略、流程與實戰案例",
+    "slug": "3912-香港網站開發Web Badging應用圖標標記.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3912-香港網站開發Web Badging應用圖標標記.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3913,
+    "keyword": "香港網站開發Web Shortcuts快捷方式",
+    "title": "香港網站開發Web Shortcuts快捷方式完整指南2026年：策略、流程與實戰案例",
+    "slug": "3913-香港網站開發Web Shortcuts快捷方式.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3913-香港網站開發Web Shortcuts快捷方式.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3914,
+    "keyword": "香港網站開發Web File Handling檔案處理",
+    "title": "香港網站開發Web File Handling檔案處理完整指南2026年：策略、流程與實戰案例",
+    "slug": "3914-香港網站開發Web File Handling檔案處理.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3914-香港網站開發Web File Handling檔案處理.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3915,
+    "keyword": "香港網站開發Web Protocol Handler協議處理",
+    "title": "香港網站開發Web Protocol Handler協議處理完整指南2026年：策略、流程與實戰案例",
+    "slug": "3915-香港網站開發Web Protocol Handler協議處理.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3915-香港網站開發Web Protocol Handler協議處理.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3916,
+    "keyword": "香港網站設計CSS Scroll Snap捕獲滾動",
+    "title": "香港網站設計CSS Scroll Snap捕獲滾動完整指南2026年：策略、流程與實戰案例",
+    "slug": "3916-香港網站設計CSS Scroll Snap捕獲滾動.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3916-香港網站設計CSS Scroll Snap捕獲滾動.html",
+    "date": "2026-11-11"
+  },
+  {
+    "id": 3917,
+    "keyword": "香港網站設計CSS View Transitions視圖轉場",
+    "title": "香港網站設計CSS View Transitions視圖轉場完整指南2026年：策略、流程與實戰案例",
+    "slug": "3917-香港網站設計CSS View Transitions視圖轉場.html",
+    "path": "/Users/vickhung/Desktop/easyappwebsite/articles/3917-香港網站設計CSS View Transitions視圖轉場.html",
+    "date": "2026-11-11"
   }
 ]
