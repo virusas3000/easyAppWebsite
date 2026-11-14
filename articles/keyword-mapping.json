@@ -11599,5 +11599,237 @@
     "slug": "香港網站開發Virtual-Keyboard虛擬鍵盤控制",
     "path": "articles/3975-香港網站開發Virtual-Keyboard虛擬鍵盤控制.html",
     "date": "2026-11-13"
+  },
+  {
+    "id": 3976,
+    "keyword": "香港網站開發Web Serial API序列埠通訊",
+    "title": "香港網站開發Web Serial API序列埠通訊完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Serial-API序列埠通訊",
+    "path": "articles/3976-Web-Serial-API序列埠通訊.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3977,
+    "keyword": "香港網站開發Web USB裝置連接",
+    "title": "香港網站開發Web USB裝置連接完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-USB裝置連接",
+    "path": "articles/3977-Web-USB裝置連接.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3978,
+    "keyword": "香港網站開發Web Bluetooth藍牙低功耗",
+    "title": "香港網站開發Web Bluetooth藍牙低功耗完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Bluetooth藍牙低功耗",
+    "path": "articles/3978-Web-Bluetooth藍牙低功耗.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3979,
+    "keyword": "香港網站開發Web HID人機介面裝置",
+    "title": "香港網站開發Web HID人機介面裝置完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-HID人機介面裝置",
+    "path": "articles/3979-Web-HID人機介面裝置.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3980,
+    "keyword": "香港網站開發Web MIDI音樂數位介面",
+    "title": "香港網站開發Web MIDI音樂數位介面完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-MIDI音樂數位介面",
+    "path": "articles/3980-Web-MIDI音樂數位介面.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3981,
+    "keyword": "香港網站開發Web Gamepad遊戲控制器",
+    "title": "香港網站開發Web Gamepad遊戲控制器完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Gamepad遊戲控制器",
+    "path": "articles/3981-Web-Gamepad遊戲控制器.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3982,
+    "keyword": "香港網站開發Web XR擴增實境",
+    "title": "香港網站開發Web XR擴增實境完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-XR擴增實境",
+    "path": "articles/3982-Web-XR擴增實境.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3983,
+    "keyword": "香港網站開發Web NN神經網絡加速",
+    "title": "香港網站開發Web NN神經網絡加速完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-NN神經網絡加速",
+    "path": "articles/3983-Web-NN神經網絡加速.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3984,
+    "keyword": "香港網站開發Web Assembly SIMD指令",
+    "title": "香港網站開發Web Assembly SIMD指令完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-SIMD指令",
+    "path": "articles/3984-Web-Assembly-SIMD指令.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3985,
+    "keyword": "香港網站開發Web Assembly Threads多線程",
+    "title": "香港網站開發Web Assembly Threads多線程完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Threads多線程",
+    "path": "articles/3985-Web-Assembly-Threads多線程.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3986,
+    "keyword": "香港網站開發Web Assembly Garbage Collection",
+    "title": "香港網站開發Web Assembly Garbage Collection完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Garbage-Collection",
+    "path": "articles/3986-Web-Assembly-Garbage-Collection.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3987,
+    "keyword": "香港網站開發Web Assembly Tail Call優化",
+    "title": "香港網站開發Web Assembly Tail Call優化完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Tail-Call優化",
+    "path": "articles/3987-Web-Assembly-Tail-Call優化.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3988,
+    "keyword": "香港網站開發Web Assembly Exception Handling",
+    "title": "香港網站開發Web Assembly Exception Handling完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Exception-Handling",
+    "path": "articles/3988-Web-Assembly-Exception-Handling.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3989,
+    "keyword": "香港網站開發Web Assembly Memory64",
+    "title": "香港網站開發Web Assembly Memory64完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Memory64",
+    "path": "articles/3989-Web-Assembly-Memory64.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3990,
+    "keyword": "香港網站開發Web Assembly Relaxed SIMD",
+    "title": "香港網站開發Web Assembly Relaxed SIMD完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Relaxed-SIMD",
+    "path": "articles/3990-Web-Assembly-Relaxed-SIMD.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3991,
+    "keyword": "香港網站開發Web Assembly Extended Const",
+    "title": "香港網站開發Web Assembly Extended Const完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Extended-Const",
+    "path": "articles/3991-Web-Assembly-Extended-Const.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3992,
+    "keyword": "香港網站開發Web Assembly Multi Memory",
+    "title": "香港網站開發Web Assembly Multi Memory完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Multi-Memory",
+    "path": "articles/3992-Web-Assembly-Multi-Memory.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3993,
+    "keyword": "香港網站開發Web Assembly JS Promise Integration",
+    "title": "香港網站開發Web Assembly JS Promise Integration完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-JS-Promise-Integration",
+    "path": "articles/3993-Web-Assembly-JS-Promise-Integration.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3994,
+    "keyword": "香港網站開發Web Assembly Component Model",
+    "title": "香港網站開發Web Assembly Component Model完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Assembly-Component-Model",
+    "path": "articles/3994-Web-Assembly-Component-Model.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3995,
+    "keyword": "香港網站開發Web Audio Worklet進階音頻",
+    "title": "香港網站開發Web Audio Worklet進階音頻完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Audio-Worklet進階音頻",
+    "path": "articles/3995-Web-Audio-Worklet進階音頻.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3996,
+    "keyword": "香港網站開發Web Codecs Video Encoder編碼器",
+    "title": "香港網站開發Web Codecs Video Encoder編碼器完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Codecs-Video-Encoder編碼器",
+    "path": "articles/3996-Web-Codecs-Video-Encoder編碼器.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3997,
+    "keyword": "香港網站開發Web Codecs Image Decoder圖像解碼",
+    "title": "香港網站開發Web Codecs Image Decoder圖像解碼完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Codecs-Image-Decoder圖像解碼",
+    "path": "articles/3997-Web-Codecs-Image-Decoder圖像解碼.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3998,
+    "keyword": "香港網站開發Web Codecs Audio Encoder音頻編碼",
+    "title": "香港網站開發Web Codecs Audio Encoder音頻編碼完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-Codecs-Audio-Encoder音頻編碼",
+    "path": "articles/3998-Web-Codecs-Audio-Encoder音頻編碼.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 3999,
+    "keyword": "香港網站開發Web GPU Compute Shader計算著色器",
+    "title": "香港網站開發Web GPU Compute Shader計算著色器完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-GPU-Compute-Shader計算著色器",
+    "path": "articles/3999-Web-GPU-Compute-Shader計算著色器.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 4000,
+    "keyword": "香港網站開發Web GPU Render Bundle渲染套件",
+    "title": "香港網站開發Web GPU Render Bundle渲染套件完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-GPU-Render-Bundle渲染套件",
+    "path": "articles/4000-Web-GPU-Render-Bundle渲染套件.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 4001,
+    "keyword": "香港網站開發Web GPU Pipeline Statistics管線統計",
+    "title": "香港網站開發Web GPU Pipeline Statistics管線統計完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-GPU-Pipeline-Statistics管線統計",
+    "path": "articles/4001-Web-GPU-Pipeline-Statistics管線統計.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 4002,
+    "keyword": "香港網站開發Web GPU Timestamp Query時間戳查詢",
+    "title": "香港網站開發Web GPU Timestamp Query時間戳查詢完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-GPU-Timestamp-Query時間戳查詢",
+    "path": "articles/4002-Web-GPU-Timestamp-Query時間戳查詢.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 4003,
+    "keyword": "香港網站開發Web GPU Occlusion Query遮擋查詢",
+    "title": "香港網站開發Web GPU Occlusion Query遮擋查詢完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-GPU-Occlusion-Query遮擋查詢",
+    "path": "articles/4003-Web-GPU-Occlusion-Query遮擋查詢.html",
+    "date": "2026-11-14"
+  },
+  {
+    "id": 4004,
+    "keyword": "香港網站開發Web NFC近場通訊",
+    "title": "香港網站開發Web NFC近場通訊完整指南2026年：策略、流程與實戰案例",
+    "slug": "Web-NFC近場通訊完整指南2026年",
+    "path": "articles/4004-Web-NFC近場通訊完整指南2026年.html",
+    "date": "2026-11-14"
   }
 ]
