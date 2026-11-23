@@ -3,7 +3,7 @@ from urllib.parse import quote
 
 base = '/Users/vickhung/Desktop/easyappwebsite'
 articles = os.path.join(base, 'articles')
-today = '2026-11-02'
+today = '2026-11-23'
 
 # Collect all article HTML files
 files = sorted([f for f in os.listdir(articles) if f.endswith('.html')])
